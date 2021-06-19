@@ -33,6 +33,7 @@ def DrawLine(delete_line = False, img=None):
 
     thickLine = np.argmax(np.bincount(class_0.flat))
     spaceLine = np.argmax(np.bincount(class_255.flat))
+    staffHeight = thickLine*5 + spaceLine*4
 
 
     line_arr = np.empty(shape=(0), dtype=np.int64)
@@ -51,6 +52,6 @@ def DrawLine(delete_line = False, img=None):
     cv2.imshow("img", img)
     #cv2.imshow("dilate", dilate)
     #cv2.imshow("thresh", threshold)
-    return line_arr
+    return line_arr, staffHeight
 
 # line_arr = DrawLine(False,img)

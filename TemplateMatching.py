@@ -1,13 +1,13 @@
 import cv2
 import numpy as np
 
-def FindSelectedArea(img, template,color, name):
+def FindSelectedArea(img, template):
     img = np.copy(img)
 
     # Read the main image
 
     # Convert it to grayscale
-    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    #img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # Read the template
     template =   cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
@@ -17,10 +17,10 @@ def FindSelectedArea(img, template,color, name):
     w, h = template.shape[::-1]
 
     # Perform match operations.
-    res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
+    res = cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED)
 
     # Specify a threshold
-    threshold = 0.85
+    threshold = 0.80
 
     # Store the index of array res which its element higher than threshold
     loc = np.where(res >= threshold)
@@ -35,4 +35,4 @@ def FindSelectedArea(img, template,color, name):
 
     # Show the final image with the matched area.
     #cv2.imshow(name, img)
-    return list(zip(*loc[::-1])), transpose
+    return list(zip(*loc[::-1]))
