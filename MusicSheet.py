@@ -52,6 +52,7 @@ for i in range(len(chordsType)):
     elif (chord.type == 4 ):
         cv2.rectangle(img, chord.pt1, chord.pt2, color[5])
 cv2.imwrite("result.jpg",img)
+print("Sucessfully write result....")
 
 CombineOpenClose.getCombinedType(chordsType,staff_height, img)
 

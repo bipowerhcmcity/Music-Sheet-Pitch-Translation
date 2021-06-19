@@ -33,6 +33,7 @@ def StaffLineRemoval(img):
     result = np.copy(result_1)
     result[result_1 < threshold] = 255 - result[result_1 < threshold]
     result[result_1 >= threshold] = 0 #+ result[result_1 >=threshold]
+    cv2.imwrite("staffRemoval.jpg",result)
     cv2.imshow("StaffLine Removal", result)
     return result
 
