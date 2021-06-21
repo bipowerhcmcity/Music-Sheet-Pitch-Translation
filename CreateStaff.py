@@ -14,19 +14,19 @@ def initStaff(staff_height, lines):
             staffs.append(staff)
 
             line_staff.clear()
-            print(staffs[0].lines)
-
         else:
             line_staff.append(lines[i])
     return staffs
 
 def groupNoteToStaff(chords, staffs, threshhold=5):
     for k in range(len(staffs)):
+        staff = []
         for chord in chords:
             anchorPoint = tuple(map(lambda i, j: (i + j)/2, chord.pt1, chord.pt2))
             print(anchorPoint, staffs[k].begin_y,staffs[k].end_y)
             if(anchorPoint[1]>=staffs[k].begin_y-threshhold and anchorPoint[1]<=staffs[k].end_y+threshhold):
-                staffs[k].appendChord(chord)
+                staff.append(chord)
             else:
                 print("Not insert")
-
+        staff.sort(key=lambda chord: chord.pt1[0], reverse=False)
+        staffs[k].appendChord(staff)

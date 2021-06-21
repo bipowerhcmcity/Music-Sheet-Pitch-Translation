@@ -20,7 +20,7 @@ def FindSelectedArea(img, template):
     res = cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED)
 
     # Specify a threshold
-    threshold = 0.80
+    threshold = 0.8
 
     # Store the index of array res which its element higher than threshold
     loc = np.where(res >= threshold)

@@ -22,19 +22,31 @@ removal = StaffLineRemoval.StaffLineRemoval(img)
 print("Staff_Height",staff_height)
 
 staffs = CreateStaff.initStaff(staff_height,lines)
-print(len(staffs[0].lines))
 
 
 #
 chordsType = ClassifiedTypeChord.inputLabel(feature_type,color,removal,img)
+for i in range(len(chordsType)):
+    print(chordsType[i].type,chordsType[i].sub_type," : ",chordsType[i].pt1 )
+
 onlyChord = []
 for i in range(len(chordsType)):
     if(chordsType[i].type==1 or chordsType[i].type==4 ):
         onlyChord.append(chordsType[i])
 
+onlySymbol = []
+for i in range(len(chordsType)):
+    if(chordsType[i].type==2 or chordsType[i].type==3 ):
+        onlySymbol.append(chordsType[i])
+
+
+
 CreateStaff.groupNoteToStaff(onlyChord,staffs)
-for i in range(len(staffs)):
-    print(i, len(staffs[i].lines))
+for staff in staffs:
+    print(staff.begin_y)
+    for chord in staff.chords:
+        print(chord.pt1, chord.pt2, chord.type,chord.sub_type)
+
 
 
 for i in range(len(chordsType)):
@@ -74,54 +86,50 @@ h_clef = clef_sol.shape[0]
 # #         cv2.line(img, (-1000, line), (1000, line), (255,255,255), 1)
 #
 #
-# #
-# notes_height = ["mi_1", "re_1", "do_1", "si", "la", "son", "fa", "mi","re", "do" ]
-# notes_height_1 = ["mi_1", "fa_1", "son_1", "la_1", "si_1", "do_2", "re_2", "mi_2", "fa_2", "son_2", "la_2", "si_2"]
-# #
-# staffline_dist = lines[1] - lines[0] # blank size between 2 lines in one staff
-# print("StaffLine distance: ",staffline_dist)
-# # headlines = []
-# # count = 0
-# # while count < len(lines):
-# #     headlines.append(lines[count])
-# #     count = count + 5
-# # print(headlines)
-# # print(lines)
-# #
-# def RoundNumber(num):
-#     sign = num / (abs(num))
-#     standard = (int(abs(num)) + 0.5)
-#     if abs(num) > standard:
-#         return (int(num) + int(sign))
-#     else:
-#         return (int(num))
-# # staffs = GroupNotes.GroupNotes(begin, staff_height*2)
-# #
-# #
-# for i in staffs:
-#     print(i.lines[0])
-# height = []
-# for k in range(len(staffs)):
-#     temp = []
-#     print(len(staffs[k].chords))
-#     for chord in (staffs[k].chords):
-#         anchorPoint = chord.pt1
-#         print(staffs[k].lines[0], anchorPoint[1])
-#         temp.append(RoundNumber((-staffs[k].lines[0] + anchorPoint[1])/(staffline_dist/2)))
-#     height.append(temp)
-# #print(height)
 #
-# result = []
-# for i in height:
-#     temp = []
-#     for j in i:
-#         if j <0:
-#             temp.append(notes_height_1[abs(j)])
-#         else:
-#             temp.append(notes_height[j])
-#     result.append(temp)
-# for i in result:
-#     print(i)
+notes_height = ["mi_1", "re_1", "do_1", "si", "la", "son", "fa", "mi","re", "do", "si-1", "la-1" ]
+notes_height_1 = ["mi_1", "fa_1", "son_1", "la_1", "si_1", "do_2", "re_2", "mi_2", "fa_2", "son_2", "la_2", "si_2"]
+#
+staffline_dist = lines[1] - lines[0] # blank size between 2 lines in one staff
+print("StaffLine distance: ",staffline_dist)
+
+def RoundNumber(num):
+    sign = num / (abs(num))
+    standard = (int(abs(num)) + 0.5)
+    if abs(num) > standard:
+        return (int(num) + int(sign))
+    else:
+        return (int(num))
+
+
+height = []
+for k in range(len(staffs)):
+    temp = []
+    for chord in (staffs[k].chords):
+        anchorPoint = chord.pt1
+        temp.append(RoundNumber((-staffs[k].lines[0] + anchorPoint[1])/(staffline_dist/2)))
+    height.append(temp)
+#print(height)
+
+result = []
+count = 0
+for i in height:
+    temp = []
+    for j in i:
+        count+=1
+        print(count)
+        if j <0:
+            print(abs(j))
+            print(notes_height_1[abs(j)])
+            temp.append(notes_height_1[abs(j)])
+        else:
+            # print(abs(j))
+            # print(j)
+            print(notes_height[j])
+            temp.append(notes_height[j])
+    result.append(temp)
+for i in result:
+    print(i)
 
 cv2.imshow("IMG",img)
 cv2.waitKey(0)

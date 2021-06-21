@@ -18,8 +18,8 @@ class Staff:
         self.end_y = end_y
         self.lines = lines
         self.chords=[]
-    def appendChord(self, chord):
-        self.chords.append(chord)
+    def appendChord(self, chords):
+        self.chords = chords
 
 
 double_close = ChordType("double_close")

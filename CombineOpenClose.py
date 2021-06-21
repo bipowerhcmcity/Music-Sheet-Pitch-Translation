@@ -44,10 +44,10 @@ def findCoupleFromOpen(open, array1, array2,black_chord, staff_height):
 
     for i in range(len(array2)):
         closes.append(array2[i])
-    for i in range(len(closes)):
-        print(closes[i].type)
+    # for i in range(len(closes)):
+    #     print(closes[i].type)
 
-    print(closes)
+    # print(closes)
     count =0
     y = open.pt1[1]
     chords = []

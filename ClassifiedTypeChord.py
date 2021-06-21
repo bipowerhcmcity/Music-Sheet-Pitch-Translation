@@ -35,7 +35,10 @@ def updateIndexArray(img_dir,arrayOfIndexType,pt1, pt2, removal):
         pt1 += temp1
         pt2 += temp2
 
-    indexOfLastElementInData = countNumberOfPointindata - 1
+    if(countNumberOfPointindata==0):
+        indexOfLastElementInData= countNumberOfPointindata
+    else:
+        indexOfLastElementInData = countNumberOfPointindata
     # crash by 2d array of array of index type
     indexOfCurrentElementInIndexType = arrayOfIndexType[len(arrayOfIndexType) - 1]
     print("Array of Index Type",arrayOfIndexType)
@@ -79,7 +82,7 @@ def inputLabel(feature_type, color, removal, img):
             arrayOfIndexType.append(subArray)
 
     print(arrayOfIndexType)
-    nms_index = NMS.non_max_suppression_fast(pt1, pt2, 0.4)
+    nms_index = NMS.non_max_suppression_fast(pt1, pt2, 0.5)
 
     chords = []
     for i in range(int(len(nms_index))):
@@ -90,7 +93,7 @@ def inputLabel(feature_type, color, removal, img):
                 for t in range(len(arrayOfIndexType[j])):
                     if int(nms_index[i]) < arrayOfIndexType[j][t]:
                        # cv2.rectangle(img, pt1[int(nms_index[i])], pt2[int(nms_index[i])], color[j - 1])
-                        print("Point",pt1[int(nms_index[i])],pt2[int(nms_index[i])])
+                        print("Point",pt1[int(nms_index[i])],pt2[int(nms_index[i])],j,t, int(nms_index[i]), arrayOfIndexType[j][t])
                         chords.append(ChordType.Chord(pt1[int(nms_index[i])],pt2[int(nms_index[i])],j,t))
                         breakFlag=True
                         break
