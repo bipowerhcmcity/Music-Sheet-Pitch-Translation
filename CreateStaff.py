@@ -1,12 +1,13 @@
 import ChordType
-def initStaff(staff_height, lines):
+def initStaff(lines):
     line_staff = []
     staffs = []
+    distance_staff = abs(lines[5] - lines[4])
     for i in range(len(lines)):
         countLine = i+1
         if(countLine%5==0):
-            y_begin = lines[countLine-5]-staff_height/2
-            y_end = lines[i]+staff_height/2
+            y_begin = lines[countLine-5]-distance_staff/2
+            y_end = lines[i]+distance_staff/2
 
             line_staff.append(lines[i])
             lines_copy = line_staff.copy()
@@ -30,3 +31,17 @@ def groupNoteToStaff(chords, staffs, threshhold=5):
                 print("Not insert")
         staff.sort(key=lambda chord: chord.pt1[0], reverse=False)
         staffs[k].appendChord(staff)
+
+def groupSymbolToStaff(symbols, staffs, threshhold=5):
+    for k in range(len(staffs)):
+        staff = []
+        for symbol in symbols:
+            anchorPoint = tuple(map(lambda i, j: (i + j)/2, symbol.pt1, symbol.pt2))
+            print(anchorPoint, staffs[k].begin_y,staffs[k].end_y)
+            if(anchorPoint[1]>=staffs[k].begin_y-threshhold and anchorPoint[1]<=staffs[k].end_y+threshhold):
+                staff.append(symbol)
+            else:
+                print("Not insert")
+        staff.sort(key=lambda chord: chord.pt1[0], reverse=False)
+        staffs[k].appendSymbol(staff)
+

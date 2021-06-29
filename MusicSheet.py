@@ -21,9 +21,9 @@ lines, staff_height = HoughTransform.RunLengthEncoding.DrawLine(False,img)
 removal = StaffLineRemoval.StaffLineRemoval(img)
 print("Staff_Height",staff_height)
 
-staffs = CreateStaff.initStaff(staff_height,lines)
+staffs = CreateStaff.initStaff(lines)
 
-
+print(staffs)
 #
 chordsType = ClassifiedTypeChord.inputLabel(feature_type,color,removal,img)
 for i in range(len(chordsType)):
@@ -40,96 +40,96 @@ for i in range(len(chordsType)):
         onlySymbol.append(chordsType[i])
 
 
-
 CreateStaff.groupNoteToStaff(onlyChord,staffs)
-for staff in staffs:
-    print(staff.begin_y)
-    for chord in staff.chords:
-        print(chord.pt1, chord.pt2, chord.type,chord.sub_type)
+CreateStaff.groupSymbolToStaff(onlySymbol,staffs)
 
-
-
-for i in range(len(chordsType)):
-    chord = chordsType[i]
-    if(chord.type==1):
-        cv2.rectangle(img,chord.pt1,chord.pt2,color[0])
-    elif(chord.type==2 and chord.sub_type==1):
-        cv2.rectangle(img,chord.pt1,chord.pt2,color[1])
-    elif (chord.type == 2 and chord.sub_type == 2):
-        cv2.rectangle(img, chord.pt1, chord.pt2, color[2])
-    elif (chord.type == 3 and chord.sub_type == 1):
-        cv2.rectangle(img, chord.pt1, chord.pt2, color[3])
-    elif (chord.type == 3 and chord.sub_type == 2):
-        cv2.rectangle(img, chord.pt1, chord.pt2, color[4])
-    elif (chord.type == 4 ):
-        cv2.rectangle(img, chord.pt1, chord.pt2, color[5])
-cv2.imwrite("result.jpg",img)
-print("Sucessfully write result....")
-
-CombineOpenClose.getCombinedType(chordsType,staff_height, img)
-
-
-pt_clef1, pt_clef2 = ClassifiedTypeChord.addFeature(clef_sol,removal)
-h_clef = cv2.cvtColor(clef_sol,cv2.COLOR_BGR2GRAY)
-h_clef = clef_sol.shape[0]
+# for i in range(10):
+#     for symbol in staffs[i].symbols:
+#         cv2.circle(img, symbol.pt1, radius=4, color=(0, 255, 255), thickness=-1)  # yellow
+#     cv2.imwrite("check_Symbol_staff"+str(i)+".jpg",img)
 #
 #
+# for i in range(len(chordsType)):
+#     chord = chordsType[i]
+#     if(chord.type==1):
+#         cv2.rectangle(img,chord.pt1,chord.pt2,color[0])
+#     elif(chord.type==2 and chord.sub_type==1):
+#         cv2.rectangle(img,chord.pt1,chord.pt2,color[1])
+#     elif (chord.type == 2 and chord.sub_type == 2):
+#         cv2.rectangle(img, chord.pt1, chord.pt2, color[2])
+#     elif (chord.type == 3 and chord.sub_type == 1):
+#         cv2.rectangle(img, chord.pt1, chord.pt2, color[3])
+#     elif (chord.type == 3 and chord.sub_type == 2):
+#         cv2.rectangle(img, chord.pt1, chord.pt2, color[4])
+#     elif (chord.type == 4 ):
+#         cv2.rectangle(img, chord.pt1, chord.pt2, color[5])
+# cv2.imwrite("result.jpg",img)
+# print("Sucessfully write result....")
 #
-# # for pt in pt_clef1:
-# #     for i in range(pt[1],h_clef+pt[1],1):
-# #         for line in lines:
-# #             if(i==line):
-# #                 cv2.line(img, (-1000, line), (1000, line), (127, 127, 127), 1)
-#
-# # # Lines:
-# # for line in lines:
-# #         cv2.line(img, (-1000, line), (1000, line), (255,255,255), 1)
+CombineOpenClose.getCombinedType(staffs, img)
 #
 #
+# pt_clef1, pt_clef2 = ClassifiedTypeChord.addFeature(clef_sol,removal)
+# h_clef = cv2.cvtColor(clef_sol,cv2.COLOR_BGR2GRAY)
+# h_clef = clef_sol.shape[0]
+# #
+# #
+# #
+# # # for pt in pt_clef1:
+# # #     for i in range(pt[1],h_clef+pt[1],1):
+# # #         for line in lines:
+# # #             if(i==line):
+# # #                 cv2.line(img, (-1000, line), (1000, line), (127, 127, 127), 1)
+# #
+# # # # Lines:
+# # # for line in lines:
+# # #         cv2.line(img, (-1000, line), (1000, line), (255,255,255), 1)
+# #
+# #
+# #
+# notes_height = ["mi_1", "re_1", "do_1", "si", "la", "son", "fa", "mi","re", "do", "si-1", "la-1" ]
+# notes_height_1 = ["mi_1", "fa_1", "son_1", "la_1", "si_1", "do_2", "re_2", "mi_2", "fa_2", "son_2", "la_2", "si_2"]
+# #
+# staffline_dist = lines[1] - lines[0] # blank size between 2 lines in one staff
+# print("StaffLine distance: ",staffline_dist)
 #
-notes_height = ["mi_1", "re_1", "do_1", "si", "la", "son", "fa", "mi","re", "do", "si-1", "la-1" ]
-notes_height_1 = ["mi_1", "fa_1", "son_1", "la_1", "si_1", "do_2", "re_2", "mi_2", "fa_2", "son_2", "la_2", "si_2"]
+# def RoundNumber(num):
+#     sign = num / (abs(num))
+#     standard = (int(abs(num)) + 0.5)
+#     if abs(num) > standard:
+#         return (int(num) + int(sign))
+#     else:
+#         return (int(num))
 #
-staffline_dist = lines[1] - lines[0] # blank size between 2 lines in one staff
-print("StaffLine distance: ",staffline_dist)
-
-def RoundNumber(num):
-    sign = num / (abs(num))
-    standard = (int(abs(num)) + 0.5)
-    if abs(num) > standard:
-        return (int(num) + int(sign))
-    else:
-        return (int(num))
-
-
-height = []
-for k in range(len(staffs)):
-    temp = []
-    for chord in (staffs[k].chords):
-        anchorPoint = chord.pt1
-        temp.append(RoundNumber((-staffs[k].lines[0] + anchorPoint[1])/(staffline_dist/2)))
-    height.append(temp)
-#print(height)
-
-result = []
-count = 0
-for i in height:
-    temp = []
-    for j in i:
-        count+=1
-        print(count)
-        if j <0:
-            print(abs(j))
-            print(notes_height_1[abs(j)])
-            temp.append(notes_height_1[abs(j)])
-        else:
-            # print(abs(j))
-            # print(j)
-            print(notes_height[j])
-            temp.append(notes_height[j])
-    result.append(temp)
-for i in result:
-    print(i)
-
+#
+# height = []
+# for k in range(len(staffs)):
+#     temp = []
+#     for chord in (staffs[k].chords):
+#         anchorPoint = chord.pt1
+#         temp.append(RoundNumber((-staffs[k].lines[0] + anchorPoint[1])/(staffline_dist/2)))
+#     height.append(temp)
+# #print(height)
+#
+# result = []
+# count = 0
+# for i in height:
+#     temp = []
+#     for j in i:
+#         count+=1
+#         print(count)
+#         if j <0:
+#             print(abs(j))
+#             print(notes_height_1[abs(j)])
+#             temp.append(notes_height_1[abs(j)])
+#         else:
+#             # print(abs(j))
+#             # print(j)
+#             print(notes_height[j])
+#             temp.append(notes_height[j])
+#     result.append(temp)
+# for i in result:
+#     print(i)
+#
 cv2.imshow("IMG",img)
 cv2.waitKey(0)
