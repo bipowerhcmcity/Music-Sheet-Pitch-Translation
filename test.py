@@ -1,10 +1,11 @@
-array = [-1,1,-2,2,3]
+def removeArrayFromArray(array1):
+    print(array1)
+    array1.pop(0)
+    print(array1)
+    return array1
 
-min = 3
-for i in range(len(array)):
-    if array[i]<0:continue
-    else:
-        if array[i]>0 and array[i]<array[min]:
-            min = i
 
-print(min)
+array1 = [1,2,3,4,5,6,7]
+
+array3 = removeArrayFromArray(array1)
+print(array3)

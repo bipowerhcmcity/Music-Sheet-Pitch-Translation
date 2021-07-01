@@ -43,30 +43,10 @@ for i in range(len(chordsType)):
 CreateStaff.groupNoteToStaff(onlyChord,staffs)
 CreateStaff.groupSymbolToStaff(onlySymbol,staffs)
 
-# for i in range(10):
-#     for symbol in staffs[i].symbols:
-#         cv2.circle(img, symbol.pt1, radius=4, color=(0, 255, 255), thickness=-1)  # yellow
-#     cv2.imwrite("check_Symbol_staff"+str(i)+".jpg",img)
-#
-#
-# for i in range(len(chordsType)):
-#     chord = chordsType[i]
-#     if(chord.type==1):
-#         cv2.rectangle(img,chord.pt1,chord.pt2,color[0])
-#     elif(chord.type==2 and chord.sub_type==1):
-#         cv2.rectangle(img,chord.pt1,chord.pt2,color[1])
-#     elif (chord.type == 2 and chord.sub_type == 2):
-#         cv2.rectangle(img, chord.pt1, chord.pt2, color[2])
-#     elif (chord.type == 3 and chord.sub_type == 1):
-#         cv2.rectangle(img, chord.pt1, chord.pt2, color[3])
-#     elif (chord.type == 3 and chord.sub_type == 2):
-#         cv2.rectangle(img, chord.pt1, chord.pt2, color[4])
-#     elif (chord.type == 4 ):
-#         cv2.rectangle(img, chord.pt1, chord.pt2, color[5])
-# cv2.imwrite("result.jpg",img)
+
 # print("Sucessfully write result....")
 #
-CombineOpenClose.getCombinedType(staffs, img)
+blackChord, singleChord, doubleChord = CombineOpenClose.getCombinedType(staffs, img)
 #
 #
 # pt_clef1, pt_clef2 = ClassifiedTypeChord.addFeature(clef_sol,removal)
