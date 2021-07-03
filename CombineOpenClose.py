@@ -1,15 +1,12 @@
 import cv2
 def getCombinedType(staffs,img):
-
     # 2 cases: Single Open in 5 type of double staff.
-    singleChord = []
-    doubleChord = []
-    blackChord = []
-
-    for j in range(10):
-        staff1 = staffs[j]
+    for z in range(10):
+        staff1 = staffs[z]
         StaffSymbol=[]
         StaffChord = []
+
+        result_chords = []
 
         for i in range(len(staff1.chords)):
             StaffChord.append(staff1.chords[i])
@@ -38,7 +35,8 @@ def getCombinedType(staffs,img):
             cv2.circle(img, result_close.pt2, radius=4, color=(0,0,255), thickness=-1) #red
             for j in range(len(chords)):
                 cv2.circle(img, chords[j].pt1, radius=4, color=(204,0,102), thickness=-1) #purple
-                singleChord.append(chords)
+                chords[j].type = 2
+                result_chords.append(chords[j])
 
         for i in range(len(doubleOpen)):
             chords,result_close = findCoupleFromOpen(doubleOpen[i],doubleClose,singleOpen, black_chord)
@@ -50,19 +48,19 @@ def getCombinedType(staffs,img):
             cv2.circle(img, result_close.pt2, radius=4, color=(0,0,255), thickness=-1) #red
             for j in range(len(chords)):
                 cv2.circle(img, chords[j].pt1, radius=4, color=(255,0,0), thickness=-1)  # blue
-                doubleChord.append(chords)
+                chords[j].type = 3
+                result_chords.append(chords[j])
         print("Black chord",len(black_chord))
-        for i in range(len(black_chord)):
-            blackChord.append(black_chord[i])
+        if(len(black_chord) >0):
+            for i in range(len(black_chord)):
+                black_chord[i].type = 1
+                result_chords.append(black_chord[i])
+        print("Result chords: ", len(result_chords))
+        result_chords.sort(key=lambda chord: chord.pt1[0], reverse=False)
+        staffs[z].chords = result_chords
 
 
     cv2.imwrite("fullOption.jpg",img)
-
-    print(len(singleChord))
-    print(len(doubleChord))
-    print(len(blackChord))
-
-    return blackChord, singleChord, doubleChord
 
 def getArrayType(chordsType, type,sub_type):
     result = []
