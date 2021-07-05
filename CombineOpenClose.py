@@ -1,4 +1,5 @@
 import cv2
+import ChordType
 def getCombinedType(staffs,img):
     # 2 cases: Single Open in 5 type of double staff.
     for z in range(10):
@@ -13,6 +14,9 @@ def getCombinedType(staffs,img):
         for i in range(len(staff1.symbols)):
             StaffSymbol.append(staff1.symbols[i])
 
+        #
+        sharp = getArrayType(StaffSymbol,5,None)
+        print("Size of Sharp in Staff",z,": ",len(sharp))
 
         singleOpen = getArrayType(StaffSymbol,3,2)
         singleClose = getArrayType(StaffSymbol, 3, 1)
@@ -25,8 +29,21 @@ def getCombinedType(staffs,img):
 
 
         black_chord = getArrayType(StaffChord,1,None)
+        white_chord = getArrayType(StaffChord,4,None)
         print(len(black_chord))
 
+        # update sharp to chords:
+
+        for i in range(len(sharp)):
+            chordBlack = findSingleSymbolInChord(black_chord,sharp[i],1)
+            chordWhite = findSingleSymbolInChord(white_chord, sharp[i], 1)
+            print(chordBlack)
+            # print(chord)
+            if(isinstance(chordBlack,ChordType.Chord)):
+                chordBlack.sharp = True
+            if (isinstance(chordWhite, ChordType.Chord)):
+                chordWhite.sharp = True
+        print("Single Open",len(singleOpen))
         for i in range(len(singleOpen)):
             chords,result_close = findCoupleFromOpen(singleOpen[i],singleClose,doubleOpen, black_chord)
             print("Removed chords: ",len(chords))
@@ -86,7 +103,21 @@ def removeElementFromArray(array,element):
             array.pop(j)
             break
 
+def findSingleSymbolInChord(chord, symbol, option=1):
+    # option 1 : find note in the right most hand side.
+    # option -1 : find note in the left most hand side.
 
+    xSymbol = int((symbol.pt1[0] + symbol.pt2[0])/2)
+    count = 20
+    while count>0:
+        for i in range(len(chord)):
+            xChord = int((chord[i].pt1[0] + chord[i].pt2[0]) / 2)
+            if xSymbol== xChord:
+                print(chord[i].pt1[0])
+                return chord[i]
+                break
+        xSymbol+=option
+        count-=1
 
 def findCoupleFromOpen(open, array1, array2,black_chord):
     result_close = open

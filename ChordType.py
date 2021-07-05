@@ -8,9 +8,15 @@ class Chord:
         self.pt1 = pt1
         self.pt2 = pt2
         self.type = type
+        self.sharp = False
+        self.flat = False
         self.sub_type = sub_type
     def getInfo(self):
         return str(self.type)+"_"+str(self.sub_type)+"-"+str(self.pt1)+"-"+str(self.pt2)
+    def updateSharp(self, option):
+        self.sharp = option
+    def updateFlat(self, option):
+        self.flat = option
 
 class Staff:
     def __init__(self,begin_y, end_y, lines):
@@ -35,12 +41,14 @@ black_chord = ChordType("black_chord")
 
 white_chord = ChordType("white_chord")
 
+sharp = ChordType("sharp")
+
 single_close = ChordType("single_close")
 single_open = ChordType("single_open")
 
 single = ChordType("single",[single_close,single_open])
 
-root = ChordType("",[black_chord,double,single,white_chord])
+root = ChordType("",[black_chord,double,single,white_chord,sharp])
 
 
 

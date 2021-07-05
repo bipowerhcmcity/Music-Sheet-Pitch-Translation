@@ -24,24 +24,20 @@ def groupNoteToStaff(chords, staffs, threshhold=5):
         staff = []
         for chord in chords:
             anchorPoint = tuple(map(lambda i, j: (i + j)/2, chord.pt1, chord.pt2))
-            print(anchorPoint, staffs[k].begin_y,staffs[k].end_y)
             if(anchorPoint[1]>=staffs[k].begin_y-threshhold and anchorPoint[1]<=staffs[k].end_y+threshhold):
                 staff.append(chord)
-            else:
-                print("Not insert")
         staff.sort(key=lambda chord: chord.pt1[0], reverse=False)
         staffs[k].appendChord(staff)
 
 def groupSymbolToStaff(symbols, staffs, threshhold=5):
     for k in range(len(staffs)):
-        staff = []
+        staff = staffs[k].symbols
         for symbol in symbols:
             anchorPoint = tuple(map(lambda i, j: (i + j)/2, symbol.pt1, symbol.pt2))
-            print(anchorPoint, staffs[k].begin_y,staffs[k].end_y)
             if(anchorPoint[1]>=staffs[k].begin_y-threshhold and anchorPoint[1]<=staffs[k].end_y+threshhold):
                 staff.append(symbol)
-            else:
-                print("Not insert")
-        staff.sort(key=lambda chord: chord.pt1[0], reverse=False)
+        staff.sort(key=lambda symbol: symbol.pt1[0], reverse=False)
+        for i in range(len(staff)):
+            print(k, " - ",staff[i].type)
         staffs[k].appendSymbol(staff)
 
