@@ -76,8 +76,8 @@ for i in range(len(staffs)):
 # # #                 cv2.line(img, (-1000, line), (1000, line), (127, 127, 127), 1)
 # #
 # # # # Lines:
-# # # for line in lines:
-# # #         cv2.line(img, (-1000, line), (1000, line), (255,255,255), 1)
+# for line in lines:
+#         cv2.line(img, (-1000, line), (1000, line), (255,255,255), 1)
 # #
 # #
 # #
