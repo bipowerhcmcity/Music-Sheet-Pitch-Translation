@@ -17,6 +17,8 @@ class Chord:
         self.sharp = option
     def updateFlat(self, option):
         self.flat = option
+    def ReleasdData(self):
+        return tuple([self.type,self.sub_type,self.pt1, self.sharp, self.flat])
 
 class Staff:
     def __init__(self,begin_y, end_y, lines):
@@ -30,6 +32,12 @@ class Staff:
         self.chords = chords
     def appendSymbol(self, symbols):
         self.symbols = symbols
+    def GetNoteInfo(self):
+        data = []
+        for i in self.chords:
+            data.append(i.ReleasdData())
+        return data
+
 
 
 double_close = ChordType("double_close")
