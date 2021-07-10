@@ -9,10 +9,8 @@ import ChordType
 import CreateStaff
 import CombineOpenClose
 import NotesTranslation
-<<<<<<< HEAD
 import NoteTranspose
-=======
->>>>>>> 057e0a9fdca545c1416d782a34f9264b27b3648c
+
 
 #feature_type = ["black_chord","double close","double open","single close","single open","white_chord"]
 color = [(0,0,255),(0,255,0),(0,255,255),(255,0,0),(204,0,102),(0,0,0)] # red, green, yellow, blue, purple, black
@@ -73,8 +71,6 @@ CreateStaff.groupSymbolToStaff(onlySharp,staffs)
 # # print("Sucessfully write result....")
 # #
 CombineOpenClose.getCombinedType(staffs, img)
-<<<<<<< HEAD
-=======
 #for i in range(len(staffs)):
 #    for j in range(len(staffs[i].chords)):
 #        print("Staff",i," chord ",j,staffs[i].chords[j].sharp)
