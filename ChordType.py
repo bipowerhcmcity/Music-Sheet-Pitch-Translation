@@ -20,6 +20,7 @@ class Chord:
     def ReleasdData(self):
         return tuple([self.type,self.sub_type,self.pt1,self.sharp,self.flat])
 
+
 class Staff:
     def __init__(self,begin_y, end_y, lines):
         self.begin_y = begin_y
@@ -36,8 +37,8 @@ class Staff:
         data = []
         for i in self.chords:
             data.append(i.ReleasdData())
-            #data.append(i.getInfo())
         return data
+
 
 
 double_close = ChordType("double_close")

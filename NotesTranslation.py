@@ -1,5 +1,3 @@
-import numpy
-import ChordType
 
 notes_height = ['E5', 'D5', 'C5', 'B4', 'A4', 'G4', 'F4','E4', 'D4', 'C4', 'B3', 'A3', 'G3', 'F3','E3', 'D3', 'C3']#, 'B', 'A', 'G', 'F','E', 'D', 'C', 'B', 'A', 'G', 'F']
 notes_height_1 = ['E5', 'F5', 'G5', 'A5', 'B5', 'C6', 'D6', 'E6', 'F6','G6']
@@ -67,7 +65,7 @@ def ReOrderedStaffs(staffs):
 					else:
 						sub_temp.append(SUB[0])
 						main_temp.append(tuple([0, "NONE", (0,0), False, False]))
-						SUB.remove(SUB[0])						
+						SUB.remove(SUB[0])
 			else:
 				if len(SUB) == 0:
 					main_temp.append(MAIN[0])
@@ -109,7 +107,7 @@ def Pos2Height(data, headlines, staffline_dist):
 		for pos in (data[i]):
 			tempT = pos[2]
 			temp.append(tuple([pos[0], str(pos[1]), RoundNumber((-headlines[i] + tempT[1])/(staffline_dist/2)), pos[3], pos[4]]))
-			temp_1.append((-headlines[i] + tempT[1])/(staffline_dist/2))        
+			temp_1.append((-headlines[i] + tempT[1])/(staffline_dist/2))
 		height.append(temp)
 		unprocess_height.append(temp_1)
 	return unprocess_height, height
