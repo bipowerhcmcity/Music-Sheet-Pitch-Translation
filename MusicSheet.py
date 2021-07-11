@@ -10,6 +10,7 @@ import CreateStaff
 import CombineOpenClose
 import NotesTranslation
 import NoteTranspose
+import ReduceSharp
 
 
 #feature_type = ["black_chord","double close","double open","single close","single open","white_chord"]
@@ -103,24 +104,38 @@ MAIN, BASS = NotesTranslation.SeparateMainNSUB(data)
 MAIN = NotesTranslation.Pos2Note(MAIN, "MAIN")
 BASS = NotesTranslation.Pos2Note(BASS, "BASS")
 
-# NoteTranspose.transpose(MAIN, -2)
-# NoteTranspose.transpose(BASS, -2)
 
+nonSharpIndex = ReduceSharp.getNonSharpNote(MAIN+BASS)
+
+NoteTranspose.transpose(MAIN, 1)
+NoteTranspose.transpose(BASS, 1)
+
+
+
+# for i,j in zip(MAIN, BASS):
+#    print(i)
+#    print(j)
+#
+# file_handle_1 = open('note_type.csv', 'w')
+# file_handle_2 = open('note.csv', 'w')
+# for i,j in zip(MAIN, BASS):
+#     file_handle_1.write(','.join([str(note_main[0]) for note_main in i]) + '\n')
+#     file_handle_1.write(','.join([str(note_bass[0]) for note_bass in j]) + '\n')
+#     file_handle_2.write(','.join([str(note_main[2]) for note_main in i]) + '\n')
+#     file_handle_2.write(','.join([str(note_bass[2]) for note_bass in j]) + '\n')
+# file_handle_1.close()
+# file_handle_2.close()
+
+
+# Reduce Sharp: just reduce the permanent sharp
+allNoteHasSharp = ReduceSharp.getAllNoteHasSharp(MAIN+BASS, nonSharpIndex)
+print("Sharp are in note", allNoteHasSharp)
+symbol, level = ReduceSharp.IdentifySharpOrFlat(allNoteHasSharp)
+ReduceSharp.reduceSharp(MAIN+BASS,symbol,level)
 
 for i,j in zip(MAIN, BASS):
    print(i)
    print(j)
-
-file_handle_1 = open('note_type.csv', 'w')
-file_handle_2 = open('note.csv', 'w')
-for i,j in zip(MAIN, BASS):
-    file_handle_1.write(','.join([str(note_main[0]) for note_main in i]) + '\n')
-    file_handle_1.write(','.join([str(note_bass[0]) for note_bass in j]) + '\n')
-    file_handle_2.write(','.join([str(note_main[2]) for note_main in i]) + '\n')
-    file_handle_2.write(','.join([str(note_bass[2]) for note_bass in j]) + '\n')
-file_handle_1.close()
-file_handle_2.close()
-
 
 cv2.imshow("IMG",img)
 cv2.waitKey(0)

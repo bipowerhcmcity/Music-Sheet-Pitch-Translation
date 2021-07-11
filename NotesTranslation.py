@@ -51,7 +51,6 @@ def ReOrderedStaffs(staffs):
 		while len(MAIN) >0 or len(SUB)>0:
 			if len(MAIN) > 0 and len(SUB)>0:
 				DIS = HorzDist(MAIN[0][2], SUB[0][2])
-				print(DIS)
 				if DIS <=threshold:
 					main_temp.append(MAIN[0])
 					sub_temp.append(SUB[0])
@@ -120,7 +119,6 @@ def Pos2Note(data, key):
 		for staff in data:
 			temp = []
 			for note in staff:
-				print("Note",note)
 				if note[2] <0 and abs(note[2]) < len(notes_height_1):
 					temp.append(tuple([note[0], note[1], notes_height_1[abs(note[2])],note[3],note[4]]))
 				elif note[2]>=0 and note[2] < len(notes_height):
