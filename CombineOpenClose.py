@@ -17,6 +17,8 @@ def getCombinedType(staffs,img):
         #
         sharp = getArrayType(StaffSymbol,5,None)
 
+
+
         singleOpen = getArrayType(StaffSymbol,3,2)
         singleClose = getArrayType(StaffSymbol, 3, 1)
         doubleOpen = getArrayType(StaffSymbol,2,2)
@@ -66,6 +68,9 @@ def getCombinedType(staffs,img):
             for i in range(len(black_chord)):
                 black_chord[i].type = 1
                 result_chords.append(black_chord[i])
+
+        for i in range(len(white_chord)):
+            result_chords.append(white_chord[i])
         result_chords.sort(key=lambda chord: chord.pt1[0], reverse=False)
         staffs[z].chords = result_chords
 

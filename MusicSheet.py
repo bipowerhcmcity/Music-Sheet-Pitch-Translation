@@ -43,7 +43,11 @@ print(staffs)
 #
 chordsType = ClassifiedTypeChord.inputLabel(feature_type,color,removal,img)
 for i in range(len(chordsType)):
-    print(chordsType[i].type,chordsType[i].sub_type," : ",chordsType[i].pt1 )
+    if(chordsType[i].type == 4):
+        cv2.circle(img, chordsType[i].pt1, radius=4, color=(204,0,102), thickness=-1) #purple
+        print(chordsType[i].type,chordsType[i].sub_type," : ",chordsType[i].pt1 )
+
+
 
 onlySharp = []
 for i in range(len(chordsType)):
@@ -107,14 +111,14 @@ BASS = NotesTranslation.Pos2Note(BASS, "BASS")
 
 nonSharpIndex = ReduceSharp.getNonSharpNote(MAIN+BASS)
 
-NoteTranspose.transpose(MAIN, 1)
-NoteTranspose.transpose(BASS, 1)
+NoteTranspose.transpose(MAIN, 2)
+NoteTranspose.transpose(BASS, 2)
 
 
 
-# for i,j in zip(MAIN, BASS):
-#    print(i)
-#    print(j)
+for i,j in zip(MAIN, BASS):
+   print(i)
+   print(j)
 #
 # file_handle_1 = open('note_type.csv', 'w')
 # file_handle_2 = open('note.csv', 'w')
