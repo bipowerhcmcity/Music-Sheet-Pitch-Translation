@@ -104,9 +104,9 @@ def Pos2Height(data, headlines, staffline_dist):
 		temp = []
 		temp_1 = []
 		for pos in (data[i]):
-			tempT = pos[2]
-			temp.append(tuple([pos[0], str(pos[1]), RoundNumber((-headlines[i] + tempT[1])/(staffline_dist/2)), pos[3], pos[4]]))
-			temp_1.append((-headlines[i] + tempT[1])/(staffline_dist/2))
+			note_position = pos[2]
+			temp.append(tuple([pos[0], str(pos[1]), RoundNumber((-headlines[i] + note_position[1])/(staffline_dist/2)), pos[3], pos[4]]))
+			temp_1.append((-headlines[i] + note_position[1])/(staffline_dist/2))
 		height.append(temp)
 		unprocess_height.append(temp_1)
 	return unprocess_height, height
