@@ -1,0 +1,112 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage[utf8]{inputenc}
+% \usepackage[Vietnamese]{babel}
+\usepackage{titling}
+%package the indent the first line in latex
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{ragged2e}
+\usepackage{afterpage}
+
+%adding bibliography
+% \usepackage[backend=biber]{biblatex}
+% \addbibresource{test.bib}
+
+
+\graphicspath{{/home/pj/Documents/proposal/}}
+
+%making the numbering in Roman format 
+\renewcommand\thesection{\Roman{section}}
+\renewcommand\thesubsection{\roman{subsection}}
+
+\setlength{\droptitle}{-8cm}
+
+\usepackage{tikz}
+
+\pretitle{
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-1.5pt,xshift=1pt]%
+        at (current page.north west)
+        {\includegraphics{vgu_logo}};
+    \end{tikzpicture}
+}
+\posttitle{}
+
+\begin{titlepage}
+	\title{ MUSIC SHEET UNDERSTANDING AND TONE MODULATION}
+	\author{}
+\end{titlepage}
+
+
+\begin{document}
+
+\afterpage{\null\newpage}
+
+\maketitle
+
+\tableofcontents
+
+\clearpage
+
+\section{Research team members}
+\begin{itemize}
+	\item Team Leader:      \hfill Truong Minh Khoa
+	\item Programmer: 		\hfill Dinh Cong Minh
+	\item ML Engineer:		\hfill Nguyen Tho Anh Khoa
+	\item Writer/Editor:	\hfill Huynh Minh Triet
+\end{itemize}
+
+
+\section{Disclaimer} 
+This report is a product of our team's work, unless otherwise referenced. In
+addition, all opinions, results, conclusions, and recommendations are of our own
+and may not represent the policies or opinions of the Vietnamese-German
+University's Department of Engineering or the University as a whole. 
+
+\clearpage
+
+\section{Abstract}
+
+\section{Introduction}
+
+The topic of recognizing musical sheets, i.e., Optical Music Recognition (OMR),
+is not a novel field of research. The term OMR first appeared in a paper written
+by MIT scientists in the 60s.  During the last three decades until now, OMR is
+an ever increasingly developing field and is capable of solving many problems
+that involves with music
+
+More specifically, the current OMR systems of today are capable enough to
+recognize a printed musical sheet and digitize it. The resulting output could be
+a .midi file, or other types of sound files such as .way, .mp3. The vast
+majority of those researches are dedicated for the common user, even for users
+who are not educated on musical theory, but there is still a lack of product
+that can be used for professional or enthusiast musicians. In reality, a common
+problem that is encountered is the modulation of music tones, i.e., up or down
+semitone, tone for the whole music sheet. Currently in order to obtain a music
+sheet with a few tones higher or lower the musicsian has to manually retype the
+entire musical sheet by hand, which is labor intensive.
+
+\subsection{Our solution}
+We propose an algorithm that can take it a pdf file as it input, then shift the
+tone of the entire song up or down to the number of tones, semitones according
+to the musician's need. 
+
+
+\clearpage
+
+\section{Proposed Method}
+To acheive our desire result we need to first remove the lines on each staff,
+second we translate the pictorial images of the note into text based notation,
+finally we will run our algorithm to shift our tones 
+
+\subsection{Line Removal}
+
+
+
+
+% \printbibliography
+
+
+\end{document}

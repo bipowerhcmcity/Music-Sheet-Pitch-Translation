@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {I}Research team members}{2}%
+\contentsline {section}{\numberline {II}Disclaimer}{2}%
+\contentsline {section}{\numberline {III}Abstract}{3}%
+\contentsline {section}{\numberline {IV}Introduction}{3}%
+\contentsline {subsection}{\numberline {i}Our solution}{3}%
+\contentsline {section}{\numberline {V}Proposed Method}{4}%
+\contentsline {subsection}{\numberline {i}Line Removal}{4}%
