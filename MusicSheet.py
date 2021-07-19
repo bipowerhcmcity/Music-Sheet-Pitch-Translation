@@ -11,6 +11,7 @@ import CombineOpenClose
 import NotesTranslation
 import NoteTranspose
 import ReduceSharp
+import PartitionStave
 
 
 #feature_type = ["black_chord","double close","double open","single close","single open","white_chord"]
@@ -56,6 +57,17 @@ for i in range(len(chordsType)):
 
 print("Only Sharp: ",onlySharp)
 
+onlyVerticalLine = []
+for i in range(len(chordsType)):
+    if(chordsType[i].type ==6):
+        centerX= int((chordsType[i].pt1[0] + chordsType[i].pt2[0])/2)
+        pt = tuple([centerX,chordsType[i].pt1[1]])
+        onlyVerticalLine.append(pt)
+
+print("Only Vertical Line: ",onlyVerticalLine)
+PartitionStave.markPartition(staffs,onlyVerticalLine)
+
+
 onlyChord = []
 for i in range(len(chordsType)):
     if(chordsType[i].type==1 or chordsType[i].type==4 ):
@@ -65,41 +77,42 @@ onlySymbol = []
 for i in range(len(chordsType)):
     if(chordsType[i].type==2 or chordsType[i].type==3 ):
         onlySymbol.append(chordsType[i])
+
+eighthRest = []
+for i in range(len(chordsType)):
+    if (chordsType[i].type == 7):
+        eighthRest.append(chordsType[i])
+print("eight Rest: ",eighthRest)
+
+dotRest = []
+for i in range(len(chordsType)):
+    if (chordsType[i].type == 8):
+        dotRest.append(chordsType[i])
+print("dot Rest: ", dotRest)
 #
 #
 CreateStaff.groupNoteToStaff(onlyChord,staffs)
 CreateStaff.groupSymbolToStaff(onlySymbol,staffs)
 CreateStaff.groupSymbolToStaff(onlySharp,staffs)
-
+CreateStaff.groupSymbolToStaff(eighthRest,staffs)
+CreateStaff.groupSymbolToStaff(dotRest,staffs)
 #
-#
-# # print("Sucessfully write result....")
 # #
+# #
+# # # print("Sucessfully write result....")
+# # #
 CombineOpenClose.getCombinedType(staffs, img)
-#for i in range(len(staffs)):
-#    for j in range(len(staffs[i].chords)):
-#        print("Staff",i," chord ",j,staffs[i].chords[j].sharp)
+PartitionStave.groupNoteToPartition(staffs)
 
-
-
+# #for i in range(len(staffs)):
+# #    for j in range(len(staffs[i].chords)):
+# #        print("Staff",i," chord ",j,staffs[i].chords[j].sharp)
+#
+#
+#
 data = NotesTranslation.Pos2Pos(staffs)
 data = NotesTranslation.ReOrderedStaffs(data)
-#for i in data:
-#    print(i)
-
-unprocessed_data, data = NotesTranslation.Pos2Height(data, headlines, abs(lines[0] - lines[1]))
-
-
-MAIN, BASS = NotesTranslation.SeparateMainNSUB(data)
-MAIN = NotesTranslation.Pos2Note(MAIN, "MAIN")
-BASS = NotesTranslation.Pos2Note(BASS, "BASS")
-#for i,j in zip(MAIN, BASS):
-#    print(i)
-#    print(j)
-data = NotesTranslation.Pos2Pos(staffs)
-data = NotesTranslation.ReOrderedStaffs(data)
-
-
+# to add more parameter to result: add to relesedata, reorder, post2Height, pos2Note
 
 unprocessed_data, data = NotesTranslation.Pos2Height(data, headlines, abs(lines[0] - lines[1]))
 

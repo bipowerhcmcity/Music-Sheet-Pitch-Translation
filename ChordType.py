@@ -10,15 +10,15 @@ class Chord:
         self.type = type
         self.sharp = False
         self.flat = False
+        self.multiple = False
         self.sub_type = sub_type
+        self.dot = False
+    def updateMultiple(self,option):
+        self.multiple = option
     def getInfo(self):
         return str(self.type)+"_"+str(self.sub_type)+"-"+str(self.pt1)+"-"+str(self.pt2)
-    def updateSharp(self, option):
-        self.sharp = option
-    def updateFlat(self, option):
-        self.flat = option
     def ReleasdData(self):
-        return tuple([self.type,self.sub_type,self.pt1,self.sharp,self.flat])
+        return tuple([self.type,self.sub_type,self.pt1,self.sharp,self.flat,self.multiple,self.dot])
 
 
 class Staff:
@@ -28,6 +28,7 @@ class Staff:
         self.lines = lines
         self.chords=[]
         self.symbols = []
+        self.point_part = []
 
     def appendChord(self, chords):
         self.chords = chords
@@ -57,7 +58,11 @@ single_open = ChordType("single_open")
 
 single = ChordType("single",[single_close,single_open])
 
-root = ChordType("",[black_chord,double,single,white_chord,sharp])
+verticalLine = ChordType("verticalLine")
+dotRest = ChordType("dot_rest")
+eighthRest = ChordType("eighth_rest")
+
+root = ChordType("",[black_chord,double,single,white_chord,sharp,verticalLine,eighthRest,dotRest])
 
 
 

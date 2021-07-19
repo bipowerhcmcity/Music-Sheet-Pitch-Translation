@@ -59,20 +59,20 @@ def ReOrderedStaffs(staffs):
 				elif DIS >threshold:
 					if IsLeft(MAIN[0][2], SUB[0][2]):
 						main_temp.append(MAIN[0])
-						sub_temp.append(tuple([0, "NONE", (0,0), False, False]))
+						sub_temp.append(tuple([0, "NONE", (0,0), False, False,False, False]))
 						MAIN.remove(MAIN[0])
 					else:
 						sub_temp.append(SUB[0])
-						main_temp.append(tuple([0, "NONE", (0,0), False, False]))
+						main_temp.append(tuple([0, "NONE", (0,0), False, False,False, False]))
 						SUB.remove(SUB[0])
 			else:
 				if len(SUB) == 0:
 					main_temp.append(MAIN[0])
-					sub_temp.append(tuple([0, "NONE", (0,0), False, False]))
+					sub_temp.append(tuple([0, "NONE", (0,0), False, False,False, False]))
 					MAIN.remove(MAIN[0])
 				elif len(MAIN) == 0:
 					sub_temp.append(SUB[0])
-					main_temp.append(tuple([0, "NONE", (0,0), False, False]))
+					main_temp.append(tuple([0, "NONE", (0,0), False, False,False, False]))
 					SUB.remove(SUB[0])
 		MAIN_RE_ORDERED.append(main_temp)
 		SUB_RE_ORDERED.append(sub_temp)
@@ -105,7 +105,7 @@ def Pos2Height(data, headlines, staffline_dist):
 		temp_1 = []
 		for pos in (data[i]):
 			tempT = pos[2]
-			temp.append(tuple([pos[0], str(pos[1]), RoundNumber((-headlines[i] + tempT[1])/(staffline_dist/2)), pos[3], pos[4]]))
+			temp.append(tuple([pos[0], str(pos[1]), RoundNumber((-headlines[i] + tempT[1])/(staffline_dist/2)), pos[3], pos[4],pos[5], pos[6]]))
 			temp_1.append((-headlines[i] + tempT[1])/(staffline_dist/2))
 		height.append(temp)
 		unprocess_height.append(temp_1)
@@ -113,18 +113,18 @@ def Pos2Height(data, headlines, staffline_dist):
 
 
 
-def Pos2Note(data, key):
+def Pos2Note(data, key): # It will produce MAIN AND SUB
 	if key == "MAIN":
 		result = []
 		for staff in data:
 			temp = []
 			for note in staff:
 				if note[2] <0 and abs(note[2]) < len(notes_height_1):
-					temp.append(tuple([note[0], note[1], notes_height_1[abs(note[2])],note[3],note[4]]))
+					temp.append(tuple([note[0], note[1], notes_height_1[abs(note[2])],note[3],note[4],note[5], note[6]]))
 				elif note[2]>=0 and note[2] < len(notes_height):
-					temp.append(tuple([note[0], note[1], notes_height[note[2]],note[3],note[4]]))
+					temp.append(tuple([note[0], note[1], notes_height[note[2]],note[3],note[4],note[5], note[6]]))
 				else:
-					temp.append(tuple([note[0], note[1], "NONE",note[3],note[4]]))
+					temp.append(tuple([note[0], note[1], "NONE"]))
 			result.append(temp)
 		return result
 	elif key == "BASS":
@@ -134,9 +134,9 @@ def Pos2Note(data, key):
 
 			for note in staff:
 				if note[2] < 0 and abs(note[2]) < len(notes_height_BASS_1):
-					temp.append(tuple([note[0], note[1], notes_height_BASS_1[abs(note[2])],note[3],note[4]]))
+					temp.append(tuple([note[0], note[1], notes_height_BASS_1[abs(note[2])],note[3],note[4],note[5], note[6]]))
 				elif note[2] >=0 and note[2] < len(notes_height_BASS):
-					temp.append(tuple([note[0], note[1], notes_height_BASS[note[2]],note[3],note[4]]))
+					temp.append(tuple([note[0], note[1], notes_height_BASS[note[2]],note[3],note[4],note[5], note[6]]))
 				else:
 					temp.append(tuple([note[0], note[1], "NONE"]))
 			result.append(temp)
