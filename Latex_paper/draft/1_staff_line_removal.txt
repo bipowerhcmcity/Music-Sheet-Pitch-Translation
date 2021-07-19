@@ -1,10 +1,12 @@
 Draft proposal
-	I) Understanding:
+	I) Removing the staff line
 - Staff line detection Successful method: Run length encoding (RLE). 
 	Current understanding:
-	+ first the program will choose a random kernel of the image ( a part of the image ) then it will dilate that kernel, then it will run a RLE vertically down that
-	kernel, if the kernel has a pattern of black(line thickness) and whites (distance length) pixels, it will keep that kernel. Else if not, then it will randomly find
-	a new kernel and do the same.
+	+ first the program will choose a random kernel of the image ( a part of the
+	image ) then it will dilate that kernel, then it will run a RLE vertically
+	down that kernel, if the kernel has a pattern of black(line thickness) and
+	whites (distance length) pixels, it will keep that kernel. Else if not, then
+	it will randomly find a new kernel and do the same.
 - Staff line removal: 
 	+ First we inverted the music sheet so that notes become white and empty
 	spaces are black. This is done bc in binary, white valued at 1 and balck 0
@@ -29,3 +31,7 @@ Draft proposal
 
 The process will be done when we have finished checking all kernel of the image.
 Invert the final image and we get our result.
+
+Failed method Hough Transform because it is highly dependent on the result of
+canny detection (high coupling)
+
