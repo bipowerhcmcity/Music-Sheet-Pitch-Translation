@@ -1,0 +1,19 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'proposal.blg'
+[71] biber:322> INFO - === Tue Jul 20, 2021, 22:36:37
+[83] Biber.pm:415> INFO - Reading 'proposal.bcf'
+[138] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
+[150] Biber.pm:4256> INFO - Processing section 0
+[150] Utils.pm:75> INFO - Globbing data source '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib'
+[150] Utils.pm:91> INFO - Globbed data source '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib' to /home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib
+[159] Biber.pm:4455> INFO - Looking for bibtex format file '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib' for section 0
+[160] bibtex.pm:1653> INFO - LaTeX decoding ...
+[168] bibtex.pm:1471> INFO - Found BibTeX data source '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib'
+[187] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_aqUq/library.bib_30307.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[194] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[194] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[194] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[194] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[196] bbl.pm:652> INFO - Writing 'proposal.bbl' with encoding 'UTF-8'
+[197] bbl.pm:755> INFO - Output to proposal.bbl
+[197] Biber.pm:128> INFO - WARNINGS: 1

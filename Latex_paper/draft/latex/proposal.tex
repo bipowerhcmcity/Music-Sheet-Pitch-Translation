@@ -9,13 +9,14 @@
 \usepackage{ragged2e}
 \usepackage{ragged2e}
 \usepackage{afterpage}
+\usepackage{amsmath}
 
 %adding bibliography
-% \usepackage[backend=biber]{biblatex}
-% \addbibresource{test.bib}
-
+\usepackage[backend=biber]{biblatex}
+\addbibresource{/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib}
 
 \graphicspath{{/home/pj/Documents/proposal/}}
+% \graphicspath{{~/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft}}
 
 %making the numbering in Roman format 
 \renewcommand\thesection{\Roman{section}}
@@ -54,7 +55,7 @@
 \begin{itemize}
 	\item Team Leader:      \hfill Truong Minh Khoa
 	\item Programmer: 		\hfill Dinh Cong Minh
-	\item ML Engineer:		\hfill Nguyen Tho Anh Khoa
+	\item Programmer:		\hfill Nguyen Tho Anh Khoa
 	\item Writer/Editor:	\hfill Huynh Minh Triet
 \end{itemize}
 
@@ -89,24 +90,55 @@ sheet with a few tones higher or lower the musicsian has to manually retype the
 entire musical sheet by hand, which is labor intensive.
 
 \subsection{Our solution}
-We propose an algorithm that can take it a pdf file as it input, then shift the
-tone of the entire song up or down to the number of tones, semitones according
-to the musician's need. 
-
+We propose an algorithm that can take in a pdf file or scanned music sheet, then 
+translate the written note either by hand or computer drawn into a digital format.
+At which stage, the program can play the song or shift the song's tones or semitomes 
+according to the musicians' need.
 
 \clearpage
 
 \section{Proposed Method}
-To acheive our desire result we need to first remove the lines on each staff,
-second we translate the pictorial images of the note into text based notation,
-finally we will run our algorithm to shift our tones 
+The process include first removing the lines on each staff for ease of musical
+note dectection.  The second stage is translating the detected note and do note
+recognition to translate notes into a digital format. Finnaly the last stage is
+where an additional python function will modulate the tones of the song to give
+the final output. 
+
 
 \subsection{Line Removal}
+By using the method in \textcite{Gomez2017} the staff's line removal algorithm
+will first grayscale the image then invert the color of the image, so that the
+lines are now white and the background is black. Finally, using a kernel of the
+form: \\
+$
+\begin{pmatrix}
+	0 & 0 & 0\\
+	1 & 1 & 1\\
+	0 & 0 & 0
+\end{pmatrix}
+$\\
+then run with the dilate() function built-in OpenCV, the
+horizontal lines will be expand so that its width is increasingly larger, and
+any white pixels, i.e., notes, that does not belong to the horizontal line, will
+be flipped to 0 and becomes the background thus eliminating notes.
 
+for example:
 
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics{b4_dilate} % first figure itself
+        \caption{before note removal}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics{after_dilate} % second figure itself
+        \caption{after note removal}
+    \end{minipage}
+\end{figure}
 
-
-% \printbibliography
+\printbibliography
 
 
 \end{document}

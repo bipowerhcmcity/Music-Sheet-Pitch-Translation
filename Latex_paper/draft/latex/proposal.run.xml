@@ -79,7 +79,7 @@
       <file>proposal.bcf</file>
     </requires>
     <requires type="editable">
-      <file>test.bib</file>
+      <file>/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib</file>
     </requires>
   </external>
 </requests>
