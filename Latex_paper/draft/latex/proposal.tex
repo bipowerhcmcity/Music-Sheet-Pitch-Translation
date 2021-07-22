@@ -10,6 +10,9 @@
 \usepackage{ragged2e}
 \usepackage{afterpage}
 \usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{alltt}
 
 %adding bibliography
 \usepackage[backend=biber]{biblatex}
@@ -117,28 +120,119 @@ $
 	0 & 0 & 0
 \end{pmatrix}
 $\\
-then run with the dilate() function built-in OpenCV, the
-horizontal lines will be expand so that its width is increasingly larger, and
-any white pixels, i.e., notes, that does not belong to the horizontal line, will
-be flipped to 0 and becomes the background thus eliminating notes.
+then run with the dilate() function built-in OpenCV, the horizontal lines will
+be expand so that its width is increasingly larger, and any white pixels, i.e.,
+notes, that does not belong to the horizontal line, will be flipped to 0 and
+becomes the background thus eliminating notes.
 
-for example:
-
-\begin{figure}
+result:
+\begin{figure}[H]
     \centering
-    \begin{minipage}{0.45\textwidth}
+    \begin{subfigure}[t]{0.5\textwidth}
         \centering
-        \includegraphics{b4_dilate} % first figure itself
-        \caption{before note removal}
-    \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
+        \includegraphics[height=2.0in]{b4_dilate}
+        \caption{music sheet before line removal}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
         \centering
-        \includegraphics{after_dilate} % second figure itself
-        \caption{after note removal}
-    \end{minipage}
+        \includegraphics[height=2.0in]{after_dilate}
+        \caption{music sheet after line removal}
+    \end{subfigure}
 \end{figure}
 
-\printbibliography
+\clearpage
+Finally, flipping the output image will result in a music sheet with lines
+removed:
+\begin{center}
+  \makebox[\textwidth]{\includegraphics[width=\linewidth]{staffRemoval.jpg}}
+\end{center}
 
+\clearpage
+
+\subsection{Note Translation}
+In order to translate the note its input as pictorial data to a digitalized form so 
+computer can process the music sheet, three steps are required. First by using 
+\textcite{Rosebrock} method to eliminate overlaping note positions. Second is to
+reorder the notes that are on the same staff lines into a list, for each staff line
+there is a corresponding list containing the positions of each note on that staff.
+Finally, converting the note positions into musical note notation.
+
+\subsubsection{Eliminating overlaping positions}
+By running template matching on the output music sheet that is removed of staff
+lines will obtain a list of position of notes on said music sheet. However, 
+there is a problem with multiple note positions overlapping each others.\\
+
+Inorder to handle this we use  \textcite{Rosebrock} method call Faster Non
+Maxium Supression so that each note will only have one position entry, avoiding
+duplication in our list of note positions.\\
+
+\subsubsection{Note reordering}
+Next musical notes that belongs to the same staff will begrouped into a same
+list.  In order to do this, notes that falls within the range of the first line (the
+bottom line) up to the height of half a staff height and and from the last line
+(the top line) down to half the height of half a staff height, will be considered
+as bellong within the same staff.\\
+
+In musical sheet if two staves are connected with a curly bracket on the left
+meaning they must be played simultaneously.
+
+E.g:\\ 
+% \includegraphics{two_staff}
+\begin{figure}[h]
+\makebox[\textwidth]{\includegraphics[width=\linewidth]{two_staff}}
+\caption{Two staves that need to be played simultaneously}
+\label{fig:two staves}
+\end{figure}
+
+In the example above the staff above with the treble clef is called the main
+staff and the staff below with the bass clef is called the sub staff. The 
+algorithm will now initialize two list MAIN[] and SUB[] to store the two staves
+respectively.
+
+\begin{alltt}
+    \normalfont
+Now the algorithm will move simultaneously through both staff and check the
+notes iteratively. For example our first note MAIN[0] and SUB[0], if they are
+vertically aligned, meaning that it need to be play simultaneously, the
+alogorithm will then move MAIN[0] and SUB[0] to MAIN\_RE\_ORDERED and
+SUB\_RE\_ORDERD. By move the algorithm will cut the note position from the
+original MAIN list and paste it into the MAIN\_RE\_ORDERED, same goes for
+SUB\_RE\_ORDERED.
+\end{alltt}
+
+However since some music sheet has minor error in printing resulting in minor
+misalignment of the note, meaning they are still supposed to be play
+simultaneously but their horizontal (x axis) position are not exactly the
+same. The function ReoderedStaffs() has a threshold value of 5, meaning if
+the two notes deviate from each other, either to the left or right, less than
+5 pixels we will consider that they will be played simultaneously.
+
+If there is a case, where there is only one note on one of the staff, meaning
+only one note need to be played at that moment, we will add the tuple (0,0)
+into the staff that doesn't have a note as a filler note. In the case that any
+staff ran out of note before the other staff, we will continue the moving
+process like normal, but will fill in elements (0,0) for the ran out staff.
+Doing this assure that the two list MAIN\_RE\_ORDERED and SUB\_RE\_ORDERED will
+always have the same number of elements in their list.\\
+
+\noindent This is the result of the first five notes of the two staves in figure number
+\ref{fig:two staves}\\
+
+\begin{figure}[H]
+\begin{verbatim}
+(216, 253), (242, 260), (270, 253), (298, 285), (325, 278)
+(216, 412), (271, 368), (298, 381), (0, 0),     (353, 368)
+\end{verbatim}
+\caption{The fourth position has a (0,0) tuple because there is no corresponding fourth
+note on the sub staff}
+\end{figure}
+
+\subsubsection{Digitalization of the notes}
+
+
+
+
+\printbibliography
 
 \end{document}

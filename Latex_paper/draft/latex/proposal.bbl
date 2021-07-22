@@ -54,6 +54,36 @@
       \endverb
       \keyw{omr,optical music recognition,staffline detection,staffline removal,stafflines}
     \endentry
+    \entry{Rosebrock}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ad5eaecc2721564034f710ce9a318887}{%
+           family={Rosebrock},
+           familyi={R\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad5eaecc2721564034f710ce9a318887}
+      \strng{fullhash}{ad5eaecc2721564034f710ce9a318887}
+      \strng{bibnamehash}{ad5eaecc2721564034f710ce9a318887}
+      \strng{authorbibnamehash}{ad5eaecc2721564034f710ce9a318887}
+      \strng{authornamehash}{ad5eaecc2721564034f710ce9a318887}
+      \strng{authorfullhash}{ad5eaecc2721564034f710ce9a318887}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{(Faster) Non-Maximum Suppression in Python - PyImageSearch}}
+      \verb{file}
+      \verb :home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex{\_}paper/(Faster) Non-Maximum Suppression in Python - PyImageSearch.html:html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pyimagesearch.com/2015/02/16/faster-non-maximum-suppression-python/
+      \endverb
+      \verb{url}
+      \verb https://www.pyimagesearch.com/2015/02/16/faster-non-maximum-suppression-python/
+      \endverb
+      \keyw{Non-maxima supression}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
