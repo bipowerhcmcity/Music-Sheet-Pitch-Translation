@@ -13,7 +13,7 @@
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage{alltt}
-
+\usepackage{listings}
 %adding bibliography
 \usepackage[backend=biber]{biblatex}
 \addbibresource{/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib}
@@ -39,7 +39,7 @@
 \posttitle{}
 
 \begin{titlepage}
-	\title{ MUSIC SHEET UNDERSTANDING AND TONE MODULATION}
+	\title{ MUSIC SHEET UNDERSTANDING AND TRANSPOSITION}
 	\author{}
 \end{titlepage}
 
@@ -73,6 +73,13 @@ University's Department of Engineering or the University as a whole.
 
 \section{Abstract}
 
+% \section{Team's workload}
+% Due to the nature of our work is in pure code I believe the best way to show how 
+% much each member contribute to the project can be directly viewed via our github
+% commit page:
+
+
+
 \section{Introduction}
 
 The topic of recognizing musical sheets, i.e., Optical Music Recognition (OMR),
@@ -87,16 +94,16 @@ a .midi file, or other types of sound files such as .way, .mp3. The vast
 majority of those researches are dedicated for the common user, even for users
 who are not educated on musical theory, but there is still a lack of product
 that can be used for professional or enthusiast musicians. In reality, a common
-problem that is encountered is the modulation of music tones, i.e., up or down
+problem that is encountered is the transposition of music tones, i.e., up or down
 semitone, tone for the whole music sheet. Currently in order to obtain a music
 sheet with a few tones higher or lower the musicsian has to manually retype the
 entire musical sheet by hand, which is labor intensive.
 
 \subsection{Our solution}
-We propose an algorithm that can take in a pdf file or scanned music sheet, then 
-translate the written note either by hand or computer drawn into a digital format.
-At which stage, the program can play the song or shift the song's tones or semitomes 
-according to the musicians' need.
+We propose an algorithm that can take in a pdf file or scanned music sheet, then
+translate the written note either by hand or computer drawn into scientific
+pitch notaion \cite{Wikipedia2013}.  At which stage, the program can play the
+song or shift the song's tones or semitomes according to the musicians' need.
 
 \clearpage
 
@@ -168,11 +175,15 @@ Maxium Supression so that each note will only have one position entry, avoiding
 duplication in our list of note positions.\\
 
 \subsubsection{Note reordering}
-Next musical notes that belongs to the same staff will begrouped into a same
-list.  In order to do this, notes that falls within the range of the first line (the
-bottom line) up to the height of half a staff height and and from the last line
-(the top line) down to half the height of half a staff height, will be considered
-as bellong within the same staff.\\
+Next musical notes that belongs to the same staff will be grouped into the same
+list,  for each staff line there is a corresponding list containing its note.
+In order to do this, from the position of first line(the bottom line of each
+staff) move down for a distance of half a staff height and then create a second
+point which is from the current point up two staff heights \footnote{the reason
+for moving half of a staff height from the first line down and then moving two
+staff height up  is to account for notes that are on the staff and the ledger
+line}. Any note's vertical position that fell in the range from those previously
+mentioned point will be considerd as in the same staff line\\
 
 In musical sheet if two staves are connected with a curly bracket on the left
 meaning they must be played simultaneously.
@@ -229,9 +240,104 @@ note on the sub staff}
 \end{figure}
 
 \subsubsection{Digitalization of the notes}
+With the list of notes's position, to be able to make note transposition possible
+they need to be translateed into musical notation.
+
+To achieve this we have create four lists containing scientific pitch notaion
+\cite{Wikipedia2013}.  two list for the main staff and two for the sub staff(one
+for notes above the first staff line and one for notes below the first staff
+line).\\
+
+The two list for the main staff:
+\begin{figure}[h]
+\centering
+\makebox[\textwidth]{['E5','D5','C5','B4','A4','G4','F4','E4','D4','C4','B3','A3','G3','F3','E3','D3','C3']}
+\caption{notes below the first staff line of the main staff}
+\vspace{\baselineskip}
+\makebox[\textwidth]{['E5','F5','G5','A5','B5','C6','D6','E6','F6','G6']}
+\caption{notes above the first staff line of the main staff}
+\end{figure}
+
+\vspace{\baselineskip}
+The two list for the sub staff:
+\begin{figure}[h]
+\centering
+\makebox[\textwidth]{['G3','F3','E3','D3','C3','B2','A2','G2','F2','E2','D2','C2','B1','A1','G1','F1','E1']}
+\caption{notes below the first staff of the sub staff}
+\vspace{\baselineskip}
+\makebox[\textwidth]{['G3','A3','B3','C4','D4','E4','F4','G4','A4','B4']}
+\caption{notes above the first staff line of the sub staff}
+\end{figure}
+
+Whenever a note is encountered on the staff line, a number will be generate
+which will be used as index to get the note notation. But since each staff 
+has two list which can be choose from. This problem is resolved by the 
+following formula:
+
+\[D = \frac{2.(note\_position[1] - headlines[i])}{d}\]
 
 
+\noindent D is the ouput\\
+note\_position[1] is the veritcal position of the note\\
+headlines[i] is the position of the first staff line of each staff\\
+d is the distance between two staff lines in a staff \footnote{the 
+full equation is: \(D = note\_position[1] -headlines[i] / d/2\)
+with d/2 divided by two because each note is separated with just half of the distance between
+each staff lines}
 
+If D $<$ 0 the algorithm will use the list for notes below the first staff line
+and D $\geq$ 0 will use the list of notes that are above the first staff line.
+
+\[ I = \begin{cases} \mbox{D,} & \mbox{if } D \geq 0 \\ \mbox{-D,} &
+\mbox{otherwise} \end{cases}\]
+
+
+Continue to repeat this staff by staff for all staves in the music sheet will result in 
+a list of notes in the music sheet orgainized in chronological order.
+
+\subsection{Tones transposition}
+After the previous process the output is a list of scientific pitch notaion
+\cite{Wikipedia2013}, e.g., C3, B2, C3, E2, F2, E3, D3, C3.\\
+
+In music theory shifting a musical note up or down a tone or semitone follow a
+predictable pattern:
+
+\begin{figure}[h]
+    \makebox[\textwidth]{\includegraphics[width=\linewidth]{music_tones}}
+    \caption{layout of a piano keyboard}
+    \label{piano_keyboard}
+\end{figure}
+
+According to the graph above, the music note C3 shifted up a tone would become
+C\#3, same goes for all other note, they become a sharp note. Except for the note
+E and B which when shifted up a semitone becomes F and C respectively. 
+
+To solve this problem we create a list of scientific pitch notaion arrange in 
+increasing order similar to figure \ref{piano_keyboard}.\\
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+
+notes\_height= ['E1', 'F1','G1','A1', 'B1', 'C2','D2', 'E2', 'F2','G2','A2',
+'B2', 'C3', 'D3', 'E3', 'F3','G3', 'A3', 'B3', 'C4', 'D4', 'E4', 'F4',
+'G4','A4','B4', 'C5', 'D5', 'E5', 'F5', 'G5', 'A5', 'B5', 'C6', 'D6', 'E6',
+'F6','G6','A6','B6' ,'C7','D7', 'E7', 'F7','G7','A7', 'B2',]
+
+    }%
+}
+\\
+
+\newsavebox\myv
+\begin{lrbox}{\myv}\begin{minipage}{\textwidth}
+\begin{lstlisting}[language = python]
+if(chord.name!="E" and chord.name!="B" and chord.sharp==False):
+    chord.sharp = True
+else:
+    chord.sharp = False
+    chord.name +=1  # E + 1 = F, F+1 = G,etc
+\end{lstlisting}
+\end{minipage}\end{lrbox}
+\resizebox{0.95\textwidth}{!}{\usebox\myv}
 
 \printbibliography
 
