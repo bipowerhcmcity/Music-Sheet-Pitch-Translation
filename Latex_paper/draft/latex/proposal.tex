@@ -39,7 +39,7 @@
 \posttitle{}
 
 \begin{titlepage}
-	\title{ MUSIC SHEET UNDERSTANDING AND TRANSPOSITION}
+	\title{ MUSIC SHEET UNDERSTANDING AND TONES TRANSPOSITION}
 	\author{}
 \end{titlepage}
 
@@ -71,7 +71,19 @@ University's Department of Engineering or the University as a whole.
 
 \clearpage
 
-\section{Abstract}
+\section{Abstract} 
+
+The field of Optical Music Recognition (OMR), a subfield in Artificial
+Intelligence, is aimed at automating the translation or understanding of music
+sheets \cite{Calvo-Zaragoza}.  However, there is a lack of applications to solve
+the problem of musical tones transposition (the process of moving a collection
+of notes up or down in pitch by a constant interval).  Such a problem in tones
+transposition is highly labor-intensive if the musician has to reorder the notes
+manually, often impossible if done during a performance. Our work proposes a way
+in which musicians can perform tones transposition by scanning a music sheet,
+input the number of shift tones or semitones required, and then the programm
+will output an audio file or a new music sheet with all of the notes shifted to
+the required pitch. 
 
 % \section{Team's workload}
 % Due to the nature of our work is in pure code I believe the best way to show how 
@@ -86,38 +98,39 @@ The topic of recognizing musical sheets, i.e., Optical Music Recognition (OMR),
 is not a novel field of research. The term OMR first appeared in a paper written
 by MIT scientists in the 60s.  During the last three decades until now, OMR is
 an ever increasingly developing field and is capable of solving many problems
-that involves with music
+that involve music \cite{Shatri2020a}\\
 
 More specifically, the current OMR systems of today are capable enough to
 recognize a printed musical sheet and digitize it. The resulting output could be
 a .midi file, or other types of sound files such as .way, .mp3. The vast
-majority of those researches are dedicated for the common user, even for users
-who are not educated on musical theory, but there is still a lack of product
-that can be used for professional or enthusiast musicians. In reality, a common
-problem that is encountered is the transposition of music tones, i.e., up or down
-semitone, tone for the whole music sheet. Currently in order to obtain a music
-sheet with a few tones higher or lower the musicsian has to manually retype the
-entire musical sheet by hand, which is labor intensive.
-
-\subsection{Our solution}
-We propose an algorithm that can take in a pdf file or scanned music sheet, then
-translate the written note either by hand or computer drawn into scientific
-pitch notaion \cite{Wikipedia2013}.  At which stage, the program can play the
-song or shift the song's tones or semitomes according to the musicians' need.
+majority of those researches are dedicated to the common user, even for users
+who are not educated on musical theory, but there is still a lack of products
+that can be used by professional or enthusiast musicians. In reality, a common
+problem that is encountered is the transposition of music tones, i.e., shifting up or down a constant interval of
+semitones or tones for the whole music sheet. Currently to obtain a music
+sheet with a few tones higher or lower the musician has to manually retype the
+entire musical sheet by hand, which is labor-intensive and time-consuming.
 
 \clearpage
 
-\section{Proposed Method}
-The process include first removing the lines on each staff for ease of musical
-note dectection.  The second stage is translating the detected note and do note
-recognition to translate notes into a digital format. Finnaly the last stage is
-where an additional python function will modulate the tones of the song to give
-the final output. 
+\subsection{Our solution}
 
+We propose an algorithm that can take in a pdf file or scanned music sheet, then
+translate the written note either by hand or computer drawn into scientific
+pitch notation \cite{Wikipedia2013}.  At which stage, the program can play the
+song or shift the song's tones or semitones according to the musicians' needs.
+
+
+\section{Proposed Method}
+The process includes: first removing the lines on each staff for ease of musical
+note detection. The second stage is translating the detected note and do note
+recognition to translate notes into scientific pitch notaion. The third stage is
+where an additional python function will transpose the semitones or tones of the song to give
+the final output. 
 
 \subsection{Line Removal}
 By using the method in \textcite{Gomez2017} the staff's line removal algorithm
-will first grayscale the image then invert the color of the image, so that the
+will first grayscale the image then invert the color of the image so that the
 lines are now white and the background is black. Finally, using a kernel of the
 form: \\
 $
@@ -128,9 +141,9 @@ $
 \end{pmatrix}
 $\\
 then run with the dilate() function built-in OpenCV, the horizontal lines will
-be expand so that its width is increasingly larger, and any white pixels, i.e.,
+be expanded so that its width is increasingly larger, and any white pixels, i.e.,
 notes, that does not belong to the horizontal line, will be flipped to 0 and
-becomes the background thus eliminating notes.
+becomes the background thus eliminating all of the notes.
 
 result:
 \begin{figure}[H]
@@ -158,35 +171,40 @@ removed:
 \clearpage
 
 \subsection{Note Translation}
-In order to translate the note its input as pictorial data to a digitalized form so 
+To translate the note from its input as pictorial data to scientific pitch notation so that the
 computer can process the music sheet, three steps are required. First by using 
-\textcite{Rosebrock} method to eliminate overlaping note positions. Second is to
+\textcite{Rosebrock} method to eliminate overlapping note positions. The second is to
 reorder the notes that are on the same staff lines into a list, for each staff line
 there is a corresponding list containing the positions of each note on that staff.
-Finally, converting the note positions into musical note notation.
+Finally, converting the note positions into scientific pitch notation.
 
 \subsubsection{Eliminating overlaping positions}
-By running template matching on the output music sheet that is removed of staff
-lines will obtain a list of position of notes on said music sheet. However, 
-there is a problem with multiple note positions overlapping each others.\\
+By running the template matching function built-in OpenCV on the output staff
+line removed music sheet will obtain a list of position of notes of music sheet.
+However, there is a problem with multiple note positions overlapping with each
+other.\\
 
 Inorder to handle this we use  \textcite{Rosebrock} method call Faster Non
-Maxium Supression so that each note will only have one position entry, avoiding
+Maximum Suppression so that each note will only have one position entry, avoiding
 duplication in our list of note positions.\\
 
-\subsubsection{Note reordering}
-Next musical notes that belongs to the same staff will be grouped into the same
-list,  for each staff line there is a corresponding list containing its note.
-In order to do this, from the position of first line(the bottom line of each
-staff) move down for a distance of half a staff height and then create a second
-point which is from the current point up two staff heights \footnote{the reason
-for moving half of a staff height from the first line down and then moving two
-staff height up  is to account for notes that are on the staff and the ledger
-line}. Any note's vertical position that fell in the range from those previously
-mentioned point will be considerd as in the same staff line\\
+\subsubsection{Note reordering} 
 
-In musical sheet if two staves are connected with a curly bracket on the left
-meaning they must be played simultaneously.
+Next musical notes that belong to the same staff
+will be grouped into the same list,  for each staff line there is a
+corresponding list containing its note.  To do this, from the position of the
+first line(the bottom line of each staff) move down for a distance of half a
+staff height and then create a second point which is from the current point up
+to two staff heights \footnote{the reason for moving half of a staff height from
+the first line down and then moving two staff height up  is to account for notes
+that are on the staff and notes that are on the ledger line}. Any note's
+vertical position that fell in the range from those previously mentioned points
+will be considered as being in the same staff \\
+
+\clearpage
+
+In music theory, if two staves are connected by a curly bracket on the left
+that means they must be played simultaneously.
 
 E.g:\\ 
 % \includegraphics{two_staff}
@@ -196,35 +214,36 @@ E.g:\\
 \label{fig:two staves}
 \end{figure}
 
+
 In the example above the staff above with the treble clef is called the main
-staff and the staff below with the bass clef is called the sub staff. The 
-algorithm will now initialize two list MAIN[] and SUB[] to store the two staves
-respectively.
+staff and the staff below with the bass clef is called the sub staff. The
+algorithm will now initialize two lists MAIN[] and SUB[] to store the two staves
+respectively.\\
 
-\begin{alltt}
-    \normalfont
-Now the algorithm will move simultaneously through both staff and check the
-notes iteratively. For example our first note MAIN[0] and SUB[0], if they are
-vertically aligned, meaning that it need to be play simultaneously, the
-alogorithm will then move MAIN[0] and SUB[0] to MAIN\_RE\_ORDERED and
-SUB\_RE\_ORDERD. By move the algorithm will cut the note position from the
-original MAIN list and paste it into the MAIN\_RE\_ORDERED, same goes for
-SUB\_RE\_ORDERED.
-\end{alltt}
+% \begin{alltt}
+%     \normalfont
+Now the algorithm will move simultaneously through both staves (main staff and sub staff) and check the
+notes iteratively. For example, our first note MAIN[0] and SUB[0], if they
+are vertically aligned, meaning that they need to be played simultaneously,
+the algorithm will then move MAIN[0] and SUB[0] to MAIN\_RE\_ORDERED and
+SUB\_RE\_ORDERD. By the word "move", the algorithm will cut the note
+position from the original MAIN list and paste it into the
+MAIN\_RE\_ORDERED, same goes for SUB\_RE\_ORDERED.\\
+% \end{alltt}
 
-However since some music sheet has minor error in printing resulting in minor
+However, since some music sheet has  minor errors in printing which will result in minor
 misalignment of the note, meaning they are still supposed to be play
-simultaneously but their horizontal (x axis) position are not exactly the
+simultaneously but their horizontal (x-axis) position are not exactly the
 same. The function ReoderedStaffs() has a threshold value of 5, meaning if
 the two notes deviate from each other, either to the left or right, less than
-5 pixels we will consider that they will be played simultaneously.
+5 pixels will still be considered as being played simultaneously.\\
 
-If there is a case, where there is only one note on one of the staff, meaning
-only one note need to be played at that moment, we will add the tuple (0,0)
-into the staff that doesn't have a note as a filler note. In the case that any
-staff ran out of note before the other staff, we will continue the moving
-process like normal, but will fill in elements (0,0) for the ran out staff.
-Doing this assure that the two list MAIN\_RE\_ORDERED and SUB\_RE\_ORDERED will
+There will arise a case, in which there is only one note on one of the staff, meaning
+only one note need to be played at that moment, the tuple (0,0) will be added
+into the staff that doesn't have a note as a filler note. In the case that any one of the
+staff ran out of notes before the other staff, continue to move through both of the
+staves like before, but the tuple (0,0) will be filled in as notes for the staff that ran out of notes first
+Doing this assure that the two lists MAIN\_RE\_ORDERED and SUB\_RE\_ORDERED will
 always have the same number of elements in their list.\\
 
 \noindent This is the result of the first five notes of the two staves in figure number
@@ -241,12 +260,11 @@ note on the sub staff}
 
 \subsubsection{Digitalization of the notes}
 With the list of notes's position, to be able to make note transposition possible
-they need to be translateed into musical notation.
+they need to be translateed scientific pitch notation.\\
 
-To achieve this we have create four lists containing scientific pitch notaion
-\cite{Wikipedia2013}.  two list for the main staff and two for the sub staff(one
-for notes above the first staff line and one for notes below the first staff
-line).\\
+To achieve this we have create four lists containing scientific pitch notaion.
+Two list for the main staff and two for the sub staff(one for notes above the
+first staff line and one for notes below the first staff line).\\
 
 The two list for the main staff:
 \begin{figure}[h]
@@ -269,35 +287,34 @@ The two list for the sub staff:
 \caption{notes above the first staff line of the sub staff}
 \end{figure}
 
-Whenever a note is encountered on the staff line, a number will be generate
-which will be used as index to get the note notation. But since each staff 
-has two list which can be choose from. This problem is resolved by the 
-following formula:
+Whenever a note is encountered on the staff (scanning from left to right), a
+number will be generated which will be used as the index to get the note
+notation. But since each staff has two lists which can be choosen from. This
+problem is resolved by the following formula:\\
 
 \[D = \frac{2.(note\_position[1] - headlines[i])}{d}\]
 
-
 \noindent D is the ouput\\
-note\_position[1] is the veritcal position of the note\\
+note\_position[1] is the vertical position of the note\\
 headlines[i] is the position of the first staff line of each staff\\
 d is the distance between two staff lines in a staff \footnote{the 
 full equation is: \(D = note\_position[1] -headlines[i] / d/2\)
 with d/2 divided by two because each note is separated with just half of the distance between
-each staff lines}
+each staff line}\\
 
 If D $<$ 0 the algorithm will use the list for notes below the first staff line
-and D $\geq$ 0 will use the list of notes that are above the first staff line.
+and D $\geq$ 0 will use the list of notes that are above the first staff line.\\
 
 \[ I = \begin{cases} \mbox{D,} & \mbox{if } D \geq 0 \\ \mbox{-D,} &
 \mbox{otherwise} \end{cases}\]
 
-
-Continue to repeat this staff by staff for all staves in the music sheet will result in 
-a list of notes in the music sheet orgainized in chronological order.
+Continue to repeat this staff by staff for all staves in the music sheet will
+result in a list of scientific pitch notations for each note in the music sheet
+organized in chronological order.\\
 
 \subsection{Tones transposition}
-After the previous process the output is a list of scientific pitch notaion
-\cite{Wikipedia2013}, e.g., C3, B2, C3, E2, F2, E3, D3, C3.\\
+After the previous process the output is a list of scientific pitch notaion,
+e.g., C3, B2, C3, E2, F2, E3, D3, C3.\\
 
 In music theory shifting a musical note up or down a tone or semitone follow a
 predictable pattern:
@@ -309,12 +326,13 @@ predictable pattern:
 \end{figure}
 
 According to the graph above, the music note C3 shifted up a tone would become
-C\#3, same goes for all other note, they become a sharp note. Except for the note
-E and B which when shifted up a semitone becomes F and C respectively. 
+C\#3, same goes for all other notes, they become a sharp note. Except for the note
+E and B which when shifted up a semitone becomes F and C respectively.\\
 
-To solve this problem we create a list of scientific pitch notaion arrange in 
+To solve this problem, we create a list of scientific pitch notation arrange in
 increasing order similar to figure \ref{piano_keyboard}.\\
 
+\begin{figure}[h]
 \noindent\fbox{%
     \parbox{\textwidth}{%
 
@@ -322,22 +340,65 @@ notes\_height= ['E1', 'F1','G1','A1', 'B1', 'C2','D2', 'E2', 'F2','G2','A2',
 'B2', 'C3', 'D3', 'E3', 'F3','G3', 'A3', 'B3', 'C4', 'D4', 'E4', 'F4',
 'G4','A4','B4', 'C5', 'D5', 'E5', 'F5', 'G5', 'A5', 'B5', 'C6', 'D6', 'E6',
 'F6','G6','A6','B6' ,'C7','D7', 'E7', 'F7','G7','A7', 'B2',]
-
     }%
 }
-\\
+\caption{list of notes pitch in ascending order}
+\label{list: note pitch increase}
+\end{figure}
 
-\newsavebox\myv
-\begin{lrbox}{\myv}\begin{minipage}{\textwidth}
-\begin{lstlisting}[language = python]
+
+\medskip
+
+In the list above in figure \ref{list: note pitch increase}, each note will have
+a note that is one semitone higher on the left, e.g., E1 and F1.  Therefore to
+shift a note tone up a semitone, first the note's position on the list, i.e.,
+its index, must be determined; Second, the new shifted note is at the index of
+the old note plus one.\\
+
+A for loop is used to loop over the entire list and check each
+iteration whether the current iteration matches, if yes return the index of the note.\\
+
+\begin{lstlisting}[language=Python]
+def findNoteinNote_height(note):
+    for i in range(len(notes_height)):
+        if(note == notes_height[i]):
+            return i
+\end{lstlisting}
+\medskip
+
+Once obtained the index of the note, to shift the tone's note up a semitone 
+another for loop is used:\\
+
+\begin{lstlisting}[language=Python]
 if(chord.name!="E" and chord.name!="B" and chord.sharp==False):
     chord.sharp = True
 else:
     chord.sharp = False
     chord.name +=1  # E + 1 = F, F+1 = G,etc
 \end{lstlisting}
-\end{minipage}\end{lrbox}
-\resizebox{0.95\textwidth}{!}{\usebox\myv}
+\medskip
+The variable "chord.name" is the index of the new note in the list in figure
+\ref{list: note pitch increase}.  Each time the loop above is run it will
+increase all note on the staff by one semitone, so if the end-user wants to shift
+the music sheet by three semitones, the for loop above will be run three
+times.\\
+
+The same process is used to shift the music notes down but instead of increasing
+"chord.name" by one, "chord.name" will be decreased by one. In addition, there are
+special cases for when the note is either F or C when shifting the music note
+down a semitone just like the cases B and C above.
+
+
+\section{Future work}
+With the help of Nguyen Tho Anh Khoa we are
+planning to use differential binarization for musical note detection and CRNN
+for note recognition. With these methods in text recognition, we are hoping to
+build our new version to be more robust and capable of handling handwritten music
+sheets, or music sheets that have staff lines not perfectly straights or
+equally parallel.\\
+
+If possible, we are hoping that we could implement the model in
+\textcite{Pacha2017} to bring this application to android devices.
 
 \printbibliography
 

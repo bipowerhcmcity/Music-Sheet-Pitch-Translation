@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  23 JUL 2021 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  24 JUL 2021 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -687,21 +687,26 @@ Package pdftex.def Info: /home/pj/Documents/proposal/vgu_logo.png  used on input
 
 ] [2
 
-] [3
+]
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
+
+ []
+
+[3
 
 ]
 </home/pj/Documents/proposal/b4_dilate.png, id=27, 20.075pt x 247.92625pt>
 File: /home/pj/Documents/proposal/b4_dilate.png Graphic file (type png)
 <use /home/pj/Documents/proposal/b4_dilate.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/b4_dilate.png  used on input line 140.
+Package pdftex.def Info: /home/pj/Documents/proposal/b4_dilate.png  used on input line 153.
 (pdftex.def)             Requested size: 11.70354pt x 144.54pt.
 </home/pj/Documents/proposal/after_dilate.png, id=28, 54.2025pt x 336.25626pt>
 File: /home/pj/Documents/proposal/after_dilate.png Graphic file (type png)
 <use /home/pj/Documents/proposal/after_dilate.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/after_dilate.png  used on input line 146.
+Package pdftex.def Info: /home/pj/Documents/proposal/after_dilate.png  used on input line 159.
 (pdftex.def)             Requested size: 23.29916pt x 144.54pt.
 
-Overfull \hbox (5.22217pt too wide) in paragraph at lines 138--149
+Overfull \hbox (5.22217pt too wide) in paragraph at lines 151--162
  [][]  [] 
  []
 
@@ -711,104 +716,158 @@ Overfull \hbox (5.22217pt too wide) in paragraph at lines 138--149
 </home/pj/Documents/proposal/staffRemoval.jpg, id=36, 1279.78125pt x 1656.1875pt>
 File: /home/pj/Documents/proposal/staffRemoval.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/staffRemoval.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/staffRemoval.jpg  used on input line 155.
+Package pdftex.def Info: /home/pj/Documents/proposal/staffRemoval.jpg  used on input line 168.
 (pdftex.def)             Requested size: 390.0pt x 504.69421pt.
  [5
 
  </home/pj/Documents/proposal/staffRemoval.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 169--172
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--176
+Underfull \hbox (badness 10000) in paragraph at lines 187--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--187
+Underfull \hbox (badness 10000) in paragraph at lines 193--203
 
  []
-
-</home/pj/Documents/proposal/two_staff.jpg, id=41, 614.295pt x 127.1952pt>
-File: /home/pj/Documents/proposal/two_staff.jpg Graphic file (type jpg)
-<use /home/pj/Documents/proposal/two_staff.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/two_staff.jpg  used on input line 194.
-(pdftex.def)             Requested size: 390.0pt x 80.75446pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6
 
 ]
-Overfull \hbox (4.0282pt too wide) in paragraph at lines 209--209
-[]\OT1/cmr/m/n/12 alogorithm will then move MAIN[0] and SUB[0] to MAIN[]RE[]ORDERED and[] 
- []
+</home/pj/Documents/proposal/two_staff.jpg, id=46, 614.295pt x 127.1952pt>
+File: /home/pj/Documents/proposal/two_staff.jpg Graphic file (type jpg)
+<use /home/pj/Documents/proposal/two_staff.jpg>
+Package pdftex.def Info: /home/pj/Documents/proposal/two_staff.jpg  used on input line 212.
+(pdftex.def)             Requested size: 390.0pt x 80.75446pt.
 
-
-Overfull \hbox (4.1268pt too wide) in paragraph at lines 210--210
-[]\OT1/cmr/m/n/12 SUB[]RE[]ORDERD. By move the al-go-rithm will cut the note po-si-tion from the[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--229
+Underfull \hbox (badness 10000) in paragraph at lines 218--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--232
+Underfull \hbox (badness 10000) in paragraph at lines 225--233
 
  []
 
-[7 </home/pj/Documents/proposal/two_staff.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 246--250
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--248
+
+ []
+
+[7
+
+ </home/pj/Documents/proposal/two_staff.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--294
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 299--301
+Underfull \hbox (badness 10000) in paragraph at lines 297--304
 
  []
 
-</home/pj/Documents/proposal/music_tones.jpg, id=57, 626.34pt x 142.5325pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+
+ []
+
+</home/pj/Documents/proposal/music_tones.jpg, id=54, 626.34pt x 142.5325pt>
 File: /home/pj/Documents/proposal/music_tones.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/music_tones.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/music_tones.jpg  used on input line 306.
+Package pdftex.def Info: /home/pj/Documents/proposal/music_tones.jpg  used on input line 323.
 (pdftex.def)             Requested size: 390.0pt x 88.752pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--317
+Underfull \hbox (badness 10000) in paragraph at lines 328--331
+
+ []
+
+[9 </home/pj/Documents/proposal/music_tones.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 332--334
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 318--329
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 336--345
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--329
+Underfull \hbox (badness 10000) in paragraph at lines 352--357
 
  []
 
-\myv=\box66
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--360
+
+ []
+
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-Overfull \hbox (54.14923pt too wide) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 369--371
+
+ []
+
+
+Overfull \hbox (54.14923pt too wide) in paragraph at lines 373--374
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[9 </home/pj/Documents/proposal/music_tones.jpg>] [10]
-Overfull \hbox (13.06561pt too wide) in paragraph at lines 343--343
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--385
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 393--399
+
+ []
+
+[11]
+Overfull \hbox (13.06561pt too wide) in paragraph at lines 404--404
 []\OT1/cmr/m/n/12 Wikipedia. ``Sci-en-tific pitch no-ta-tion''. In: \OT1/cmr/m/it/12 The Free En-cy-clo-pe-dia Wikipedia
  []
 
 
-Overfull \hbox (7.35847pt too wide) in paragraph at lines 343--343
+Overfull \hbox (7.35847pt too wide) in paragraph at lines 404--404
 \OT1/cmr/m/it/12 [web page] \OT1/cmr/m/n/12 (2013). \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https : / / en . wikipedia . org / wiki / Scientific %
  []
 
-[11
+[12
 
 ] (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.aux)
 Package logreq Info: Writing requests to 'proposal.run.xml'.
@@ -816,18 +875,18 @@ Package logreq Info: Writing requests to 'proposal.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22755 strings out of 481239
- 436521 string characters out of 5920378
- 1037457 words of memory out of 5000000
- 37681 multiletter control sequences out of 15000+600000
+ 22774 strings out of 481239
+ 437080 string characters out of 5920378
+ 1033633 words of memory out of 5000000
+ 37700 multiletter control sequences out of 15000+600000
  540619 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,9n,60p,1443b,1391s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.pdf (13 pages, 630754 bytes).
+Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.pdf (14 pages, 639830 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

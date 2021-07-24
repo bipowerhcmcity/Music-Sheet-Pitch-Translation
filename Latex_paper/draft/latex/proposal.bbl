@@ -19,6 +19,53 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Calvo-Zaragoza}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2776d49d4e877131b65a36c36f0caaac}{%
+           family={Calvo-Zaragoza},
+           familyi={C\bibinithyphendelim Z\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+        {{hash=aa38ca2a094c61ee8cceea6fb2010c5f}{%
+           family={Hajic},
+           familyi={H\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=671831d2435bb021d6c25ece85233023}{%
+           family={Pacha},
+           familyi={P\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{52c404a7f5aae1ffaf60e1fbffaa6490}
+      \strng{fullhash}{52c404a7f5aae1ffaf60e1fbffaa6490}
+      \strng{bibnamehash}{52c404a7f5aae1ffaf60e1fbffaa6490}
+      \strng{authorbibnamehash}{52c404a7f5aae1ffaf60e1fbffaa6490}
+      \strng{authornamehash}{52c404a7f5aae1ffaf60e1fbffaa6490}
+      \strng{authorfullhash}{52c404a7f5aae1ffaf60e1fbffaa6490}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For over 50 years, researchers have been trying to teach computers to read music notation, referred to as Optical Music Recognition (OMR). However, this field is still difficult to access for new researchers, especially those without a significant musical background: Few introductory materials are available, and, furthermore, the field has struggled with defining itself and building a shared terminology. In this work, we address these shortcomings by (1) providing a robust definition of OMR and its relationship to related fields, (2) analyzing how OMR inverts the music encoding process to recover the musical notation and the musical semantics from documents, and (3) proposing a taxonomy of OMR, with most notably a novel taxonomy of applications. Additionally, we discuss how deep learning affects modern OMR research, as opposed to the traditional pipeline. Based on this work, the reader should be able to attain a basic understanding of OMR: its objectives, its inherent structure, its relationship to other fields, the state of the art, and the research opportunities it affords.}
+      \field{eprinttype}{arXiv}
+      \field{issn}{15577341}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{number}{4}
+      \field{title}{{Understanding Optical Music Recognition}}
+      \field{volume}{53}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1145/3397499
+      \endverb
+      \verb{eprint}
+      \verb 1908.03608
+      \endverb
+      \verb{file}
+      \verb :home/pj/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Calvo-Zaragoza et al. - Unknown - Understanding Optical Music Recognition.pdf:pdf
+      \endverb
+      \keyw{Optical music recognition,music notation,music scores}
+    \endentry
     \entry{Gomez2017}{article}{}
       \name{author}{2}{}{%
         {{hash=3c613a6e8e0a93ebc4c0317d5cc4dfb5}{%
@@ -54,6 +101,45 @@
       \endverb
       \keyw{omr,optical music recognition,staffline detection,staffline removal,stafflines}
     \endentry
+    \entry{Pacha2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=671831d2435bb021d6c25ece85233023}{%
+           family={Pacha},
+           familyi={P\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=761d31d34df8cd529644640e5f535f5e}{%
+           family={Eidenberger},
+           familyi={E\bibinitperiod},
+           given={Horst},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{56ec46075cb42f478c46ecc4a57609f1}
+      \strng{fullhash}{56ec46075cb42f478c46ecc4a57609f1}
+      \strng{bibnamehash}{56ec46075cb42f478c46ecc4a57609f1}
+      \strng{authorbibnamehash}{56ec46075cb42f478c46ecc4a57609f1}
+      \strng{authornamehash}{56ec46075cb42f478c46ecc4a57609f1}
+      \strng{authorfullhash}{56ec46075cb42f478c46ecc4a57609f1}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Optical Music Recognition (OMR) is a branch of artificial intelligence that aims at automatically recognizing and understanding the content of music scores in images. Several approaches and systems have been proposed that try to solve this problem by using expert knowledge and specialized algorithms that tend to fail at generalization to a broader set of scores, imperfect image scans or data of different formatting. In this paper we propose a new approach to solve OMR by investigating how humans read music scores and by imitating that behavior with machine learning. To demonstrate the power of this approach, we conduct two experiments that teach a machine to distinguish entire music sheets from arbitrary content through frame-by-frame classification and distinguishing between 32 classes of handwritten music symbols which can be a basis for object detection. Both tasks can be performed at high rates of confidence (> 98{\%}) which is comparable to the performance of humans on the same task.}
+      \field{isbn}{9781538614174}
+      \field{journaltitle}{Proceedings - 16th IEEE International Conference on Machine Learning and Applications, ICMLA 2017}
+      \field{title}{{Towards self-learning optical music recognition}}
+      \field{volume}{2017-Decem}
+      \field{year}{2017}
+      \field{pages}{795\bibrangedash 800}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICMLA.2017.00-60
+      \endverb
+      \verb{file}
+      \verb :home/pj/MEGA/ComVi/paper{\_}writing/Mendeley/papers/pacha2017.pdf:pdf
+      \endverb
+      \keyw{Dataset,Deep Learning,Music,Optical Music Recognition,document analysis}
+    \endentry
     \entry{Rosebrock}{misc}{}
       \name{author}{1}{}{%
         {{hash=ad5eaecc2721564034f710ce9a318887}{%
@@ -83,6 +169,50 @@
       \verb https://www.pyimagesearch.com/2015/02/16/faster-non-maximum-suppression-python/
       \endverb
       \keyw{Non-maxima supression}
+    \endentry
+    \entry{Shatri2020a}{article}{}
+      \name{author}{2}{}{%
+        {{hash=360a192605a0525f13d4a8ba49365b3c}{%
+           family={Shatri},
+           familyi={S\bibinitperiod},
+           given={Elona},
+           giveni={E\bibinitperiod}}}%
+        {{hash=f01574e8c7c9fed8acf0c76910a6a6f7}{%
+           family={Fazekas},
+           familyi={F\bibinitperiod},
+           given={Gy{ö}rgy},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ebc21c66ded7dc6a187b607f766500f}
+      \strng{fullhash}{2ebc21c66ded7dc6a187b607f766500f}
+      \strng{bibnamehash}{2ebc21c66ded7dc6a187b607f766500f}
+      \strng{authorbibnamehash}{2ebc21c66ded7dc6a187b607f766500f}
+      \strng{authornamehash}{2ebc21c66ded7dc6a187b607f766500f}
+      \strng{authorfullhash}{2ebc21c66ded7dc6a187b607f766500f}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Optical Music Recognition (OMR) is concerned with transcribing sheet music into a machine-readable format. The transcribed copy should allow musicians to compose, play and edit music by taking a picture of a music sheet. Complete transcription of sheet music would also enable more efficient archival. OMR facilitates examining sheet music statistically or searching for patterns of notations, thus helping use cases in digital musicology too. Recently, there has been a shift in OMR from using conventional computer vision techniques towards a deep learning approach. In this paper, we review relevant works in OMR, including fundamental methods and significant outcomes, and highlight different stages of the OMR pipeline. These stages often lack standard input and output representation and standardised evaluation. Therefore, comparing different approaches and evaluating the impact of different processing methods can become rather complex. This paper provides recommendations for future work, addressing some of the highlighted issues and represents a position in furthering this important field of research.}
+      \field{eprinttype}{arXiv}
+      \field{month}{6}
+      \field{title}{{Optical Music Recognition: State of the Art and Major Challenges}}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.5281/zenodo.4105964
+      \endverb
+      \verb{eprint}
+      \verb 2006.07885
+      \endverb
+      \verb{file}
+      \verb :home/pj/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Shatri, Fazekas - 2020 - Optical Music Recognition State of the Art and Major Challenges.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2006.07885v2 http://arxiv.org/abs/2006.07885
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2006.07885v2%20http://arxiv.org/abs/2006.07885
+      \endverb
     \endentry
     \entry{Wikipedia2013}{article}{}
       \name{author}{1}{}{%
