@@ -27,7 +27,7 @@ def groupNoteToPartition(staffs):
                 temparr.append(staffs[t].chords[i])
 
         group.append(temparr) # for the last temp arr
-        groupNote.append(group)
+
 
         # checkBeat and the distance X between 2 first notes:
         # 1) distance:
@@ -36,11 +36,13 @@ def groupNoteToPartition(staffs):
             2: 1 / 2,
             3: 1 / 4,
             4: 2,
-            7: 1 / 2
+            7: 1 / 2,
+            9: 4,
         }
         for i in range(len(group)):
-            print("Staff: ",t)
-            print(checkTotalBeat(group[i],beatDictionary))
+            if checkTotalBeat(group[i],beatDictionary) ==0:
+                group[i]=[ChordType.Chord(1,1,8),*group[i]]
+        groupNote.append(group)
 
 def centerPoint(pt1, pt2):
     return (pt1+pt2)/2
@@ -52,7 +54,6 @@ def checkTotalBeat(group, beatDictionary):
         # print("Type=",group[i].type)
         sum += beatDictionary[group[i].type]
         if (group[i].dot == True):
-            print("dot here...")
             sum += beatDictionary[group[i].type] * 1 / 2
     return sum
 
@@ -66,7 +67,10 @@ def eleminateMultipleNotes(group):
     for i in range(len(distance)):
         if(distance[i] < threshhold):
             group[i-count].updateMultiple(True)
-            group[i-count+1].dot = True # the next to chord is also has dot
+            group[i-count+1].updateMultiple(True) # the next to chord is also has dot
+
+            if(group[i-count].dot):
+                group[i-count+1].dot=True
             group.pop(i-count)
             count+=1
 

@@ -20,6 +20,7 @@ def getCombinedType(staffs,img):
         rest = []
         rest += getArrayType(StaffSymbol,7,None)
         # will have more rest here in future....
+        rest +=getArrayType(StaffSymbol,9,None)
 
         # and dot rest: special rest
         dotRest = getArrayType(StaffSymbol,8,None)

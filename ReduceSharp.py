@@ -47,19 +47,16 @@ def IdentifySharpOrFlat(arrayNote):
                 flatCount+=1
                 break
     if(flatCount>sharpCount):
-        return "flat", flatCount
+        return -1, flatCount
     else:
-        return "sharp",sharpCount
+        return 1,sharpCount
 
-def reduceSharp(staffs, type, level):
-    sharp = ['F', 'C', 'G', 'D', 'A']
+def changeSharpToFlat(staffs, level):
     flat = ['A', 'D', 'G', 'C', 'F']
     flatReal = ['B', 'E', 'A', 'D', 'G']
 
-    if type == "sharp":
-        arr = sharp[:level]
-    else:
-        arr = flat[:level]
+
+    arr = flat[:level]
 
     for staff in staffs:
         for j in range(len(staff)):
@@ -67,8 +64,7 @@ def reduceSharp(staffs, type, level):
             for i in range(len(arr)):
                 if(str(staff[j][2])[0] == arr[i] and staff[j][3] == True ):
                     listTypeNote[3] = False
-                    if(type == "flat"):
-                        listTypeNote[2] = listTypeNote[2].replace(flat[i],flatReal[i])
+                    listTypeNote[2] = listTypeNote[2].replace(flat[i],flatReal[i])
 
             staff[j] = tuple(listTypeNote)
 

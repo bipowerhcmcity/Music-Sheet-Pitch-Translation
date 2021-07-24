@@ -12,7 +12,7 @@ import NotesTranslation
 import NoteTranspose
 import ReduceSharp
 import PartitionStave
-
+import WritingNote
 
 #feature_type = ["black_chord","double close","double open","single close","single open","white_chord"]
 color = [(0,0,255),(0,255,0),(0,255,255),(255,0,0),(204,0,102),(0,0,0)] # red, green, yellow, blue, purple, black
@@ -84,6 +84,12 @@ for i in range(len(chordsType)):
         eighthRest.append(chordsType[i])
 print("eight Rest: ",eighthRest)
 
+fullRest = []
+for i in range(len(chordsType)):
+    if (chordsType[i].type == 9):
+        fullRest.append(chordsType[i])
+print("full Rest: ",fullRest)
+
 dotRest = []
 for i in range(len(chordsType)):
     if (chordsType[i].type == 8):
@@ -95,6 +101,7 @@ CreateStaff.groupNoteToStaff(onlyChord,staffs)
 CreateStaff.groupSymbolToStaff(onlySymbol,staffs)
 CreateStaff.groupSymbolToStaff(onlySharp,staffs)
 CreateStaff.groupSymbolToStaff(eighthRest,staffs)
+CreateStaff.groupSymbolToStaff(fullRest,staffs)
 CreateStaff.groupSymbolToStaff(dotRest,staffs)
 #
 # #
@@ -124,9 +131,8 @@ BASS = NotesTranslation.Pos2Note(BASS, "BASS")
 
 nonSharpIndex = ReduceSharp.getNonSharpNote(MAIN+BASS)
 
-NoteTranspose.transpose(MAIN, 2)
-NoteTranspose.transpose(BASS, 2)
-
+NoteTranspose.transpose(MAIN, 3)
+NoteTranspose.transpose(BASS, 3)
 
 
 for i,j in zip(MAIN, BASS):
@@ -148,11 +154,21 @@ for i,j in zip(MAIN, BASS):
 allNoteHasSharp = ReduceSharp.getAllNoteHasSharp(MAIN+BASS, nonSharpIndex)
 print("Sharp are in note", allNoteHasSharp)
 symbol, level = ReduceSharp.IdentifySharpOrFlat(allNoteHasSharp)
-ReduceSharp.reduceSharp(MAIN+BASS,symbol,level)
+if(symbol==-1):
+    ReduceSharp.changeSharpToFlat(MAIN+BASS,level)
 
+allMajorChord = ["C","G","D","A","E","B","Ab","Eb","Bb","F"]
+
+print(symbol, level)
+MajorChord = allMajorChord[level*symbol]
+print("Major chord: ",MajorChord)
 for i,j in zip(MAIN, BASS):
    print(i)
    print(j)
+
+print("Writing to pdf...")
+WritingNote.start(MajorChord,MAIN,BASS,symbol) # symbol for classify sharp or flat
+print(MAIN+BASS)
 
 cv2.imshow("IMG",img)
 cv2.waitKey(0)
