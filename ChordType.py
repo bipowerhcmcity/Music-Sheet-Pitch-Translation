@@ -61,8 +61,9 @@ single = ChordType("single",[single_close,single_open])
 verticalLine = ChordType("verticalLine")
 dotRest = ChordType("dot_rest")
 eighthRest = ChordType("eighth_rest")
+full_rest = ChordType("full_rest")
 
-root = ChordType("",[black_chord,double,single,white_chord,sharp,verticalLine,eighthRest,dotRest])
+root = ChordType("",[black_chord,double,single,white_chord,sharp,verticalLine,eighthRest,dotRest,full_rest])
 
 
 
