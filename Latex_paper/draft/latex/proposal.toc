@@ -23,3 +23,5 @@
 \contentsline {subsubsection}{Digitalization of the notes}{8}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {iii}Tones transposition}{9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {VI}Future work}{11}%
