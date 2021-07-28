@@ -15,8 +15,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/titling/titling.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/titling/titling.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
@@ -29,6 +29,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
@@ -81,8 +85,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -263,6 +265,9 @@ INPUT /home/pj/Documents/proposal/music_tones.jpg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
+INPUT /home/pj/Documents/proposal/Schedule.png
+INPUT /home/pj/Documents/proposal/Schedule.png
+INPUT /home/pj/Documents/proposal/Schedule.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.aux
 INPUT /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.run.xml

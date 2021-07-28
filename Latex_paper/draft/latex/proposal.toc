@@ -25,3 +25,7 @@
 \contentsline {subsection}{\numberline {iii}Tones transposition}{9}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {VI}Future work}{11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {VII}Expected outcome}{11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {VIII}Timeline}{12}%

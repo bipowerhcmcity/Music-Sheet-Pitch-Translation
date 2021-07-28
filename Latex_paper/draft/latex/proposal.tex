@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 % \usepackage[Vietnamese]{babel}
 \usepackage{titling}
+\usepackage{rotating}
 %package the indent the first line in latex
 \usepackage{indentfirst}
 \usepackage{graphicx}
@@ -57,9 +58,9 @@
 \section{Research team members}
 \begin{itemize}
 	\item Team Leader:      \hfill Truong Minh Khoa
-	\item Programmer: 		\hfill Dinh Cong Minh
-	\item Programmer:		\hfill Nguyen Tho Anh Khoa
-	\item Writer/Editor:	\hfill Huynh Minh Triet
+	\item Team member: 		\hfill Dinh Cong Minh
+	\item Team member:		\hfill Nguyen Tho Anh Khoa
+	\item Team member:	    \hfill Huynh Minh Triet
 \end{itemize}
 
 
@@ -397,8 +398,73 @@ build our new version to be more robust and capable of handling handwritten musi
 sheets, or music sheets that have staff lines not perfectly straights or
 equally parallel.\\
 
-If possible, we are hoping that we could implement the model in
-\textcite{Pacha2017} to bring this application to android devices.
+Future version will implement the model in
+\textcite{Pacha2017} to bring this method to android devices.
+
+\section{Expected outcome}
+Since tone transposition is a common problem faced by many musicians, our
+solution must logically also be widely available and easy to use. For this
+reason, our final goal is to implement the entire method as a mobile app that
+can be download and installed from app stores and use immediately.  
+
+
+\clearpage
+
+\section{Timeline}
+
+
+\newcommand\measurepage{\dimexpr\pagegoal-\pagetotal-\baselineskip\relax}
+\begin{sidewaysfigure}[hbt!]
+    \includegraphics[width = \textwidth, height = \measurepage, keepaspectratio]{Schedule.png}
+\end{sidewaysfigure}
+
+% \begin{figure}[h]
+%     % \makebox[\linewidth]{\includegraphics[width=\linewidth]{Schedule.png}}
+%     % \includegraphics{Schedule.png}
+%     \includegraphics[width = \linewidth, height = \textheight,keepaspectratio]{Schedule.png}
+%     \caption{projected timeline in the scale of one year}
+%     \label{Timeline}
+% \end{figure}
+
+
+
+Task description:\\
+
+Detecting staff line: staff line detection is the first essential step to obtain
+the coordinates of each line from which the note's pitch can be derived.\\
+
+Staff line removal: Run Length Encoding or other methods are used to remove
+every line of a line-detected music sheet from the previous process or an
+independent music sheet; this is done for ease of symbols and note recognition.\\
+
+Note and note type detection: At this stage, template matching is then used to
+recognize the shape of each music note as well as categorize each note to
+determine whether it's a whole note, half note, or a quarter note, etc.\\
+
+Grouping Note to Staff: This process will arrange each note into its respective
+staff. From then on, operation on the music sheet is not done on the entire sheet
+but is done staff by staff; this is a divide and conquers method\\
+
+Detecting additional symbols: A music sheet doesn't just contain music notes, but
+it might also include accidentals and key signatures to indicate beat and tone.
+Recognition and understanding of the semantic of each symbol enable the checking
+of whether the staff has the number of beats required.\\
+
+Note Translation: At this stage, each note will be converted to
+scientific pitch notation, e.g., A, B and C, etc. based on its positional
+coordinate.\\
+
+Note Transposition: This process shifts the note up or down based on its
+scientific pitch notation to result in a transposed music sheet.\\
+
+Build an app to display the result: at this stage, the final product, i.e., the
+transposed music sheet is completed; we will build an app to apply and display
+the final result on mobile devices.\\
+
+Write paper: During the last two months of the project, we will start the
+process of writing a scientific paper; as a way to contribute to the scientific
+community and concluding a year of work.\\
+
 
 \printbibliography
 
