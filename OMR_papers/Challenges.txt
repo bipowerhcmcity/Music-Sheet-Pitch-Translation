@@ -1,0 +1,2 @@
+Pacha2017 (có code) là một bài báo có góc nhìn tổng quan về toàn ngành OMR và
+những điểm yếu/challenges hiện tại đang gặp phải của ngành.
