@@ -214,32 +214,6 @@
       \verb https://arxiv.org/abs/2006.07885v2%20http://arxiv.org/abs/2006.07885
       \endverb
     \endentry
-    \entry{Wikipedia2013}{article}{}
-      \name{author}{1}{}{%
-        {{hash=9c677286866aad38f8e9b660f5411814}{%
-           family={Wikipedia},
-           familyi={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
-      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The Free Encyclopedia Wikipedia [web page]}
-      \field{title}{{Scientific pitch notation}}
-      \field{year}{2013}
-      \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/Scientific{\_}pitch{\_}notation http://en.wikipedia.org/wiki/Scientific{\_}pitch{\_}notation
-      \endverb
-      \verb{url}
-      \verb https://en.wikipedia.org/wiki/Scientific%7B%5C_%7Dpitch%7B%5C_%7Dnotation%20http://en.wikipedia.org/wiki/Scientific%7B%5C_%7Dpitch%7B%5C_%7Dnotation
-      \endverb
-    \endentry
   \enddatalist
 \endrefsection
 \endinput

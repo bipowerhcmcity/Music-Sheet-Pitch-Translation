@@ -1,20 +1,20 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'proposal.blg'
-[71] biber:322> INFO - === Wed Jul 28, 2021, 11:43:20
-[84] Biber.pm:415> INFO - Reading 'proposal.bcf'
-[139] Biber.pm:943> INFO - Found 6 citekeys in bib section 0
-[150] Biber.pm:4256> INFO - Processing section 0
-[151] Utils.pm:75> INFO - Globbing data source '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib'
-[151] Utils.pm:91> INFO - Globbed data source '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib' to /home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib
-[159] Biber.pm:4455> INFO - Looking for bibtex format file '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib' for section 0
-[160] bibtex.pm:1653> INFO - LaTeX decoding ...
-[174] bibtex.pm:1471> INFO - Found BibTeX data source '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib'
-[198] Utils.pm:293> WARN - month field 'jun' in entry 'Shatri2020a' is not an integer - this will probably not sort properly.
-[223] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_LXaj/library.bib_82340.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[235] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[235] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[235] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[235] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[243] bbl.pm:652> INFO - Writing 'proposal.bbl' with encoding 'UTF-8'
-[246] bbl.pm:755> INFO - Output to proposal.bbl
-[247] Biber.pm:128> INFO - WARNINGS: 2
+[73] biber:322> INFO - === Wed Jul 28, 2021, 13:59:23
+[85] Biber.pm:415> INFO - Reading 'proposal.bcf'
+[142] Biber.pm:943> INFO - Found 5 citekeys in bib section 0
+[154] Biber.pm:4256> INFO - Processing section 0
+[154] Utils.pm:75> INFO - Globbing data source '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib'
+[154] Utils.pm:91> INFO - Globbed data source '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib' to /home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib
+[162] Biber.pm:4455> INFO - Looking for bibtex format file '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib' for section 0
+[164] bibtex.pm:1653> INFO - LaTeX decoding ...
+[179] bibtex.pm:1471> INFO - Found BibTeX data source '/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib'
+[203] Utils.pm:293> WARN - month field 'jun' in entry 'Shatri2020a' is not an integer - this will probably not sort properly.
+[227] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_nddF/library.bib_128048.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[238] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[238] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[238] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[238] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[247] bbl.pm:652> INFO - Writing 'proposal.bbl' with encoding 'UTF-8'
+[250] bbl.pm:755> INFO - Output to proposal.bbl
+[250] Biber.pm:128> INFO - WARNINGS: 2

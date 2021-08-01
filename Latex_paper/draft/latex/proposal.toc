@@ -8,8 +8,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {IV}Introduction}{3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {i}Our solution}{3}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {V}Proposed Method}{4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {i}Line Removal}{4}%
@@ -29,3 +27,5 @@
 \contentsline {section}{\numberline {VII}Expected outcome}{11}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {VIII}Timeline}{12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {i}Task description}{13}%
