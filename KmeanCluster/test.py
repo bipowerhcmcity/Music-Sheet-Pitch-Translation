@@ -5,11 +5,13 @@ from scipy.spatial.distance import cdist
 import random
 np.random.seed(11)
 import cv2
+import StaffLineRemoval
 
-file_handle = cv2.imread("sheet_5.jpg")
-GRAY = cv2.cvtColor(file_handle, cv2.COLOR_BGR2GRAY)
+file_handle = cv2.imread("sheet_2.jpg")
+GRAY = StaffLineRemoval.StaffLineRemoval(file_handle)
+# GRAY = cv2.GaussianBlur(GRAY,(5,5),0)
 
-win_size = 20
+win_size = 5
 K = 2
 
 def EDist(a, b):
@@ -75,7 +77,7 @@ def HasConverge(old_center, new_center):
 def Kmeans(X, K):
 	centers = Kmean_init_centers(X, K)
 	it = 0
-	for i in range(10):
+	for i in range(5):
 		it = it + 1
 		print("ITERATTION: ", it)
 		label = Kmean_assign_label(X, centers)
