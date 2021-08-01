@@ -1,2 +1,7 @@
 Pacha2017 (có code) là một bài báo có góc nhìn tổng quan về toàn ngành OMR và
 những điểm yếu/challenges hiện tại đang gặp phải của ngành.
+
+Deepsocres_and_deep_watershed_ : là một bài báo sử dụng dataset của DeepScore 
+https://tuggeluk.github.io/deepscores/
+và giải quyết vấn đề tách các symbol ra khỏi background của sheet nhạc bằng phương pháp watershed.
+
