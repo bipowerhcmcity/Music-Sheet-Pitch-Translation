@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  28 JUL 2021 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  8 AUG 2021 21:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -651,42 +651,48 @@ File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@expandcount=\count418
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)))
-\@quotelevel=\count419
-\@quotereset=\count420
+))) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip96
+\multirow@cntb=\count419
+\multirow@dima=\skip97
+\bigstrutjot=\dimen278
+)
+\@quotelevel=\count420
+\@quotereset=\count421
  (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count421
+\l__kernel_color_stack_int=\count422
 \l__pdf_internal_box=\box67
 ) (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.aux)
 \openout1 = `proposal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count422
-\scratchdimen=\dimen278
+\scratchcounter=\count423
+\scratchdimen=\dimen279
 \scratchbox=\box68
-\nofMPsegments=\count423
-\nofMParguments=\count424
+\nofMPsegments=\count424
+\nofMParguments=\count425
 \everyMPshowfont=\toks41
-\MPscratchCnt=\count425
-\MPscratchDim=\dimen279
-\MPnumerator=\count426
-\makeMPintoPDFobject=\count427
+\MPscratchCnt=\count426
+\MPscratchDim=\dimen280
+\MPnumerator=\count427
+\makeMPintoPDFobject=\count428
 \everyMPtoPDFconversion=\toks42
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -700,8 +706,8 @@ Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 57.
-\c@lstlisting=\count428
+LaTeX Info: Redefining \selectfont on input line 63.
+\c@lstlisting=\count429
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -715,13 +721,13 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'proposal.bbl' found.
  (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.bbl)
-Package biblatex Info: Reference section=0 on input line 57.
-Package biblatex Info: Reference segment=0 on input line 57.
+Package biblatex Info: Reference section=0 on input line 63.
+Package biblatex Info: Reference segment=0 on input line 63.
  ABD: EveryShipout initializing macros
 </home/pj/Documents/proposal/vgu_logo.png, id=4, 251.94125pt x 79.29625pt>
 File: /home/pj/Documents/proposal/vgu_logo.png Graphic file (type png)
 <use /home/pj/Documents/proposal/vgu_logo.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/vgu_logo.png  used on input line 61.
+Package pdftex.def Info: /home/pj/Documents/proposal/vgu_logo.png  used on input line 67.
 (pdftex.def)             Requested size: 251.94063pt x 79.29604pt.
  [1
 
@@ -734,7 +740,7 @@ Package pdftex.def Info: /home/pj/Documents/proposal/vgu_logo.png  used on input
 ] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 107--112
+Underfull \hbox (badness 10000) in paragraph at lines 116--121
 
  []
 
@@ -744,15 +750,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--112
 </home/pj/Documents/proposal/b4_dilate.png, id=27, 20.075pt x 247.92625pt>
 File: /home/pj/Documents/proposal/b4_dilate.png Graphic file (type png)
 <use /home/pj/Documents/proposal/b4_dilate.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/b4_dilate.png  used on input line 156.
+Package pdftex.def Info: /home/pj/Documents/proposal/b4_dilate.png  used on input line 165.
 (pdftex.def)             Requested size: 11.70354pt x 144.54pt.
 </home/pj/Documents/proposal/after_dilate.png, id=28, 54.2025pt x 336.25626pt>
 File: /home/pj/Documents/proposal/after_dilate.png Graphic file (type png)
 <use /home/pj/Documents/proposal/after_dilate.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/after_dilate.png  used on input line 162.
+Package pdftex.def Info: /home/pj/Documents/proposal/after_dilate.png  used on input line 171.
 (pdftex.def)             Requested size: 23.29916pt x 144.54pt.
 
-Overfull \hbox (5.22217pt too wide) in paragraph at lines 154--165
+Overfull \hbox (5.22217pt too wide) in paragraph at lines 163--174
  [][]  [] 
  []
 
@@ -762,22 +768,22 @@ Overfull \hbox (5.22217pt too wide) in paragraph at lines 154--165
 </home/pj/Documents/proposal/staffRemoval.jpg, id=36, 1279.78125pt x 1656.1875pt>
 File: /home/pj/Documents/proposal/staffRemoval.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/staffRemoval.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/staffRemoval.jpg  used on input line 171.
+Package pdftex.def Info: /home/pj/Documents/proposal/staffRemoval.jpg  used on input line 180.
 (pdftex.def)             Requested size: 390.0pt x 504.69421pt.
  [5
 
  </home/pj/Documents/proposal/staffRemoval.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 185--189
+Underfull \hbox (badness 10000) in paragraph at lines 194--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--193
+Underfull \hbox (badness 10000) in paragraph at lines 199--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--206
+Underfull \hbox (badness 10000) in paragraph at lines 205--215
 
  []
 
@@ -787,171 +793,189 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--206
 </home/pj/Documents/proposal/two_staff.jpg, id=46, 614.295pt x 127.1952pt>
 File: /home/pj/Documents/proposal/two_staff.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/two_staff.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/two_staff.jpg  used on input line 215.
+Package pdftex.def Info: /home/pj/Documents/proposal/two_staff.jpg  used on input line 224.
 (pdftex.def)             Requested size: 390.0pt x 80.75446pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--225
+Underfull \hbox (badness 10000) in paragraph at lines 230--234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--236
+Underfull \hbox (badness 10000) in paragraph at lines 237--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--243
+Underfull \hbox (badness 10000) in paragraph at lines 246--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--251
+Underfull \hbox (badness 10000) in paragraph at lines 253--260
 
  []
 
 [7
 
  </home/pj/Documents/proposal/two_staff.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--267
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--271
+Underfull \hbox (badness 10000) in paragraph at lines 277--280
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--297
+Underfull \hbox (badness 10000) in paragraph at lines 302--306
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 300--307
+Underfull \hbox (badness 10000) in paragraph at lines 309--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--310
+Underfull \hbox (badness 10000) in paragraph at lines 317--319
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--317
+Underfull \hbox (badness 10000) in paragraph at lines 323--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
+Underfull \hbox (badness 10000) in paragraph at lines 328--330
 
  []
 
 </home/pj/Documents/proposal/music_tones.jpg, id=54, 626.34pt x 142.5325pt>
 File: /home/pj/Documents/proposal/music_tones.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/music_tones.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/music_tones.jpg  used on input line 326.
+Package pdftex.def Info: /home/pj/Documents/proposal/music_tones.jpg  used on input line 335.
 (pdftex.def)             Requested size: 390.0pt x 88.752pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--334
+Underfull \hbox (badness 10000) in paragraph at lines 340--343
 
  []
 
 [9 </home/pj/Documents/proposal/music_tones.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 335--337
+Underfull \hbox (badness 10000) in paragraph at lines 344--346
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 339--348
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 348--357
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--360
+Underfull \hbox (badness 10000) in paragraph at lines 364--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--365
+Underfull \hbox (badness 10000) in paragraph at lines 370--374
 
  []
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 374--376
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
 
  []
 
 
-Overfull \hbox (54.14923pt too wide) in paragraph at lines 378--379
+Overfull \hbox (54.14923pt too wide) in paragraph at lines 387--388
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--390
+Underfull \hbox (badness 10000) in paragraph at lines 394--399
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 398--404
-
- []
-
-[11] [12
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 445--447
+Underfull \hbox (badness 10000) in paragraph at lines 407--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--451
+Underfull \hbox (badness 10000) in paragraph at lines 421--423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--455
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--459
+Underfull \hbox (badness 10000) in paragraph at lines 431--434
+
+ []
+
+</home/pj/Documents/proposal/budget_table.png, id=65, 986.18437pt x 435.12563pt>
+File: /home/pj/Documents/proposal/budget_table.png Graphic file (type png)
+<use /home/pj/Documents/proposal/budget_table.png>
+Package pdftex.def Info: /home/pj/Documents/proposal/budget_table.png  used on input line 437.
+(pdftex.def)             Requested size: 390.0pt x 172.07524pt.
+[11] [12 </home/pj/Documents/proposal/budget_table.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 469--471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--464
+Underfull \hbox (badness 10000) in paragraph at lines 472--475
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--467
+Underfull \hbox (badness 10000) in paragraph at lines 476--479
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--471
+Underfull \hbox (badness 10000) in paragraph at lines 480--483
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--474
+Underfull \hbox (badness 10000) in paragraph at lines 484--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--478
+Underfull \hbox (badness 10000) in paragraph at lines 489--491
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--482
+Underfull \hbox (badness 10000) in paragraph at lines 492--495
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--498
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--502
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--506
 
  []
 
@@ -965,18 +989,18 @@ Package logreq Info: Writing requests to 'proposal.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23316 strings out of 481239
- 445230 string characters out of 5920378
- 1058267 words of memory out of 5000000
- 38227 multiletter control sequences out of 15000+600000
+ 23374 strings out of 481239
+ 446267 string characters out of 5920378
+ 1059025 words of memory out of 5000000
+ 38280 multiletter control sequences out of 15000+600000
  540619 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,11n,60p,1443b,1391s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.pdf (16 pages, 641460 bytes).
+Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.pdf (16 pages, 722141 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
