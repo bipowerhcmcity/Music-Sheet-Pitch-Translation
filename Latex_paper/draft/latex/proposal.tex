@@ -8,6 +8,7 @@
 \newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \usepackage[utf8]{inputenc}
 % \usepackage[Vietnamese]{babel}
 \usepackage{titling}
@@ -38,6 +39,11 @@
 
 \usepackage{tikz}
 
+%for table at the end of the proposal
+\usepackage{booktabs}   
+\usepackage{multirow}
+\usepackage{graphicx}
+%  \usepackage[table,xcdraw]{xcolor}
 
 \pretitle{
     \begin{tikzpicture}[remember picture,overlay]
@@ -66,10 +72,13 @@
 
 \section{Research team members}
 \begin{itemize}
-	\item Team Leader:      \hfill Truong Minh Khoa
-	\item Team member: 		\hfill Dinh Cong Minh
-	\item Team member:		\hfill Nguyen Tho Anh Khoa
-	\item Team member:	    \hfill Huynh Minh Triet
+	\item Team leader:      \hfill Truong Minh Khoa  (VGU CSE 2018)
+	\item Team Member: 		\hfill Dinh Cong Minh (VGU CSE 2019)
+	\item Team Member:	    \hfill Nguyen Tho Anh Khoa (alumni of HCM University of 
+
+                            \hfill Technology K14)
+	\item Team Member:	    \hfill Huynh Minh Triet (VGU CSE 2019)
+    \item Supervisor        \hfill Dr.Dinh Quang Vinh,CSE (Faculty of VGU) 
 \end{itemize}
 
 
@@ -409,12 +418,27 @@ Future version will implement the model in
 % 1) Code demo có thể chuẩn tone nhạc dc
 % 2) Conference paper
 
-Our short-term goal is a demo code capable of doing tone transposition for an
-entire music sheet. In addition, our long-term goal is to turn this project to
-be a conference paper.
+Currently, the outcome of our group's project is to produce a paper to attend a scientific conference.
+We plan to submit to the Nafosted conference, and if time allows, other Machine Learning conferences.\\
+
+Hardware: Our final product does not include any hardware components.\\
+
+Software: After attending the Nafosted conference as well as finishing our
+paper, we would like to build an app implementation of the method capable of
+running on Android tablets and PCs.
+
+\section{Cost}
+Total estimated cost will be 20 Million Vietnam Dong, which will be used to pay
+for the conference's entry fee and other miscellaneous fees related to attending
+such conferences.\\
 
 
-\clearpage
+\begin{center}
+  \makebox[\textwidth]{\includegraphics[width=\linewidth]{budget_table.png}}
+\end{center}
+
+
+
 
 \section{Timeline}
 \begin{table}[h]

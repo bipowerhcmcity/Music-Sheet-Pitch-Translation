@@ -26,6 +26,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {VII}Expected outcome}{11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {VIII}Timeline}{12}%
+\contentsline {section}{\numberline {VIII}Cost}{11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {IX}Timeline}{12}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {i}Task description}{13}%
