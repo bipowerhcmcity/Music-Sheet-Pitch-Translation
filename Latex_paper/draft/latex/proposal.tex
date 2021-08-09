@@ -40,7 +40,9 @@
 \usepackage{tikz}
 
 %for table at the end of the proposal
-\usepackage{booktabs}   
+% \usepackage{booktabs}   Dont use booktab the traditional method is still better
+\usepackage{tablefootnote}
+\usepackage{footnote}
 \usepackage{multirow}
 \usepackage{graphicx}
 %  \usepackage[table,xcdraw]{xcolor}
@@ -72,7 +74,7 @@
 
 \section{Research team members}
 \begin{itemize}
-	\item Team leader:      \hfill Truong Minh Khoa  (VGU CSE 2018)
+	\item Team Leader:      \hfill Truong Minh Khoa  (VGU CSE 2018)
 	\item Team Member: 		\hfill Dinh Cong Minh (VGU CSE 2019)
 	\item Team Member:	    \hfill Nguyen Tho Anh Khoa (alumni of HCM University of 
 
@@ -433,11 +435,32 @@ for the conference's entry fee and other miscellaneous fees related to attending
 such conferences.\\
 
 
-\begin{center}
-  \makebox[\textwidth]{\includegraphics[width=\linewidth]{budget_table.png}}
-\end{center}
-
-
+\begin{table}[]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \cellcolor[HTML]{FFFFFF}{\color[HTML]{C8C3BC} } &
+       &
+      \multicolumn{2}{c|}{\textbf{Total estimated budget}} &
+      \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Breakdown of \\ requested budget by year\end{tabular}}} \\ \cline{3-6} 
+    \multirow{-2}{*}{\cellcolor[HTML]{FFFFFF}{\color[HTML]{C8C3BC} }} &
+      \multirow{-2}{*}{\textbf{Budget items}} &
+      Amount (VND) &
+      \% &
+      {\color[HTML]{CB0000} From VGU} &
+      Others \\ \hline
+    1 & Man-power                   &                     &     &                     &  \\ \hline
+    2 & Materials \& Supplies       &                     &     &                     &  \\ \hline
+    3 & Equipment, instrument       &                     &     &                     &  \\ \hline
+    4 & Conference, publication fee & \textbf{16,499,000} \tablefootnote{one VGA MSI GeForce RTX 3060 LHR VENTUS 2X 12GB GDDR6 OC} & 100 & \textbf{16,499,000} &  \\ \hline
+    5 & Travel, field expenses      &                     &     &                     &  \\ \hline
+    6 & Outsourcing, services       &                     &     &                     &  \\ \hline
+    7 & Other direct costs          &                     &     &                     &  \\ \hline
+      & \textbf{Total:}             & \textbf{16,499,000} \tablefootnote{cost may be subject to change} & 100 & \textbf{16,499,000} &  \\ \hline
+    \end{tabular}%
+    }
+    \end{table}
 
 
 \section{Timeline}
