@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  9 AUG 2021 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  10 AUG 2021 12:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -688,7 +688,11 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count425
 \l__pdf_internal_box=\box68
-) (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.aux)
+) (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+)
 \openout1 = `proposal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -771,259 +775,285 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--123
 [3
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 151--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--161
+
+ []
+
 </home/pj/Documents/proposal/b4_dilate.png, id=27, 20.075pt x 247.92625pt>
 File: /home/pj/Documents/proposal/b4_dilate.png Graphic file (type png)
 <use /home/pj/Documents/proposal/b4_dilate.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/b4_dilate.png  used on input line 167.
+Package pdftex.def Info: /home/pj/Documents/proposal/b4_dilate.png  used on input line 168.
 (pdftex.def)             Requested size: 11.70354pt x 144.54pt.
 </home/pj/Documents/proposal/after_dilate.png, id=28, 54.2025pt x 336.25626pt>
 File: /home/pj/Documents/proposal/after_dilate.png Graphic file (type png)
 <use /home/pj/Documents/proposal/after_dilate.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/after_dilate.png  used on input line 173.
+Package pdftex.def Info: /home/pj/Documents/proposal/after_dilate.png  used on input line 174.
 (pdftex.def)             Requested size: 23.29916pt x 144.54pt.
 
-Overfull \hbox (5.22217pt too wide) in paragraph at lines 165--176
+Overfull \hbox (5.22217pt too wide) in paragraph at lines 166--177
  [][]  [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--184
+
  []
 
 [4
 
  </home/pj/Documents/proposal/b4_dilate.png> </home/pj/Documents/proposal/after_dilate.png>]
-</home/pj/Documents/proposal/staffRemoval.jpg, id=36, 1279.78125pt x 1656.1875pt>
+</home/pj/Documents/proposal/apply_RLE.png, id=35, 420.57124pt x 315.1775pt>
+File: /home/pj/Documents/proposal/apply_RLE.png Graphic file (type png)
+<use /home/pj/Documents/proposal/apply_RLE.png>
+Package pdftex.def Info: /home/pj/Documents/proposal/apply_RLE.png  used on input line 186.
+(pdftex.def)             Requested size: 210.28511pt x 157.58836pt.
+</home/pj/Documents/proposal/inverted_two_staves.png, id=36, 1181.41376pt x 265.99374pt>
+File: /home/pj/Documents/proposal/inverted_two_staves.png Graphic file (type png)
+<use /home/pj/Documents/proposal/inverted_two_staves.png>
+Package pdftex.def Info: /home/pj/Documents/proposal/inverted_two_staves.png  used on input line 230.
+(pdftex.def)             Requested size: 390.0pt x 87.80661pt.
+ [5 </home/pj/Documents/proposal/apply_RLE.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--273
+
+ []
+
+[6 </home/pj/Documents/proposal/inverted_two_staves.png>]
+</home/pj/Documents/proposal/staffRemoval.jpg, id=50, 1279.78125pt x 1656.1875pt>
 File: /home/pj/Documents/proposal/staffRemoval.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/staffRemoval.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/staffRemoval.jpg  used on input line 182.
+Package pdftex.def Info: /home/pj/Documents/proposal/staffRemoval.jpg  used on input line 278.
 (pdftex.def)             Requested size: 390.0pt x 504.69421pt.
- [5
+ [7
 
  </home/pj/Documents/proposal/staffRemoval.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 196--200
+Underfull \hbox (badness 10000) in paragraph at lines 294--298
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--204
+Underfull \hbox (badness 10000) in paragraph at lines 299--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--217
+Underfull \hbox (badness 10000) in paragraph at lines 305--315
 
  []
 
-[6
+[8
 
 ]
-</home/pj/Documents/proposal/two_staff.jpg, id=46, 614.295pt x 127.1952pt>
+</home/pj/Documents/proposal/two_staff.jpg, id=57, 614.295pt x 127.1952pt>
 File: /home/pj/Documents/proposal/two_staff.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/two_staff.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/two_staff.jpg  used on input line 226.
+Package pdftex.def Info: /home/pj/Documents/proposal/two_staff.jpg  used on input line 324.
 (pdftex.def)             Requested size: 390.0pt x 80.75446pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--236
+Underfull \hbox (badness 10000) in paragraph at lines 330--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--247
+Underfull \hbox (badness 10000) in paragraph at lines 337--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--254
+Underfull \hbox (badness 10000) in paragraph at lines 346--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--262
+Underfull \hbox (badness 10000) in paragraph at lines 353--360
 
  []
 
-[7
+[9
 
  </home/pj/Documents/proposal/two_staff.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 263--265
+Underfull \hbox (badness 10000) in paragraph at lines 361--363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--278
+Underfull \hbox (badness 10000) in paragraph at lines 374--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--282
+Underfull \hbox (badness 10000) in paragraph at lines 377--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--308
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 311--318
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 409--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--328
+Underfull \hbox (badness 10000) in paragraph at lines 417--419
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--332
+Underfull \hbox (badness 10000) in paragraph at lines 423--426
 
  []
 
-</home/pj/Documents/proposal/music_tones.jpg, id=54, 626.34pt x 142.5325pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 428--430
+
+ []
+
+</home/pj/Documents/proposal/music_tones.jpg, id=65, 626.34pt x 142.5325pt>
 File: /home/pj/Documents/proposal/music_tones.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/music_tones.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/music_tones.jpg  used on input line 337.
+Package pdftex.def Info: /home/pj/Documents/proposal/music_tones.jpg  used on input line 435.
 (pdftex.def)             Requested size: 390.0pt x 88.752pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--345
+Underfull \hbox (badness 10000) in paragraph at lines 440--443
 
  []
 
-[9 </home/pj/Documents/proposal/music_tones.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+[11 </home/pj/Documents/proposal/music_tones.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 444--446
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 350--359
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 448--457
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--371
+Underfull \hbox (badness 10000) in paragraph at lines 464--469
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--376
+Underfull \hbox (badness 10000) in paragraph at lines 470--474
 
  []
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 385--387
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
 
  []
 
 
-Overfull \hbox (54.14923pt too wide) in paragraph at lines 389--390
+Overfull \hbox (54.14923pt too wide) in paragraph at lines 487--488
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--401
+Underfull \hbox (badness 10000) in paragraph at lines 494--499
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 409--415
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 507--513
 
  []
 
+[13] [14
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+]
+Underfull \hbox (badness 10000) in paragraph at lines 593--595
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--436
+Underfull \hbox (badness 10000) in paragraph at lines 596--599
 
  []
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 438.
-
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 492--494
+Underfull \hbox (badness 10000) in paragraph at lines 600--603
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 495--498
+Underfull \hbox (badness 10000) in paragraph at lines 604--607
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--502
+Underfull \hbox (badness 10000) in paragraph at lines 608--612
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--506
+Underfull \hbox (badness 10000) in paragraph at lines 613--615
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--511
+Underfull \hbox (badness 10000) in paragraph at lines 616--619
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--514
+Underfull \hbox (badness 10000) in paragraph at lines 620--622
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 515--518
+Underfull \hbox (badness 10000) in paragraph at lines 623--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 519--521
+Underfull \hbox (badness 10000) in paragraph at lines 627--630
 
  []
 
+[15
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--525
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 526--529
-
- []
-
-[13
-
-] [14
+] [16
 
 ] (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'proposal.run.xml'.
 \openout1 = `proposal.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23598 strings out of 481239
- 449915 string characters out of 5920378
- 1066948 words of memory out of 5000000
- 38483 multiletter control sequences out of 15000+600000
+ 23614 strings out of 481239
+ 450440 string characters out of 5920378
+ 1065014 words of memory out of 5000000
+ 38498 multiletter control sequences out of 15000+600000
  540619 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,17n,60p,1443b,1397s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,60p,1443b,1491s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.pdf (16 pages, 651257 bytes).
+Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.pdf (18 pages, 700629 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

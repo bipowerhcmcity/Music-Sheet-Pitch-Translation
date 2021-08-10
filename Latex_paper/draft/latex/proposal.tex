@@ -136,48 +136,144 @@ entire musical sheet by hand, which is labor-intensive and time-consuming.
 \clearpage
 
 \section{Proposed Method}
-The process includes: first removing the lines on each staff for ease of musical
-note detection. The second stage includes note
-recognition to translate the detected notes into scientific pitch notaion. The third stage is
-where an additional python function will transpose the semitones or tones of the song to give
-the final output. 
+The process includes the first stage, Staff Line Preprocessing, to remove the
+lines on each staff for ease of musical note detection. The second stage is Note
+Translation to translates the detected notes into scientific pitch notation. The
+third stage, Tone Transposition will transpose the semitones or tones of the
+song to give the final output. 
 
-\subsection{Line Removal}
-By using the method in \textcite{Gomez2017} the staff's line removal algorithm
-will first grayscale the image then invert the color of the image so that the
-lines are now white and the background is black. Finally, using a kernel of the
-form: \\
-$
+\subsection{Staff Line Preprocessing}
+For ease of note recognition, first, the staff lines must be detected and
+removed. This process includes two stages. First, detection of the staff lines
+and their thickness; second, removal of those staff lines.
+
+\subsubsection{Staff Line Detection}
+To detect the staff line in the music sheet we first need to remove all of the notes.
+This is done for ease of staff line detection.\\
+
+Our staff's line detection algorithm will first grayscale the image and then
+invert the image colors so that the lines are now white and the background is
+black. The color inverted music sheet is then run with the OpenCV built-in
+dilate() function, where the horizontal lines will be expanded so that its width
+is increasingly larger, and any white pixels, i.e., notes, that does not belong
+to the horizontal line, will be flipped to 0 and becomes the background thus
+eliminating all of the notes.\\
+
+% \clearpage
+Result:
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[height=2.0in]{b4_dilate}
+        \caption{before applying dilate function}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[height=2.0in]{after_dilate}
+        \caption{after applying dilate function}
+    \end{subfigure}
+\end{figure}
+
+The dilated image above will give an output that is fairly accurate except for a
+few lines at the last staff line. This is why we then use \textcite{Gomez2017}'s
+method and Run Length Encoding (RLE) to determine the lines' thicknesses and
+their distance between one another. RLE will be applied vertically along a
+random column of the dilated image above:\\
+
+\begin{figure}[ht]
+\makebox[\textwidth]{\includegraphics[scale = 0.5]{apply_RLE}}
+\caption{dilated image after running RLE on a random column \protect\footnotemark }
+\label{}
+\end{figure}
+
+\footnotetext{This image was taken from \textcite{Gomez2017} which was done on a
+note removed but not color inverted music sheet. Which is why the line is in
+black and the distance is in white, opposite to our dilated image.}
+
+RLE will group adjacent pixels of the same color into one group with a number to
+indicate how many pixels of the same color is within that group and a character
+to indicate that group is either a group of black pixels "B" or a group of white
+pixels "W". Through which the staff line thickness and the distance between two
+staff lines are then obtained. More specifically, to extract the distance between each
+staff line, e.g., our RLE output might be 3B,2W,4B,2W,3B,3W,3B,2W, the black
+group (because our music sheet is color inverted so black is the distance) that
+appear most often "3B" with the value of three pixels is chosen. Therefore, the
+distance between two staff lines is three pixels. The same method is also applied
+to get the thickness of the lines.
+
+\subsubsection{Staff Line Removal}
+In our music sheet, places where there is only lines will have matrix of 
+this type:
+
+\begin{figure}[ht]
+    \centering
+    $
 \begin{pmatrix}
 	0 & 0 & 0\\
 	1 & 1 & 1\\
 	0 & 0 & 0
 \end{pmatrix}
 $\\
-then run with the dilate() function built-in OpenCV, the horizontal lines will
-be expanded so that its width is increasingly larger, and any white pixels, i.e.,
-notes, that does not belong to the horizontal line, will be flipped to 0 and
-becomes the background thus eliminating all of the notes.
-
-result:
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[t]{0.5\textwidth}
-        \centering
-        \includegraphics[height=2.0in]{b4_dilate}
-        \caption{music sheet before line removal}
-    \end{subfigure}%
-    ~ 
-    \begin{subfigure}[t]{0.5\textwidth}
-        \centering
-        \includegraphics[height=2.0in]{after_dilate}
-        \caption{music sheet after line removal}
-    \end{subfigure}
+\caption{an example of a kernel with only line and no notes}
+\label{line only matrix}
 \end{figure}
 
+\medskip
+
+Please note that the rows of ones represent the thickness of the line, which can
+vary from one to multiple rows, the same thing goes for the row of zeros, distance
+between each line.
+
+\begin{figure}[h]
+    \makebox[\textwidth]{\includegraphics[width=\linewidth]{inverted_two_staves.png}}
+    \caption{The current color inverted music sheet}
+    \label{}
+\end{figure}
+ 
+To remove the staff lines on each music line, a check vector of length N will be run 
+on each NxN kernel of the image:\\
+
+\begin{figure}[ht]
+    \centering
+$
+\begin{pmatrix}
+	1 & ... & 1 & 0 & ... & 0 & 1 & ... & 1
+\end{pmatrix}
+$\\
+\caption{Check vector of length N}
+\label{check vector}
+\end{figure}
+
+The number of ones and zeros in figure \ref{check vector} depends on
+the thickness of each line and the distance between two staff lines
+respectively, which was obtained in the previous section.  For example, with the
+kernel in figure \ref{line only matrix} the check vector will be of the type:
+
+\begin{figure}[h!]
+    \centering
+    $
+    \begin{pmatrix}
+       1 & 0 & 1 
+    \end{pmatrix}
+    $\\
+\end{figure}
+
+ This check vector is then multiplied with every NxN kernel of the image. If the
+ kernel is of the type of a line, the result will be a vector of 0s, otherwise,
+ the vector result will contain at least one positive integer among its
+ elements.\\
+
+ For every time we encounter an area that is a line by using the check vector,
+ the found area will be replaced by the NxN matrix which is full of 0s, else it
+ will be ignored and we will continuously check the next kernel. The process
+ will be terminated when we have checked all the possible kernels in the
+ image.\\
+
 \clearpage
-Finally, flipping the output image will result in a music sheet with lines
-removed:
+Finally, inverting the color of the output image one last time will result in a
+music sheet with lines removed:
 \begin{center}
   \makebox[\textwidth]{\includegraphics[width=\linewidth]{staffRemoval.jpg}}
 \end{center}
@@ -185,11 +281,13 @@ removed:
 \clearpage
 
 \subsection{Note Translation}
-To translate the note from its input as pictorial data to scientific pitch notation so that the
-computer can process the music sheet, three steps are required. First by using 
-\textcite{Rosebrock} method to eliminate overlapping note positions after running template matching. The second is to
-reorder the notes that are on the same staff lines into a list, for each staff line
-there is a corresponding list containing the positions of each note on that staff.
+
+To translate the note from its input as pictorial data to scientific pitch
+notation so that the computer can process the music sheet, three steps are
+required. First by using \textcite{Rosebrock} method to eliminate overlapping
+note positions after running template matching. The second is to reorder the
+notes that are on the same staff lines into a list, for each staff line there is
+a corresponding list containing the positions of each note on that staff.
 Finally, converting the note positions into scientific pitch notation.
 
 \subsubsection{Eliminating overlaping positions}
@@ -326,7 +424,7 @@ Continue to repeat this staff by staff for all staves in the music sheet will
 result in a list of scientific pitch notations for each note in the music sheet
 organized in chronological order.\\
 
-\subsection{Tones transposition}
+\subsection{Tones Transposition}
 After the previous process the output is a list of scientific pitch notaion,
 e.g., C3, B2, C3, E2, F2, E3, D3, C3.\\
 
@@ -420,22 +518,25 @@ Future version will implement the model in
 % 1) Code demo có thể chuẩn tone nhạc dc
 % 2) Conference paper
 
-Currently, the outcome of our group's project is to produce a paper to attend a scientific conference.
-We plan to submit to the Nafosted conference, and if time allows, other Machine Learning conferences.\\
+% Currently, the outcome of our group's project is to produce a paper to attend a scientific conference.
+% We plan to submit to the Nafosted conference, and if time allows, other Machine Learning conferences.\\
 
-Hardware: Our final product does not include any hardware components.\\
+% Hardware: Our final product does not include any hardware components.\\
 
-Software: After attending the Nafosted conference as well as finishing our
-paper, we would like to build an app implementation of the method capable of
-running on Android tablets and PCs.
+% Software: After attending the Nafosted conference as well as finishing our
+% paper, we would like to build an app implementation of the method capable of
+% running on Android tablets and PCs.
+
+% Our goal is to turn this project into a paper and attend the upcoming Nafosted conference in 2021.
+Our outcome includes a demo source code that can demonstrate tone transposition and a conference
+paper to attend the upcoming Nafosted conference in 2021.
+
+\clearpage
 
 \section{Cost}
-Total estimated cost will be 20 Million Vietnam Dong, which will be used to pay
-for the conference's entry fee and other miscellaneous fees related to attending
-such conferences.\\
+The budget will be spent to buy one GPU graphic card, as shown in the table below.
 
-
-\begin{table}[]
+\begin{table}[ht]
     \centering
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{|c|c|c|c|c|c|}
