@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  17 AUG 2021 00:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  17 AUG 2021 00:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/cvpr.tex
-(/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/cvpr.tex
+**/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.tex
+(/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/cvpr.cls
 Document Class: cvpr 2020/5/16 Example LaTex class for IEEE CVPR
@@ -364,8 +364,8 @@ Package: listings 2019/09/10 1.8c (Carsten Heinz)
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count294
 \l__pdf_internal_box=\box56
-) (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/cvpr.aux)
-\openout1 = `cvpr.aux'.
+) (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.aux)
+\openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
@@ -507,30 +507,30 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 376--385
 
 [4 </home/pj/Documents/proposal/music_tones.jpg>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/cvpr.bbl (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/cvpr.brf)
+) (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.bbl (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.brf)
 \tf@brf=\write3
-\openout3 = `cvpr.brf'.
+\openout3 = `paper.brf'.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 452.
  [5]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 452.
- (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/cvpr.aux)
+ (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 452.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
-Package rerunfilecheck Info: File `cvpr.brf' has not changed.
+Package rerunfilecheck Info: File `paper.brf' has not changed.
 (rerunfilecheck)             Checksum: 40C39DF79BEAE7052898C35A3F2BF9E9;305.
  ) 
 Here is how much of TeX's memory you used:
- 10667 strings out of 481239
- 158729 string characters out of 5920378
- 611654 words of memory out of 5000000
+ 10668 strings out of 481239
+ 158749 string characters out of 5920378
+ 611656 words of memory out of 5000000
  25669 multiletter control sequences out of 15000+600000
  559209 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,10n,46p,841b,1211s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,10n,46p,842b,1211s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/cvpr.pdf (5 pages, 641042 bytes).
+Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.pdf (5 pages, 641042 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams

@@ -1,13 +1,13 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: cvpr.aux
+The top-level auxiliary file: paper.aux
 The style file: ieee_fullname.bst
 Database file #1: /home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib
 Warning--empty journal in Gomez2017
 Warning--empty journal in Shatri2020a
 You've used 4 entries,
             2120 wiz_defined-function locations,
-            521 strings with 4281 characters,
+            521 strings with 4283 characters,
 and the built_in function-call counts, 1049 in all, are:
 = -- 96
 > -- 51
