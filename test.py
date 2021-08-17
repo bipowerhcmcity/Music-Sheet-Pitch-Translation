@@ -1,8 +1,7 @@
-for i in range(0):
-    print("Something")
+dict = {"A":0, "B":1, "C":2}
 
-c=0
-a = [1,2,3]
-b= [2,3,4]
-c = a+b
-print(c)
+uptone = dict["A"] + 1  # index = 0
+note = list(dict.keys())[uptone]
+
+print(note) # B
+
