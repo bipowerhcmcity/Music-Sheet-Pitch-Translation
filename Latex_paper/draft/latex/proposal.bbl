@@ -101,45 +101,6 @@
       \endverb
       \keyw{omr,optical music recognition,staffline detection,staffline removal,stafflines}
     \endentry
-    \entry{Pacha2017}{article}{}
-      \name{author}{2}{}{%
-        {{hash=671831d2435bb021d6c25ece85233023}{%
-           family={Pacha},
-           familyi={P\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod}}}%
-        {{hash=761d31d34df8cd529644640e5f535f5e}{%
-           family={Eidenberger},
-           familyi={E\bibinitperiod},
-           given={Horst},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{56ec46075cb42f478c46ecc4a57609f1}
-      \strng{fullhash}{56ec46075cb42f478c46ecc4a57609f1}
-      \strng{bibnamehash}{56ec46075cb42f478c46ecc4a57609f1}
-      \strng{authorbibnamehash}{56ec46075cb42f478c46ecc4a57609f1}
-      \strng{authornamehash}{56ec46075cb42f478c46ecc4a57609f1}
-      \strng{authorfullhash}{56ec46075cb42f478c46ecc4a57609f1}
-      \field{sortinit}{P}
-      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Optical Music Recognition (OMR) is a branch of artificial intelligence that aims at automatically recognizing and understanding the content of music scores in images. Several approaches and systems have been proposed that try to solve this problem by using expert knowledge and specialized algorithms that tend to fail at generalization to a broader set of scores, imperfect image scans or data of different formatting. In this paper we propose a new approach to solve OMR by investigating how humans read music scores and by imitating that behavior with machine learning. To demonstrate the power of this approach, we conduct two experiments that teach a machine to distinguish entire music sheets from arbitrary content through frame-by-frame classification and distinguishing between 32 classes of handwritten music symbols which can be a basis for object detection. Both tasks can be performed at high rates of confidence (> 98{\%}) which is comparable to the performance of humans on the same task.}
-      \field{isbn}{9781538614174}
-      \field{journaltitle}{Proceedings - 16th IEEE International Conference on Machine Learning and Applications, ICMLA 2017}
-      \field{title}{{Towards self-learning optical music recognition}}
-      \field{volume}{2017-Decem}
-      \field{year}{2017}
-      \field{pages}{795\bibrangedash 800}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/ICMLA.2017.00-60
-      \endverb
-      \verb{file}
-      \verb :home/pj/MEGA/ComVi/paper{\_}writing/Mendeley/papers/pacha2017.pdf:pdf
-      \endverb
-      \keyw{Dataset,Deep Learning,Music,Optical Music Recognition,document analysis}
-    \endentry
     \entry{Rosebrock}{misc}{}
       \name{author}{1}{}{%
         {{hash=ad5eaecc2721564034f710ce9a318887}{%

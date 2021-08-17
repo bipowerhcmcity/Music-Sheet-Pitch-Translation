@@ -17,44 +17,54 @@
 \abx@aux@cite{Gomez2017}
 \abx@aux@segm{0}{0}{Gomez2017}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {V}Proposed Method}{4}\protected@file@percent }
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {i}Line Removal}{4}\protected@file@percent }
-\abx@aux@cite{Rosebrock}
-\abx@aux@segm{0}{0}{Rosebrock}
-\abx@aux@cite{Rosebrock}
-\abx@aux@segm{0}{0}{Rosebrock}
-\abx@aux@cite{Rosebrock}
-\abx@aux@segm{0}{0}{Rosebrock}
-\abx@aux@cite{Rosebrock}
-\abx@aux@segm{0}{0}{Rosebrock}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {ii}Note Translation}{6}\protected@file@percent }
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Eliminating overlaping positions}{6}\protected@file@percent }
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Note reordering}{6}\protected@file@percent }
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Two staves that need to be played simultaneously\relax }}{7}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {i}Staff Line Preprocessing}{4}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Staff Line Detection}{4}\protected@file@percent }
+\abx@aux@cite{Gomez2017}
+\abx@aux@segm{0}{0}{Gomez2017}
+\abx@aux@cite{Gomez2017}
+\abx@aux@segm{0}{0}{Gomez2017}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces dilated image after running RLE on a random column \footnotemark \relax }}{5}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:two staves}{{2}{7}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The fourth position has a (0,0) tuple because there is no corresponding fourth note on the sub staff\relax }}{8}\protected@file@percent }
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Digitalization of the notes}{8}\protected@file@percent }
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces notes below the first staff line of the main staff\relax }}{8}\protected@file@percent }
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces notes above the first staff line of the main staff\relax }}{8}\protected@file@percent }
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces notes below the first staff of the sub staff\relax }}{8}\protected@file@percent }
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces notes above the first staff line of the sub staff\relax }}{8}\protected@file@percent }
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {iii}Tones transposition}{9}\protected@file@percent }
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces layout of a piano keyboard\relax }}{9}\protected@file@percent }
-\newlabel{piano_keyboard}{{8}{9}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces list of notes pitch in ascending order\relax }}{10}\protected@file@percent }
-\newlabel{list: note pitch increase}{{9}{10}}
-\abx@aux@cite{Pacha2017}
-\abx@aux@segm{0}{0}{Pacha2017}
-\abx@aux@cite{Pacha2017}
-\abx@aux@segm{0}{0}{Pacha2017}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {VI}Future work}{11}\protected@file@percent }
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {VII}Expected outcome}{11}\protected@file@percent }
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {VIII}Timeline}{12}\protected@file@percent }
-\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Timeline\relax }}{12}\protected@file@percent }
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {i}Task description}{13}\protected@file@percent }
+\newlabel{}{{2}{5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Staff Line Removal}{5}\protected@file@percent }
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces an example of a kernel with only line and no notes\relax }}{6}\protected@file@percent }
+\newlabel{line only matrix}{{3}{6}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The current color inverted music sheet\relax }}{6}\protected@file@percent }
+\newlabel{}{{4}{6}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Check vector of length N\relax }}{6}\protected@file@percent }
+\newlabel{check vector}{{5}{6}}
+\abx@aux@cite{Rosebrock}
+\abx@aux@segm{0}{0}{Rosebrock}
+\abx@aux@cite{Rosebrock}
+\abx@aux@segm{0}{0}{Rosebrock}
+\abx@aux@cite{Rosebrock}
+\abx@aux@segm{0}{0}{Rosebrock}
+\abx@aux@cite{Rosebrock}
+\abx@aux@segm{0}{0}{Rosebrock}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {ii}Note Translation}{8}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Eliminating overlaping positions}{8}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Note reordering}{8}\protected@file@percent }
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Two staves that need to be played simultaneously\relax }}{9}\protected@file@percent }
+\newlabel{fig:two staves}{{6}{9}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The fourth position has a (0,0) tuple because there is no corresponding fourth note on the sub staff\relax }}{10}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsubsection}{Digitalization of the notes}{10}\protected@file@percent }
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces notes below the first staff line of the main staff\relax }}{10}\protected@file@percent }
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces notes above the first staff line of the main staff\relax }}{10}\protected@file@percent }
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces notes below the first staff of the sub staff\relax }}{10}\protected@file@percent }
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces notes above the first staff line of the sub staff\relax }}{10}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {iii}Tones Transposition}{11}\protected@file@percent }
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces layout of a piano keyboard\relax }}{11}\protected@file@percent }
+\newlabel{piano_keyboard}{{12}{11}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces list of notes pitch in ascending order\relax }}{12}\protected@file@percent }
+\newlabel{list: note pitch increase}{{13}{12}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {VI}Future work}{13}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {VII}Expected outcome}{13}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {VIII}Cost}{14}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {IX}Timeline}{14}\protected@file@percent }
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Timeline\relax }}{14}\protected@file@percent }
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {i}Task description}{15}\protected@file@percent }
 \abx@aux@refcontextdefaultsdone
 \abx@aux@defaultrefcontext{0}{Calvo-Zaragoza}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{Gomez2017}{nty/global//global/global}
-\abx@aux@defaultrefcontext{0}{Pacha2017}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{Rosebrock}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{Shatri2020a}{nty/global//global/global}
