@@ -1,0 +1,80 @@
+REMOVE ALL THE "WE" IN THIS PART!!!
+
+A = MAIN
+B = SUB
+a = MAIN[0]
+b = SUB[0]
+A' = MAIN_RE_ORDERED
+B' = SUB_RE_ORDERED
+h = headlines[i]
+h' = note_position[1]
+--------------------------------------------------------------------------------
+After applying staff line removal we apply template matching so that it returns
+a list of postitions of the notes. 
+
+- Because when using template matching we will have multiple bounding boxes, so we
+  need to apply Faster NMS (by Pyimage search) to remove mutliple bounding box at
+  a single spot. What we get is the positions of every single notes in the music
+  sheet
+
+- the algorithm will then group the note position according to their staff. 
+
+- When at the start of a music staff there is a curly brace(in music theory we
+  just call it brace), it means that these two lines must be play at once.
+
+- We call them the main staff (MAIN) and sub staff(SUB), the one above
+  with the treble clef and the staff below with the bass clef respectively.
+
+- We will also create two additional list called MAIN_RE_REORDERED and
+  SUB_RE_ORDERED. We will transport the each note pair by pair from each list
+  MAIN and SUB to the new list
+
+- Now the algorithm will move simultaneously through both staff and check the
+  notes iteratively. For example our first note MAIN[0] and SUB[0], if they are
+  vertically aligned, meaning that it need to be play simultaneously, the
+  alogorithm will then move MAIN[0] and SUB[0] to MAIN_RE_ORDERED and
+  SUB_RE_ORDERD. By move the algorithm will cut the note position from the
+  original MAIN list and paste it into the MAIN_RE_ORDERED, same thing for SUB.
+
+- However since some music sheet has minor error in printing resulting in minor
+  misalignment of the note, meaning they are still supposed to be play
+  simultaneously but their horizontal (x axis) position are not exactly the
+  same. The algorithm ReoderedStaffs() has a threshold value of 5, meaning if
+  the two notes deviate from each other, either to the left or right, less than
+  5 we will consider that they will be played simultaneously.
+
+- If there is a case, where there is only one note on one of the staff, meaning
+  only one note need to be played at that moment, we will add the tuple (0,0)
+  into the staff that doesn't have a note as a filler note. In the case that any
+  staff ran out of note before the other staff, we will continue the moving
+  process like normal, but will fill in elements (0,0) for the ran out staff.
+  Doing this assure that the two list MAIN_RE_ORDERED and SUB_RE_ORDERED will
+  always have the same number of elements in their list.
+
+II) Note Translation:
+
+- Based on the vertical distance of between the note and the first staff line
+  (which is the bottom line)
+
+- The process then continue to translate all of the postion in the
+  RE_ORDERED_MAN and RE_ORDERED_SUB to become note notation,
+
+- To do this we premade four list of notes name, two for the main staff and two
+  for the bass staff
+  
+  (include list pic here)
+
+- Since each staff has 2 list, one for notes that are above the first staff line
+  and one for below the first staff line. To determine which index the algorithm
+  will choose from, we calculate D where
+
+
+=> D = (note_position[1] -headlines[i] ) / d/2
+
+  (Insert the D formula here)
+
+*it is d/2 because each note is seperated with just half the distance between
+each staff lines
+
+If D < 0 the algorithm will use the list for notes below the first staff line
+and D >= 0 will use the list of notes that are above the first staff line.

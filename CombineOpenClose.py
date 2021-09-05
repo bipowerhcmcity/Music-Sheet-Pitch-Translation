@@ -16,7 +16,17 @@ def getCombinedType(staffs,img):
 
         #
         sharp = getArrayType(StaffSymbol,5,None)
-        print("Size of Sharp in Staff",z,": ",len(sharp))
+
+        rest = []
+        rest += getArrayType(StaffSymbol,7,None)
+        # will have more rest here in future....
+        rest +=getArrayType(StaffSymbol,9,None)
+
+        # and dot rest: special rest
+        dotRest = getArrayType(StaffSymbol,8,None)
+        print("Len of dot rest: ",len(dotRest))
+
+
 
         singleOpen = getArrayType(StaffSymbol,3,2)
         singleClose = getArrayType(StaffSymbol, 3, 1)
@@ -30,34 +40,30 @@ def getCombinedType(staffs,img):
 
         black_chord = getArrayType(StaffChord,1,None)
         white_chord = getArrayType(StaffChord,4,None)
-        print(len(black_chord))
+
 
         # update sharp to chords:
 
         for i in range(len(sharp)):
-            chordBlack = findSingleSymbolInChord(black_chord,sharp[i],1)
-            chordWhite = findSingleSymbolInChord(white_chord, sharp[i], 1)
-            print(chordBlack)
+            chordBlack = findSingleSymbolInChord(black_chord,sharp[i],1,20)
+            chordWhite = findSingleSymbolInChord(white_chord, sharp[i], 1,20)
             # print(chord)
             if(isinstance(chordBlack,ChordType.Chord)):
                 chordBlack.sharp = True
             if (isinstance(chordWhite, ChordType.Chord)):
                 chordWhite.sharp = True
-        print("Single Open",len(singleOpen))
-        for i in range(len(singleOpen)):
-            chords,result_close = findCoupleFromOpen(singleOpen[i],singleClose,doubleOpen, black_chord)
-            print("Removed chords: ",len(chords))
-            removeArrayFromArray(black_chord, chords)
-            cv2.circle(img,singleOpen[i].pt1,radius=4,color=(0,255,255), thickness=-1) #yellow
-            cv2.circle(img, result_close.pt2, radius=4, color=(0,0,255), thickness=-1) #red
-            for j in range(len(chords)):
-                cv2.circle(img, chords[j].pt1, radius=4, color=(204,0,102), thickness=-1) #purple
-                chords[j].type = 2
-                result_chords.append(chords[j])
+
+        for i in range(len(dotRest)):
+            chordBlack = findSingleSymbolInChord(black_chord, dotRest[i], -1,100)
+            chordWhite = findSingleSymbolInChord(white_chord, dotRest[i], -1,100)
+            # print(chord)
+            if (isinstance(chordBlack, ChordType.Chord)):
+                chordBlack.dot = True
+            if (isinstance(chordWhite, ChordType.Chord)):
+                chordWhite.dot = True
 
         for i in range(len(doubleOpen)):
             chords,result_close = findCoupleFromOpen(doubleOpen[i],doubleClose,singleOpen, black_chord)
-            print("Removed chords: ", len(chords))
             y= doubleOpen[i].pt1[1] +10
             point = (doubleOpen[i].pt1[0],y)
             removeArrayFromArray(black_chord, chords)
@@ -67,12 +73,29 @@ def getCombinedType(staffs,img):
                 cv2.circle(img, chords[j].pt1, radius=4, color=(255,0,0), thickness=-1)  # blue
                 chords[j].type = 3
                 result_chords.append(chords[j])
-        print("Black chord",len(black_chord))
+
+        for i in range(len(singleOpen)):
+            chords,result_close = findCoupleFromOpen(singleOpen[i],singleClose,doubleOpen, black_chord)
+            removeArrayFromArray(black_chord, chords)
+            cv2.circle(img,singleOpen[i].pt1,radius=4,color=(0,255,255), thickness=-1) #yellow
+            cv2.circle(img, result_close.pt2, radius=4, color=(0,0,255), thickness=-1) #red
+            for j in range(len(chords)):
+                cv2.circle(img, chords[j].pt1, radius=4, color=(204,0,102), thickness=-1) #purple
+                chords[j].type = 2
+                result_chords.append(chords[j])
+
+
         if(len(black_chord) >0):
             for i in range(len(black_chord)):
                 black_chord[i].type = 1
                 result_chords.append(black_chord[i])
-        print("Result chords: ", len(result_chords))
+
+        for i in range(len(white_chord)):
+            result_chords.append(white_chord[i])
+        # append rest:
+        for i in range(len(rest)):
+            result_chords.append(rest[i])
+
         result_chords.sort(key=lambda chord: chord.pt1[0], reverse=False)
         staffs[z].chords = result_chords
 
@@ -103,18 +126,20 @@ def removeElementFromArray(array,element):
             array.pop(j)
             break
 
-def findSingleSymbolInChord(chord, symbol, option=1):
+def findSingleSymbolInChord(chord, symbol, option, threshhold):
     # option 1 : find note in the right most hand side.
     # option -1 : find note in the left most hand side.
 
     xSymbol = int((symbol.pt1[0] + symbol.pt2[0])/2)
-    count = 20
+    count = threshhold
     while count>0:
         for i in range(len(chord)):
+
             xChord = int((chord[i].pt1[0] + chord[i].pt2[0]) / 2)
+
             if xSymbol== xChord:
-                print(chord[i].pt1[0])
                 return chord[i]
+
                 break
         xSymbol+=option
         count-=1

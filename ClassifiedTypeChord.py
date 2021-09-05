@@ -1,4 +1,3 @@
-import os
 import NMS
 import os
 import glob
@@ -86,7 +85,6 @@ def inputLabel(feature_type, color, removal, img):
 
     chords = []
     for i in range(int(len(nms_index))):
-        print(nms_index[i])
         for j in range(len(arrayOfIndexType)):
             breakFlag = False
             if(isinstance(arrayOfIndexType[j],list)):

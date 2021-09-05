@@ -1,0 +1,37 @@
+Draft proposal
+	I) Removing the staff line
+- Staff line detection Successful method: Run length encoding (RLE). 
+	Current understanding:
+	+ first the program will choose a random kernel of the image ( a part of the
+	image ) then it will dilate that kernel, then it will run a RLE vertically
+	down that kernel, if the kernel has a pattern of black(line thickness) and
+	whites (distance length) pixels, it will keep that kernel. Else if not, then
+	it will randomly find a new kernel and do the same.
+- Staff line removal: 
+	+ First we inverted the music sheet so that notes become white and empty
+	spaces are black. This is done bc in binary, white valued at 1 and balck 0
+	we don't need to care much about the empty spaces between everything.
+	Doing this so that when we do further computation we don't have to deal with
+	huge numbers
+	+ "The algorithm is basically based on matrix multiplication." We need to do
+	this because we need to only delete the staff line but still need to keep
+	the pixel values of nodes that happen to be on that staff.
+	-> solution we use a row vector of type (1 0...0 1) the number of 1s and 0s
+	will increase or decrease based on the line thickness and distance between 
+	each lines respectively.
+	=> if the part of the kernel has no notes on it, rmb after inverted the lines
+	are white and spaces are black :
+			   0 0 0 0
+	(1 0 1) x  1 1 1 1   if we take the row vector and multiply with this matrix
+			   0 0 0 0
+	if the line is clean of any node it should return a vector filled with 0s
+	else the row vector will have a 1s in it. If it has at least one "1" in it
+	meaning that this there is a node that is also a part of the line, and 
+	we ignore it and move on.
+
+The process will be done when we have finished checking all kernel of the image.
+Invert the final image and we get our result.
+
+Failed method Hough Transform because it is highly dependent on the result of
+canny detection (high coupling)
+

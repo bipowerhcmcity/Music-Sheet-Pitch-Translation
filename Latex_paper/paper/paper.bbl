@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}\itemsep=-1pt
+
+\bibitem{Calvo-Zaragoza}
+Jorge Calvo-Zaragoza, Jan Hajic, and Alexander Pacha.
+\newblock {Understanding Optical Music Recognition}.
+\newblock {\em ACM Computing Surveys}, 53(4), 2020.
+
+\bibitem{Gomez2017}
+Ashley~Antony Gomez and C~N Sujatha.
+\newblock {Optical Music Recognition: Staffline Detectionand Removal}.
+\newblock 6(5):48--58, 2017.
+
+\bibitem{Rosebrock}
+Adrian Rosebrock.
+\newblock {(Faster) Non-Maximum Suppression in Python - PyImageSearch}.
+
+\bibitem{Shatri2020a}
+Elona Shatri and Gy{\"{o}}rgy Fazekas.
+\newblock {Optical Music Recognition: State of the Art and Major Challenges}.
+\newblock jun 2020.
+
+\end{thebibliography}

@@ -1,0 +1,37 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {I}Research team members}{2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {II}Disclaimer}{2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {III}Abstract}{3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {IV}Introduction}{3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {V}Proposed Method}{4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {i}Staff Line Preprocessing}{4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Staff Line Detection}{4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Staff Line Removal}{5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {ii}Note Translation}{8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Eliminating overlaping positions}{8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Note reordering}{8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Digitalization of the notes}{10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {iii}Tones Transposition}{11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {VI}Future work}{13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {VII}Expected outcome}{13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {VIII}Cost}{14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {IX}Timeline}{14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {i}Task description}{15}%
