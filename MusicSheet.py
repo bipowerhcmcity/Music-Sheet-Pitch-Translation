@@ -45,7 +45,7 @@ print(staffs)
 chordsType = ClassifiedTypeChord.inputLabel(feature_type,color,removal,img)
 for i in range(len(chordsType)):
     if(chordsType[i].type == 4):
-        cv2.circle(img, chordsType[i].pt1, radius=4, color=(204,0,102), thickness=-1) #purple
+        cv2.circle(img, chordsType[i].pt1, radius=4, color=(0,255,0), thickness=-1) #purple
         print(chordsType[i].type,chordsType[i].sub_type," : ",chordsType[i].pt1 )
 
 
@@ -128,6 +128,15 @@ MAIN, BASS = NotesTranslation.SeparateMainNSUB(data)
 MAIN = NotesTranslation.Pos2Note(MAIN, "MAIN")
 BASS = NotesTranslation.Pos2Note(BASS, "BASS")
 
+for i,j in zip(MAIN, BASS):
+    result = []
+    for x in range(len(i)):
+        result.append(i[x][2])
+    print(result)
+    result = []
+    for x in range(len(j)):
+        result.append(i[x][2])
+    print(result)
 
 nonSharpIndex = ReduceSharp.getNonSharpNote(MAIN+BASS)
 
@@ -170,5 +179,6 @@ print("Writing to pdf...")
 WritingNote.start(MajorChord,MAIN,BASS,symbol) # symbol for classify sharp or flat
 print(MAIN+BASS)
 
-cv2.imshow("IMG",img)
+cv2.imwrite("allresult.jpg",img)
+cv2.imshow("All result",img)
 cv2.waitKey(0)

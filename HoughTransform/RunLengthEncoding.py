@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from PIL import Image
 
 def DrawLine(delete_line = False, img=None):
     img = np.copy(img)
@@ -15,6 +16,8 @@ def DrawLine(delete_line = False, img=None):
     class_0 = np.empty(shape=(0), dtype=np.int64)
     i = 0
     count = 0
+
+    result = []
     while i < len(data):
         count = 0
         if i + count > len(data):
@@ -30,6 +33,7 @@ def DrawLine(delete_line = False, img=None):
         else:
             class_0 = np.append(class_0, count)
         i += count
+        result.append(count)
 
     thickLine = np.argmax(np.bincount(class_0.flat))
     spaceLine = np.argmax(np.bincount(class_255.flat))
