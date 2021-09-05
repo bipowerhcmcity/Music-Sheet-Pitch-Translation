@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber proposal"] 1628583019 "proposal.bcf" "proposal.bbl" "proposal" 1628748864
+["biber proposal"] 1628583019 "proposal.bcf" "proposal.bbl" "proposal" 1629164012
   "/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib" 1627114569 8871 4297ab3ee6118ecd9515a0ffbfc7b245 ""
-  "proposal.bcf" 1628748864 102147 9fca6755d621c9aab7fe18362cda86c1 "pdflatex"
+  "proposal.bcf" 1629164012 102147 9fca6755d621c9aab7fe18362cda86c1 "pdflatex"
   (generated)
-  "proposal.blg"
   "proposal.bbl"
-["pdflatex"] 1628748863 "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.tex" "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.pdf" "proposal" 1628748864
+  "proposal.blg"
+["pdflatex"] 1629164011 "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.tex" "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.pdf" "proposal" 1629164012
   "/etc/texmf/web2c/texmf.cnf" 1625569804 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/pj/Documents/proposal/after_dilate.png" 1626794425 1023 a81392507cde5942b7b41d69eef55b18 ""
   "/home/pj/Documents/proposal/apply_RLE.png" 1628564024 36608 65c450dc789507787e4c5160f3a49a97 ""
@@ -15,8 +15,8 @@
   "/home/pj/Documents/proposal/staffRemoval.jpg" 1626871341 336216 8efa80dfc8e730e31e9eb6db529bcc6d ""
   "/home/pj/Documents/proposal/two_staff.jpg" 1626928165 110691 b81a2eb8b9063f887ef055b211ab18bf ""
   "/home/pj/Documents/proposal/vgu_logo.png" 1626673168 2786 42982e5ac4c54ecf814b4987b26628e1 ""
-  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.aux" 1628748864 7083 c16c62508514383470e7d65d40556818 ""
-  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.tex" 1628748863 26241 2b4ff0fefd1fd02d5cdc5ff11df0b574 ""
+  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.aux" 1629164012 7083 c16c62508514383470e7d65d40556818 ""
+  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.tex" 1629164011 26241 fc61798686b4d69e7ec59321e1256328 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -185,17 +185,17 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1625569842 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1625569859 8256623 ddff20e07758250d72c6a8d2aeb039ed ""
-  "proposal.aux" 1628748864 7083 c16c62508514383470e7d65d40556818 "pdflatex"
-  "proposal.bbl" 1628583020 10534 6c65612632b9b6cbc3a8ff3124a1ee96 "biber proposal"
-  "proposal.run.xml" 1628748864 2381 05542be9f26e066d84e006e3084b051d "pdflatex"
-  "proposal.tex" 1628748863 26241 2b4ff0fefd1fd02d5cdc5ff11df0b574 ""
-  "proposal.toc" 1628748864 1824 ed45b7b6369d554cfd225c1158249c60 "pdflatex"
+  "proposal.aux" 1629164012 7083 c16c62508514383470e7d65d40556818 "pdflatex"
+  "proposal.bbl" 1628749065 10534 6c65612632b9b6cbc3a8ff3124a1ee96 "biber proposal"
+  "proposal.run.xml" 1629164012 2381 05542be9f26e066d84e006e3084b051d "pdflatex"
+  "proposal.tex" 1629164011 26241 fc61798686b4d69e7ec59321e1256328 ""
+  "proposal.toc" 1629164012 1824 ed45b7b6369d554cfd225c1158249c60 "pdflatex"
   (generated)
+  "proposal.aux"
   "proposal.run.xml"
   "proposal.toc"
   "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.pdf"
-  "proposal.log"
   "proposal.bcf"
-  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.log"
-  "proposal.aux"
+  "proposal.log"
   "proposal.pdf"
+  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/draft/latex/proposal.log"

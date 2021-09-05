@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  17 AUG 2021 00:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.6)  3 SEP 2021 16:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -367,23 +367,23 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 ) (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 35.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) ABD: EveryShipout initializing macros (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
@@ -431,7 +431,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box59
 Package atbegshi Info: Package `everyshi' patched.
-Package hyperref Info: Link coloring ON on input line 29.
+Package hyperref Info: Link coloring ON on input line 35.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -441,99 +441,114 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count309
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 29.
+LaTeX Info: Redefining \selectfont on input line 35.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count310
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-</home/pj/Documents/proposal/b4_dilate.png, id=6, 20.075pt x 247.92625pt>
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+</home/pj/Documents/proposal/b4_dilate.png, id=20, 20.075pt x 247.92625pt>
 File: /home/pj/Documents/proposal/b4_dilate.png Graphic file (type png)
 <use /home/pj/Documents/proposal/b4_dilate.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/b4_dilate.png  used on input line 105.
-(pdftex.def)             Requested size: 8.1925pt x 101.17755pt.
-</home/pj/Documents/proposal/after_dilate.png, id=8, 54.2025pt x 336.25626pt>
+Package pdftex.def Info: /home/pj/Documents/proposal/b4_dilate.png  used on input line 117.
+(pdftex.def)             Requested size: 8.77757pt x 108.405pt.
+</home/pj/Documents/proposal/after_dilate.png, id=22, 54.2025pt x 336.25626pt>
 File: /home/pj/Documents/proposal/after_dilate.png Graphic file (type png)
 <use /home/pj/Documents/proposal/after_dilate.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/after_dilate.png  used on input line 111.
-(pdftex.def)             Requested size: 16.30884pt x 101.17755pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
- </home/pj/Documents/proposal/b4_dilate.png> </home/pj/Documents/proposal/after_dilate.png>]
-</home/pj/Documents/proposal/apply_RLE.png, id=27, 420.57124pt x 315.1775pt>
+Package pdftex.def Info: /home/pj/Documents/proposal/after_dilate.png  used on input line 123.
+(pdftex.def)             Requested size: 17.47417pt x 108.405pt.
+</home/pj/Documents/proposal/apply_RLE.png, id=24, 420.57124pt x 315.1775pt>
 File: /home/pj/Documents/proposal/apply_RLE.png Graphic file (type png)
 <use /home/pj/Documents/proposal/apply_RLE.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/apply_RLE.png  used on input line 123.
+Package pdftex.def Info: /home/pj/Documents/proposal/apply_RLE.png  used on input line 135.
 (pdftex.def)             Requested size: 210.28511pt x 157.58836pt.
-</home/pj/Documents/proposal/inverted_two_staves.png, id=29, 1181.41376pt x 265.99374pt>
+</home/pj/Documents/proposal/inverted_two_staves.png, id=27, 1181.41376pt x 265.99374pt>
 File: /home/pj/Documents/proposal/inverted_two_staves.png Graphic file (type png)
 <use /home/pj/Documents/proposal/inverted_two_staves.png>
-Package pdftex.def Info: /home/pj/Documents/proposal/inverted_two_staves.png  used on input line 165.
+Package pdftex.def Info: /home/pj/Documents/proposal/inverted_two_staves.png  used on input line 177.
 (pdftex.def)             Requested size: 237.13594pt x 53.38857pt.
-</home/pj/Documents/proposal/staffRemoval.jpg, id=32, 1279.78125pt x 1656.1875pt>
+</home/pj/Documents/proposal/staffRemoval.jpg, id=30, 1279.78125pt x 1656.1875pt>
 File: /home/pj/Documents/proposal/staffRemoval.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/staffRemoval.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/staffRemoval.jpg  used on input line 212.
+Package pdftex.def Info: /home/pj/Documents/proposal/staffRemoval.jpg  used on input line 225.
 (pdftex.def)             Requested size: 237.13594pt x 306.87006pt.
- [2 </home/pj/Documents/proposal/apply_RLE.png> </home/pj/Documents/proposal/inverted_two_staves.png>]
-</home/pj/Documents/proposal/two_staff.jpg, id=51, 614.295pt x 127.1952pt>
+ [2
+
+ </home/pj/Documents/proposal/b4_dilate.png> </home/pj/Documents/proposal/after_dilate.png> </home/pj/Documents/proposal/apply_RLE.png> </home/pj/Documents/proposal/inverted_two_staves.png>]
+</home/pj/Documents/proposal/two_staff.jpg, id=52, 614.295pt x 127.1952pt>
 File: /home/pj/Documents/proposal/two_staff.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/two_staff.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/two_staff.jpg  used on input line 254.
+Package pdftex.def Info: /home/pj/Documents/proposal/two_staff.jpg  used on input line 267.
 (pdftex.def)             Requested size: 237.13594pt x 49.1013pt.
  [3 </home/pj/Documents/proposal/staffRemoval.jpg> </home/pj/Documents/proposal/two_staff.jpg>]
-</home/pj/Documents/proposal/music_tones.jpg, id=63, 626.34pt x 142.5325pt>
+</home/pj/Documents/proposal/music_tones.jpg, id=64, 626.34pt x 142.5325pt>
 File: /home/pj/Documents/proposal/music_tones.jpg Graphic file (type jpg)
 <use /home/pj/Documents/proposal/music_tones.jpg>
-Package pdftex.def Info: /home/pj/Documents/proposal/music_tones.jpg  used on input line 363.
+Package pdftex.def Info: /home/pj/Documents/proposal/music_tones.jpg  used on input line 376.
 (pdftex.def)             Requested size: 237.13594pt x 53.96281pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 376--385
+Overfull \hbox (16.16203pt too wide) in paragraph at lines 398--398
+[]\OT1/ptm/m/n/10 notes[]height= 'E1':0,'F1':1,'G1':2,'A1':3,'B1':4,'C2':5,'D2':6,
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 389--399
 [] 
  []
 
-[4 </home/pj/Documents/proposal/music_tones.jpg>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.bbl (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.brf)
+)
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 417.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 417.
+ [4 </home/pj/Documents/proposal/music_tones.jpg>] (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.bbl (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.brf)
 \tf@brf=\write3
 \openout3 = `paper.brf'.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 452.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 452.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 472.
+ [5
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 472.
  (/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 452.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 472.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 472.
 Package rerunfilecheck Info: File `paper.brf' has not changed.
-(rerunfilecheck)             Checksum: 40C39DF79BEAE7052898C35A3F2BF9E9;305.
+(rerunfilecheck)             Checksum: 7FAB85B4E747EA2427A50853CE7D492D;301.
  ) 
 Here is how much of TeX's memory you used:
- 10668 strings out of 481239
- 158749 string characters out of 5920378
- 611656 words of memory out of 5000000
- 25669 multiletter control sequences out of 15000+600000
+ 10682 strings out of 481239
+ 158999 string characters out of 5920378
+ 609680 words of memory out of 5000000
+ 25682 multiletter control sequences out of 15000+600000
  559209 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,10n,46p,842b,1211s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,10n,46p,842b,1950s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.pdf (5 pages, 641042 bytes).
+Output written on /home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.pdf (5 pages, 639832 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
