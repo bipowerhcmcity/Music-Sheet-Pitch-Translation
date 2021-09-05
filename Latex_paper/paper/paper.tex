@@ -1,3 +1,9 @@
+%Paper todo list
+% - Write note grouping
+% - Multiscale part
+% - Rewrite Abstract (include more method in it )
+% - rewrite tone transposition
+
 \documentclass[final]{cvpr}
 
 \usepackage{times}
@@ -31,9 +37,15 @@
 %%%%%%%%% TITLE
 \title{Music Sheet Understanding and Tones Transposition}
 
-\author{Khoa Truong,Minh Dinh,Triet Huynh,Khoa Nguyen and Vinh Dinh\\
-         CSE,Vietnamese-German University}  
+\author{Khoa Truong,Minh Dinh,Triet Huynh,and Dr.Vinh Dinh\\
+         CSE,Vietnamese-German University,Thu Dau Mot City
+\and
+Khoa Nguyen\\
+CS,alumni of HCM University of Technology K14, HCM City
+}  
 
+% \author{Khoa Truong,Minh Dinh,Triet Huynh,Khoa Nguyen and Vinh Dinh\\
+%          CSE,Vietnamese-German University}  
 
 \maketitle
 
@@ -63,7 +75,7 @@ problems \cite{Shatri2020a}.
 
 More specifically, the current OMR systems of today are capable enough to
 recognize a printed musical sheet and digitize it. The resulting output could be
-a .midi file, or other types of sound files such as .way, .mp3. The vast
+a .midi file, or other types of sound files such as .wav, .mp3. The vast
 majority of those researches are dedicated to the common user, even for users
 who are not educated on musical theory, but there is still a lack of products
 that can be used by professional or enthusiast musicians. In reality, a common
@@ -96,19 +108,19 @@ dilate() function, where the horizontal lines will be expanded so that its width
 is increasingly larger, and any white pixels, i.e., notes, that does not belong
 to the horizontal line, will be flipped to 0 and becomes the background thus
 eliminating all of the notes.
-
+\clearpage
 Result:
 \begin{figure}[H]
     \centering
     \begin{subfigure}[t]{0.2\textwidth}
         \centering
-        \includegraphics[height=1.4in]{b4_dilate}
+        \includegraphics[height=1.5in]{b4_dilate}
         \caption{before applying dilate function}
     \end{subfigure}%
     ~ 
     \begin{subfigure}[t]{0.2\textwidth}
         \centering
-        \includegraphics[height=1.4in]{after_dilate}
+        \includegraphics[height=1.5in]{after_dilate}
         \caption{after applying dilate function}
     \end{subfigure}
 \end{figure}
@@ -121,11 +133,11 @@ random column of the dilated image above:
 
 \begin{figure}[ht]
 \makebox[\columnwidth]{\includegraphics[scale = 0.5]{apply_RLE}}
+\caption{This image was taken from Gomez's original paper \cite{Gomez2017} which was done on a
+note removed but not color inverted music sheet. which is why the line is in
+black and the distance is in white, opposite to our dilated image.}
 \end{figure}
 
-This image was taken from Gomez's original paper \cite{Gomez2017} which was done on a
-note removed but not color inverted music sheet. which is why the line is in
-black and the distance is in white, opposite to our dilated image.\\
 
 RLE will group adjacent pixels of the same color into one group with a number to
 indicate how many pixels of the same color is within that group and a character
@@ -151,7 +163,7 @@ this type:
 	0 & 0 & 0
 \end{pmatrix}
 $\\
-\caption{an example of a kernel with only line and no notes}
+\caption{an example of a kernel with one line and no notes}
 \label{line only matrix}
 \end{figure}
 
@@ -181,10 +193,11 @@ $\\
 \label{check vector}
 \end{figure}
 
-The number of zeros and ones in figure \ref{check vector} depends on
-the thickness of each line and the distance between two staff lines
-respectively, which was obtained in the previous section.  For example, with the
-kernel in figure \ref{line only matrix} the check vector will be of the type:
+The number of zeros and ones of the N length check vector in figure \ref{check
+vector} depends on the thickness of each line and the distance between two staff
+lines respectively, which was obtained in the previous section.  For example,
+the kernel with one line and no notes in figure \ref{line only matrix} the
+check vector will be of the type:
 
 \begin{figure}[h!]
     \centering
@@ -197,7 +210,7 @@ kernel in figure \ref{line only matrix} the check vector will be of the type:
 
  This check vector is then multiplied with every NxN kernel of the image. If the
  kernel is of the type of a line, the result will be a vector of 0s, otherwise,
- the vector result will contain at least one positive integer among its
+ the resulting vector will contain at least one positive integer among its
  elements.
 
  For every time we encounter an area that is a line by using the check vector,
@@ -216,7 +229,7 @@ music sheet with lines removed:
 To translate the note from its input as pictorial data to scientific pitch
 notation so that the computer can process the music sheet, three steps are
 required. First by using Rosebrock's method \cite{Rosebrock} to eliminate overlapping
-note positions after running template matching. The second is to reorder the
+note positions after running template matching. The second is to group the
 notes that are on the same staff lines into a list, for each staff line there is
 a corresponding list containing the positions of each note on that staff.
 Finally, converting the note positions into scientific pitch notation.
@@ -233,16 +246,16 @@ duplication in our list of note positions.
 
 \subsubsection{Note reordering} 
 
-Next musical notes that belong to the same staff
-will be grouped into the same list,  for each staff line there is a
-corresponding list containing its note.  To do this, from the position of the
-first line(the bottom line of each staff) move down for a distance of half a
-staff height and then create a second point which is from the current point up
-to two staff heights (reason for moving half of a staff height from
-the first line down and then moving two staff height up  is to account for notes
-that are on the staff's lines and notes that are on the ledger lines). Any notes'
-vertical position that fell in the range from those previously mentioned points
-will be considered as being in the same staff. 
+% Next musical notes that belong to the same staff
+% will be grouped into the same list,  for each staff line there is a
+% corresponding list containing its note.  To do this, from the position of the
+% first line(the bottom line of each staff) move down for a distance of half a
+% staff height and then create a second point which is from the current point up
+% to two staff heights (reason for moving half of a staff height from
+% the first line down and then moving two staff height up  is to account for notes
+% that are on the staff's lines and notes that are on the ledger lines). Any notes'
+% vertical position that fell in the range from those previously mentioned points
+% will be considered as being in the same staff. 
 
 
 In music theory, if two staves are connected by a curly bracket on the left
@@ -350,11 +363,11 @@ and D $\geq$ 0 will use the list of notes that are above the first staff line.\\
 
 Continue to repeat this staff by staff for all staves in the music sheet will
 result in a list of scientific pitch notations for each note in the music sheet
-organized in chronological order.\\
+organized in chronological order.
 
 \subsection{Tones Transposition}
 After the previous process the output is a list of scientific pitch notaion,
-e.g., C3, B2, C3, E2, F2, E3, D3, C3.\\
+e.g., C3, B2, C3, E2, F2, E3, D3, C3.
 
 In music theory shifting a musical note up or down a tone or semitone follow a
 predictable pattern:
@@ -372,51 +385,58 @@ E and B which when shifted up a semitone becomes F and C respectively.\\
 To solve this problem, we create a list of scientific pitch notation arrange in
 increasing order similar to figure \ref{piano_keyboard}.\\
 
-\begin{figure}[h]
+\begin{figure}[H]
 \noindent\fbox{%
     \parbox{\columnwidth}{%
 
-notes\_height= ['E1', 'F1','G1','A1', 'B1', 'C2','D2', 'E2', 'F2','G2','A2',
-'B2', 'C3', 'D3', 'E3', 'F3','G3', 'A3', 'B3', 'C4', 'D4', 'E4', 'F4',
-'G4','A4','B4', 'C5', 'D5', 'E5', 'F5', 'G5', 'A5', 'B5', 'C6', 'D6', 'E6',
-'F6','G6','A6','B6' ,'C7','D7', 'E7', 'F7','G7','A7', 'B2',]
-    }%
+notes\_height= {'E1':0,'F1':1,'G1':2,'A1':3,'B1':4,'C2':5,'D2':6,
+'E2':7,'F2':8,'G2':9,'A2':10,'B2':11, 'C3':12, 'D3':13,
+'E3':14,'F3':15,'G3':16,'A3':17, 'B3':18, 'C4':19, 'D4':20, 'E4':21, 'F4':22,
+'G4':23,'A4':24,'B4':25, 'C5':26, 'D5':27, 'E5':28, 'F5':29,'G5':30, 'A5':31,
+'B5':32, 'C6':33, 'D6':34, 'E6':35, 'F6':36,'G6':37,'A6':38,'B6':39
+,'C7':40,'D7':41, 'E7':42, 'F7':43,'G7':44,'A7':45, 'B7':46}   }%
 }
 \caption{list of notes pitch in ascending order}
 \label{list: note pitch increase}
 \end{figure}
 
-In the list above in figure \ref{list: note pitch increase}, each note will have
-a note that is one semitone higher on the left, e.g., E1 and F1.  Therefore to
-shift a note tone up a semitone the note's position in the list, i.e.,
-its index, must be determined; then the new shifted note is at the index of
-the old note plus one.\\
+% In the dictionary list above in figure \ref{list: note pitch increase}, each
+% note will have a note that is one semitone higher on its the left, e.g., E1 and F1.
+% Therefore to shift a note tone up a semitone the note's position in the list,
+% i.e., its index, must be determined; then the new shifted note is at the index
+% of the old note plus one.
 
-A for loop is used to loop over the entire list and check within each
-iteration whether the current iteration's note notation from the list above
-matches with the note that the program is working with , if yes return the index
-of the note.\\
+In the the list above in \ref{list: note pitch increase} which is built using python
+dictionary, Wherein each dictionary items has a key (the scientific pitch
+notaion),e.g.,E1,F1,etc and a value (the index),0,1,etc respectively.each
+note will have a note that is one semitone higher on its the left, e.g., E1 and F1.
+% Therefore to shift a note tone up a semitone the note's position in the list,
+% i.e., its index, must be determined, this is done by using the following function
 
 \begin{lstlisting}[language=Python]
-def findNoteinNote_height(note):
-    for i in range(len(notes_height)):
-        if(note == notes_height[i]):
-            return i
+if(chord[3] == False and str(chord[2][0])\
+!='E' and str(chord[2])[0] !='B' ):
+chord[3] = True
+else:
+chord[3] = False
+index = notes_height[chord[2]]
+new_index = int(index) + 1
+chord[2]=list(notes_height.keys())\
+[new_index]
 \end{lstlisting}
-\medskip
 
 Once obtained the index of the note, to shift the tone's note up a semitone 
 another for loop is used:\\
 
-\begin{lstlisting}[language=Python]
-if(chord.name!="E" and chord.name!="B" and 
-chord.sharp==False):
-    chord.sharp = True
-else:
-    chord.sharp = False
-    chord.name +=1  # E + 1 = F, F+1 = G,etc
-\end{lstlisting}
-\medskip
+% \begin{lstlisting}[language=Python]
+% if(chord.name!="E" and chord.name!="B" and 
+% chord.sharp==False):
+%     chord.sharp = True
+% else:
+%     chord.sharp = False
+%     chord.name +=1  # E + 1 = F, F+1 = G,etc
+% \end{lstlisting}
+
 The variable "chord.name" is the index of the new note in the list in figure
 \ref{list: note pitch increase}.  Each time the loop above is run it will
 increase a note on the current staff by one semitone, so if the end-user wants to shift

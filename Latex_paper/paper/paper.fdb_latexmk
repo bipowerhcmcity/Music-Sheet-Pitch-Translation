@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex paper"] 1629135085 "paper.aux" "paper.bbl" "paper" 1629135167
+["bibtex paper"] 1630677610 "paper.aux" "paper.bbl" "paper" 1630677611
   "./ieee_fullname.bst" 1589814326 19905 72b73f4cb1c51eaa1a7af8ecad2b6bfb ""
-  "/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib" 1627114569 8871 4297ab3ee6118ecd9515a0ffbfc7b245 ""
-  "paper.aux" 1629135086 5469 7028b4dc4e84611811be53b13d97ef60 "pdflatex"
+  "/home/pj/MEGA/ComVi/paper_writing/Mendeley/bibitex/library.bib" 1629464630 10357 0857171fecc6061f3128805a711ce3ea ""
+  "paper.aux" 1630677611 5842 b0b0d88706daad6be847e9a906348e8f "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
-["pdflatex"] 1629135086 "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.tex" "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.pdf" "paper" 1629135167
+["pdflatex"] 1630677610 "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.tex" "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.pdf" "paper" 1630677611
   "/etc/texmf/web2c/texmf.cnf" 1625569804 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/pj/Documents/proposal/after_dilate.png" 1626794425 1023 a81392507cde5942b7b41d69eef55b18 ""
   "/home/pj/Documents/proposal/apply_RLE.png" 1628564024 36608 65c450dc789507787e4c5160f3a49a97 ""
@@ -15,8 +15,8 @@
   "/home/pj/Documents/proposal/music_tones.jpg" 1627030913 22917 3c50ba302479971122baf6e4080141a1 ""
   "/home/pj/Documents/proposal/staffRemoval.jpg" 1626871341 336216 8efa80dfc8e730e31e9eb6db529bcc6d ""
   "/home/pj/Documents/proposal/two_staff.jpg" 1626928165 110691 b81a2eb8b9063f887ef055b211ab18bf ""
-  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.aux" 1629135086 5469 7028b4dc4e84611811be53b13d97ef60 ""
-  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.tex" 1629134667 18986 c1f94d03404959b1325a7886d95b9dd2 ""
+  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.aux" 1630677611 5842 b0b0d88706daad6be847e9a906348e8f ""
+  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.tex" 1630677610 19891 96e4cdd6a5cfc9707ba9df510a3bbc80 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb.tfm" 1136768653 2300 14616918391efa49ac8b481a75fbdc1a ""
@@ -122,6 +122,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty" 1568236792 77022 32914f01b528131c47be2a1040d3856d ""
   "/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty" 1320274502 4623 936bfb87af7b91b6496a2317f80db16b ""
   "/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty" 1574631863 19963 36fd8e818f9f0f32e2db8413d4970122 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd" 1137110629 576 95c2c0baea9c719a4be29a3d4122498b ""
   "/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd" 1137110629 961 15056f4a61917ceed3a44e4ac11fcc52 ""
   "/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty" 1156702453 857 6c716f26c5eadfb81029fcd6ce2d45e6 ""
   "/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty" 1564521318 9974 f2895af67a8ceb11ae60d6efbed7dc62 ""
@@ -138,14 +139,14 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1625569842 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1625569859 8256623 ddff20e07758250d72c6a8d2aeb039ed ""
   "cvpr.cls" 1589814326 20566 94fe0374a1aefb79e6d48d815a6f6901 ""
-  "paper.aux" 1629135086 5469 7028b4dc4e84611811be53b13d97ef60 "pdflatex"
-  "paper.bbl" 1629135086 677 9f09d0e252d2c3c42b07a6819c462d44 "bibtex paper"
-  "paper.brf" 1629135086 305 40c39df79beae7052898c35a3f2bf9e9 "pdflatex"
-  "paper.tex" 1629134667 18986 c1f94d03404959b1325a7886d95b9dd2 ""
+  "paper.aux" 1630677611 5842 b0b0d88706daad6be847e9a906348e8f "pdflatex"
+  "paper.bbl" 1630677610 677 9f09d0e252d2c3c42b07a6819c462d44 "bibtex paper"
+  "paper.brf" 1630677611 301 7fab85b4e747ea2427a50853ce7d492d "pdflatex"
+  "paper.tex" 1630677610 19891 96e4cdd6a5cfc9707ba9df510a3bbc80 ""
   (generated)
   "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.log"
-  "paper.aux"
-  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.pdf"
-  "paper.pdf"
   "paper.brf"
+  "/home/pj/coding/python/Music-Sheet-Pitch-Translation/Latex_paper/paper/paper.pdf"
+  "paper.aux"
+  "paper.pdf"
   "paper.log"
